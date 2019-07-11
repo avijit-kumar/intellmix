@@ -1,2 +1,0 @@
-# intellmix
-CPG Dashboard
