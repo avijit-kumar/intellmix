@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>CPG by TEG</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header class="navbar navbar-expand navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+        <img src="img/intell-mix-logo.png" alt="intell mix logo">
+      </a>
+    </div>
+  </header>
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <i class="fas fa-chevron-right pr-2"></i>Organisations</li>
+      </ol>
+    </nav>
+    <div class="d-flex align-items-start">
+      <div class="page-header">
+        <h3>Edit Details (Organisation Name)</h3>
+      </div>
+    </div>
+    <div class="manage__create__new__organisation pb-100">
+      <div class="manage__org__form">
+        <h4>Organisation Name:</h4>
+        <div class="form-group row">
+          <label for="orgsName" class="col-sm-3 col-form-label">Organisation Name:</label>
+          <input type="text" class="col-sm-3 form-control" id="orgsName" placeholder="Enter organisation name">
+        </div>
+        <div class="form-group row">
+          <label for="subsPeriod" class="col-sm-3 col-form-label">Select Subscription Period:</label>
+          <select id="subsPeriod" class="col-sm-3 form-control">
+            <option>6 months</option>
+            <option>12 months</option>
+          </select>
+        </div>
+        <div class="form-group row">
+          <label for="orgsCycle" class="col-sm-3 col-form-label">Organisation Cycle:</label>
+          <select id="orgsCycle" class="col-sm-3 form-control">
+            <option>Quaterly</option>
+            <option>Half Yearly</option>
+            <option>Yearly</option>
+          </select>
+        </div>
+      </div>
+      <div class="manage__org__form">
+        <h4>Admin Details:</h4>
+        <div class="form-group row">
+          <label for="orgsAdminName" class="col-sm-3 col-form-label">Admin Name:</label>
+          <input type="text" class="col-sm-3 form-control" id="orgsAdminName" placeholder="Enter admin name">
+        </div>
+        <div class="form-group row">
+          <label for="orgsAdminEmail" class="col-sm-3 col-form-label">Admin Email:</label>
+          <input type="email" class="col-sm-3 form-control" id="orgsAdminEmail" placeholder="Enter email address">
+        </div>
+      </div>
+      <div class="manage__org__form">
+        <h4>Brands:</h4>
+        <ul class="manage__org__form__brands" id="org-brands">
+          <li class="item">
+            <input type="text" class="col-sm-2 form-control item-name" placeholder="Enter brand name"
+              value="Brand 1 Name" disabled>
+            <button class="btn edit-btn">edit</button>
+            <button class="btn remove-btn">remove</button>
+          </li>
+          <li class="item">
+            <input type="text" class="col-sm-2 form-control item-name" placeholder="Enter brand name"
+              value="Brand 1 Name" disabled>
+            <button class="btn edit-btn">edit</button>
+            <button class="btn remove-btn">remove</button>
+          </li>
+        </ul>
+        <div class="input-group">
+          <input type="text" class="col-sm-3 form-control" id="orgsBrandName" placeholder="Enter brand name" required>
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="addBrandBtn">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="manage__org__form">
+        <h4>Data Types:</h4>
+        <div class="d-flex w-100">
+          <select id="selectBrands-DT" class="col-sm-3 form-control">
+            <option>Brand 1</option>
+            <option>Brand 2</option>
+            <option>Brand 3</option>
+          </select>
+          
+          <button class="btn btn-primary ml-4" type="button" id="previewBtn">Preview Structure</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script>
+    $('#addBrandBtn').on('click', function () {
+      var brandName = $('#orgsBrandName').val();
+      if (brandName.length) {
+        $('#org-brands').append(`<li class="manage__org__form__brand_item">
+            <span class="item-name">${brandName}</span>
+            <a class="edit-item">edit</a>
+            <a class="remove-item">remove</a>
+          </li>`);
+      }
+    });
+
+    $('#org-brands .item .edit-item').on('click', function () {
+      $(this).parent('.item').attr(e);
+    });
+  </script>
+
+</body>
+
+</html>

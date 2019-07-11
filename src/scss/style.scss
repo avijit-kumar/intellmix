@@ -1,0 +1,200 @@
+$body-bg: #f2f2f2;
+$body-color: #333;
+$font-family-base: 'Barlow', sans-serif;
+$primary: #F7931E;
+$primary-hover: #B86300;
+$secondary: #4B4A4C;
+$btn-font-weight: 600;
+
+$custom-control-gutter: 0rem;
+$custom-control-spacer-x: 1.25rem;
+
+$custom-control-indicator-size: 1.25rem;
+// $custom-control-indicator-bg:           #35c736;
+
+$link-color: #0076FF;
+// $link-hover-color: darken($link-color, 15%) !default;
+
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./user-form";
+@import "./utilities";
+@import "./login";
+@import "./admin";
+@import "./super-admin";
+
+
+html,
+body {
+  height: 100%;
+  font-family: $font-family-base;
+}
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+
+html,
+body .table {
+  color: $body-color;
+}
+
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: darken($link-color, 10%);
+  }
+}
+
+.content-wrapper {
+  height: calc(100% - 50px);
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+
+  .navbar {
+    height: 50px;
+  }
+}
+
+.im-logo {
+  max-width: 130px;
+  display: block;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.page-header {
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 0;
+  }
+}
+
+.breadcrumb {
+  background: none;
+  padding-left: 0;
+  font-size: 14px;
+
+  .breadcrumb-item {
+    a {
+      color: #4A90E2;
+    }
+  }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: '';
+  display: none;
+}
+
+.search-user-wrapper {
+  width: 250px;
+
+  @media (max-width: 992px) {
+    width: 200px;
+  }
+}
+
+.manage-user__table {
+  td {
+    line-height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    p {
+      margin: 0;
+    }
+  }
+
+  .manage-user__action {
+    height: 30px;
+  }
+}
+
+.manage-user__filters {
+  padding-left: 15px;
+}
+
+.manage-user__filter-role,
+.manage-user__filter-status {
+  width: 150px;
+  ;
+}
+
+.manage-user__edit {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--success);
+  }
+}
+
+.manage-user__delete {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--danger);
+  }
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: $primary;
+  background-color: $primary;
+}
+
+
+.disabled-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+tr {
+  .disabled-badge {
+    display: none;
+  }
+  &.disabled {
+    td {
+      background-color: #eee;
+    }
+    .disabled-badge {
+      display: block;
+    }
+  }
+}
