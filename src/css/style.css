@@ -355,7 +355,7 @@
 }
 
 .manage__form__action_btn .btn {
-    width: 120px;
+    min-width: 120px;
 }
 
 .manage__view__user .manage__form__input input + label,
@@ -759,6 +759,71 @@
 
 .manage__org__form__brands .item .btn:hover, .manage__org__form__brands .item .btn:focus, .manage__org__form__brands .item .btn:active {
     color: #005ecc;
+}
+
+.dt__column__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dt__column__item input:disabled,
+  .dt__column__item select:disabled {
+    border-color: transparent;
+    background: none;
+}
+
+.dt__column__item input:disabled:hover, .dt__column__item input:disabled:active, .dt__column__item input:disabled:focus,
+    .dt__column__item select:disabled:hover,
+    .dt__column__item select:disabled:active,
+    .dt__column__item select:disabled:focus {
+    border-color: transparent;
+}
+
+.dt__column__item__action {
+    margin-left: auto;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 60px;
+    height: 38px;
+}
+
+.dt__column__item__action .edit__icon,
+    .dt__column__item__action .remove__icon {
+    cursor: pointer;
+    opacity: 0.8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.dt__column__item__action .edit__icon svg,
+      .dt__column__item__action .remove__icon svg {
+    width: 20px;
+    height: 20px;
+    line-height: 38px;
+}
+
+.dt__column__item__action .edit__icon:hover, .dt__column__item__action .edit__icon:focus, .dt__column__item__action .edit__icon:active,
+      .dt__column__item__action .remove__icon:hover,
+      .dt__column__item__action .remove__icon:focus,
+      .dt__column__item__action .remove__icon:active {
+    opacity: 1;
+    color: #F7931E;
 }
 
 html,

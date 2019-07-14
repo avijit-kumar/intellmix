@@ -3,11 +3,14 @@ $primary: #F7931E;
 
 .manage__org__form {
   margin-bottom: 40px;
+
   h4 {
     font-size: 18px;
     font-weight: 600;
   }
+
   .form-control {
+
     &:hover,
     &:focus,
     &:active {
@@ -16,6 +19,7 @@ $primary: #F7931E;
       outline: 0;
     }
   }
+
   select {
     appearance: none;
     background-image: url(./../img/chevron-down.svg);
@@ -23,13 +27,16 @@ $primary: #F7931E;
     background-repeat: no-repeat;
     background-size: 20px;
   }
+
   &__brands {
     padding-left: 0;
+
     .item {
       list-style-type: none;
       display: flex;
-      align-items: center; 
+      align-items: center;
       margin-bottom: 5px;
+
       input.item-name {
         &:disabled {
           padding-left: 0;
@@ -38,17 +45,66 @@ $primary: #F7931E;
           background-color: transparent;
         }
       }
+
       .btn {
         line-height: 20px;
         padding: 0 3px;
         margin: 0 5px;
         color: $link-color;
         text-decoration: underline;
+
         &:hover,
         &:focus,
         &:active {
           color: darken($link-color, 10%);
         }
+      }
+    }
+  }
+}
+
+.dt__column__item {
+  display: flex;
+  align-items: center;
+
+  input:disabled,
+  select:disabled {
+    border-color: transparent;
+    background: none;
+    // line-height: 30px;
+    // height: 30px;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  &__action {
+    margin-left: auto;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 38px;
+    .edit__icon,
+    .remove__icon {
+      cursor: pointer;
+      opacity: 0.8;
+      display: flex;
+      align-content: center;
+      svg {
+        width: 20px;
+        height: 20px;
+        line-height: 38px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+        color: $primary;
       }
     }
   }
