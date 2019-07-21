@@ -439,6 +439,11 @@
     padding-bottom: 100px;
 }
 
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .login {
     min-height: 100vh;
     text-align: center;
