@@ -36,253 +36,433 @@
         <h3>Edit Details (Organisation Name)</h3>
       </div>
     </div>
-    <div class="manage__create__new__organisation pb-100">
-      <div class="manage__org__form">
-        <h4>Organisation Name:</h4>
-        <div class="form-group row">
-          <label for="orgsName" class="col-sm-4 col-form-label">Organisation Name:</label>
-          <input type="text" class="col-sm-4 form-control" id="orgsName" placeholder="Enter organisation name">
-        </div>
-        <div class="form-group row">
-          <label for="subsPeriod" class="col-sm-4 col-form-label">Select Subscription Period:</label>
-          <select id="subsPeriod" class="col-sm-4 form-control">
-            <option>6 months</option>
-            <option>12 months</option>
-          </select>
-        </div>
-        <div class="form-group row">
-          <label for="orgsCycle" class="col-sm-4 col-form-label">Organisation Cycle:</label>
-          <select id="orgsCycle" class="col-sm-4 form-control">
-            <option>Quaterly</option>
-            <option>Half Yearly</option>
-            <option>Yearly</option>
-          </select>
-        </div>
-      </div>
-      <div class="manage__org__form">
-        <h4>Admin Details:</h4>
-        <div class="form-group row">
-          <label for="orgsAdminName" class="col-sm-4 col-form-label">Admin Name:</label>
-          <input type="text" class="col-sm-4 form-control" id="orgsAdminName" placeholder="Enter admin name">
-        </div>
-        <div class="form-group row">
-          <label for="orgsAdminEmail" class="col-sm-4 col-form-label">Admin Email:</label>
-          <input type="email" class="col-sm-4 form-control" id="orgsAdminEmail" placeholder="Enter email address">
-        </div>
-      </div>
-      <div class="manage__org__form">
-        <h4>Brands:</h4>
-        <ul class="manage__org__form__brands" id="org-brands">
-          <li class="item">
-            <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name"
-              value="Brand 1 Name" disabled>
-            <button class="btn edit-btn">edit</button>
-            <button class="btn remove-btn">remove</button>
-          </li>
-          <li class="item">
-            <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name"
-              value="Brand 1 Name" disabled>
-            <button class="btn edit-btn">edit</button>
-            <button class="btn remove-btn">remove</button>
-          </li>
-        </ul>
-        <div class="input-group">
-          <input type="text" class="col-sm-4 form-control" id="orgsBrandName" placeholder="Enter brand name" required>
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="addBrandBtn">+ Add</button>
+    <ul class="nav manage__org__nav justify-content-around mb-3" id="orgsForm" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="orgsBasic-tab" data-toggle="tab" href="#orgsBasic-content" role="tab"
+          aria-controls="orgsBasic-content" aria-selected="true">
+          <span class="nav-steps-no">1</span>
+          Basic Details
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="orgsDataTypes-tab" data-toggle="tab" href="#orgsDataTypes-content" role="tab"
+          aria-controls="orgsDataTypes-content" aria-selected="false">
+          <span class="nav-steps-no">2</span>
+          Brand Data Types
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content pb-100" id="orgsFormContent">
+      <div class="tab-pane fade show active card" id="orgsBasic-content" role="tabpanel" aria-labelledby="orgsBasic-tab">
+        <div class="manage__create__new__organisation card-body">
+          <div class="manage__org__form">
+            <h4>Organisation Name:</h4>
+            <div class="form-group row">
+              <label for="orgsName" class="col-sm-4 col-form-label">Organisation Name:</label>
+              <input type="text" class="col-sm-4 form-control" id="orgsName" placeholder="Enter organisation name">
+            </div>
+            <div class="form-group row">
+              <label for="subsPeriod" class="col-sm-4 col-form-label">Select Subscription Period:</label>
+              <select id="subsPeriod" class="col-sm-4 form-control">
+                <option>6 months</option>
+                <option>12 months</option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <label for="orgsCycle" class="col-sm-4 col-form-label">Organisation Cycle:</label>
+              <select id="orgsCycle" class="col-sm-4 form-control">
+                <option>Quaterly</option>
+                <option>Half Yearly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="manage__org__data_types">
-        <div class="manage__org__form">
-          <h4>Data Types:</h4>
-          <div class="d-flex w-100">
-            <select id="selectBrands" class="col-sm-4 form-control">
-              <option>Brand 1</option>
-              <option>Brand 2</option>
-              <option>Brand 3</option>
-            </select>
-
-            <button class="btn btn-primary ml-4" type="button" id="previewBtn">Preview Structure</button>
+          <div class="manage__org__form">
+            <h4>Admin Details:</h4>
+            <div class="form-group row">
+              <label for="orgsAdminName" class="col-sm-4 col-form-label">Admin Name:</label>
+              <input type="text" class="col-sm-4 form-control" id="orgsAdminName" placeholder="Enter admin name">
+            </div>
+            <div class="form-group row">
+              <label for="orgsAdminEmail" class="col-sm-4 col-form-label">Admin Email:</label>
+              <input type="email" class="col-sm-4 form-control" id="orgsAdminEmail" placeholder="Enter email address">
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="manage__org__form manage__org__data_type card">
-        <div class="card-body ">
-          <h4 class="card-title">Data Type</h4>
-          <div class="d-flex align-items-center w-100 mb-2">
-            <input type="text" class="col-sm-4 form-control" id="brandDataTypeName" placeholder="Data type name"
-              required>
-            <span class="ml-4 mr-4"> OR </span>
-            <select id="selectBrandDataType" class="col-sm-5 form-control">
-              <option disabled value="">Choose from existing data type</option>
-              <option>Data Type 1</option>
-              <option>Data Type 2</option>
-              <option>Data Type 3</option>
-            </select>
-
-          </div>
-          <button class="btn btn-primary col-sm-2 mb-4">Next</button>
-          <div class="d-flex flex-column w-100 mb-4">
-            <h4 class="card-title">Data Level Details</h4>
-            <select id="selectDataTypeLocation" class="col-sm-4 form-control mb-3">
-              <option disabled value="">Location</option>
-              <option>location 1</option>
-              <option>location 2</option>
-              <option>location 3</option>
-            </select>
-            <select id="selectDataTypeFrequency" class="col-sm-4 form-control mb-3">
-              <option disabled value="">Frequency</option>
-              <option>Frequency 1</option>
-              <option>Frequency 2</option>
-              <option>Frequency 3</option>
-            </select>
-            <select id="selectDataTypeBrandLevel" class="col-sm-4 form-control mb-3">
-              <option disabled value="">Brand Level</option>
-              <option>Brand Level 1</option>
-              <option>Brand Level 2</option>
-              <option>Brand Level 3</option>
-            </select>
-            <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control">
-              <option disabled value="">Channel Level</option>
-              <option>Channel Level 1</option>
-              <option>Channel Level 2</option>
-              <option>Channel Level 3</option>
-            </select>
-          </div>
-          <div class="d-flex flex-column w-100 ">
-            <h4 class="card-title">Columns</h4>
-            <ul id="dataTypeColumns" class="list-group dt__column mb-4">
-              <li class="list-group-item  dt__column__item dt__column__header bg-dark text-light">
-                <div class="col-sm-4">Column</div>
-                <div class="col-sm-4 ml-3">Data Type</div>
+          <div class="manage__org__form">
+            <h4>Brands:</h4>
+            <ul class="manage__org__form__brands" id="org-brands">
+              <li class="item">
+                <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name"
+                  value="Brand 1 Name" disabled>
+                <button class="btn edit-btn">edit</button>
+                <button class="btn remove-btn">remove</button>
               </li>
-              <li class="list-group-item dt__column__item sortable-drag">
-                <input class="form-control col-sm-4" value="Column 1" disabled />
-                <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
-                    <option disabled value="">Choose Data Type</option>
-                  <option selected>Data Type</option>
-                  <option>Data Type 2</option>
-                </select>
-                <span class="dt__column__item__action">
-                  <i class="edit__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-edit"
-                      viewBox="0 0 24 24">
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                    </svg>
-                  </i>
-                  <i class="remove__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-x"
-                      viewBox="0 0 24 24">
-                      <line x1="18" x2="6" y1="6" y2="18" />
-                      <line x1="6" x2="18" y1="6" y2="18" />
-                    </svg>
-                  </i>
-                </span>
-              </li>
-              <li class="list-group-item dt__column__item sortable-drag">
-                <input class="form-control col-sm-4" value="Column 2" disabled />
-                <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
-                    <option disabled value="">Choose Data Type</option>
-                  <option selected>Data Type 1</option>
-                  <option>Data Type 2</option>
-                </select>
-                <span class="dt__column__item__action">
-                  <i class="edit__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-edit"
-                      viewBox="0 0 24 24">
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                    </svg>
-                  </i>
-                  <i class="remove__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-x"
-                      viewBox="0 0 24 24">
-                      <line x1="18" x2="6" y1="6" y2="18" />
-                      <line x1="6" x2="18" y1="6" y2="18" />
-                    </svg>
-                  </i>
-                </span>
-              </li>
-              <li class="list-group-item dt__column__item sortable-drag">
-                <input class="form-control col-sm-4" placeholder="Enter column name" />
-                <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3">
-                  <option disabled value="">Choose Data Type</option>
-                  <option>Data Type 1</option>
-                  <option>Data Type 2</option>
-                </select>
-                <span class="dt__column__item__action">
-                  <i class="edit__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-edit"
-                      viewBox="0 0 24 24">
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                    </svg>
-                  </i>
-                  <i class="remove__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-x"
-                      viewBox="0 0 24 24">
-                      <line x1="18" x2="6" y1="6" y2="18" />
-                      <line x1="6" x2="18" y1="6" y2="18" />
-                    </svg>
-                  </i>
-                </span>
+              <li class="item">
+                <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name"
+                  value="Brand 1 Name" disabled>
+                <button class="btn edit-btn">edit</button>
+                <button class="btn remove-btn">remove</button>
               </li>
             </ul>
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
-                <button class="btn btn-primary save-btn ml-4">Save</button>
+            <div class="input-group">
+              <input type="text" class="col-sm-4 form-control" id="orgsBrandName" placeholder="Enter brand name"
+                required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="addBrandBtn">+ Add</button>
               </div>
+            </div>
           </div>
         </div>
-        <div class="manage__form__action_btn">
-          <div class="container d-flex justify-content-between">
-            <button class="btn btn-outline-secondary deactivate-btn mr-4">Deactivate Organisation</button>
-            <button class="btn btn-primary publish-btn">Publish</button>
+      </div>
+      <div class="tab-pane fade card" id="orgsDataTypes-content" role="tabpanel" aria-labelledby="orgsDataTypes-tab">
+        <div class="manage__create__new__organisation card-body">
+          <div class="manage__org__data_types">
+            <div class="manage__org__form">
+              <h4>Data Types:</h4>
+              <div class="d-flex w-100">
+                <select id="selectBrands" class="col-sm-4 form-control">
+                  <option>Brand 1</option>
+                  <option>Brand 2</option>
+                  <option>Brand 3</option>
+                </select>
+
+                <button class="btn btn-primary ml-4" type="button" id="previewBtn">Preview Structure</button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="brandDataTypes">
+            <div class="card">
+              <div class="card-header p-1 active" id="dataTypeHeading-1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#dataType-1"
+                    aria-expanded="true" aria-controls="dataType-1">
+                    Data Type #1
+                  </button>
+                </h2>
+              </div>
+              <div id="dataType-1" class="collapse show" aria-labelledby="dataTypeHeading-1"
+                data-parent="#brandDataTypes">
+                <div class="card-body">
+                  <div class="manage__org__form manage__org__data_type">
+                    <div class="d-flex flex-column w-100 mb-4">
+                      <h4 class="card-title">Data Level Details</h4>
+                      <select id="selectDataTypeLocation" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Location</option>
+                        <option>location 1</option>
+                        <option>location 2</option>
+                        <option>location 3</option>
+                      </select>
+                      <select id="selectDataTypeFrequency" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Frequency</option>
+                        <option>Frequency 1</option>
+                        <option>Frequency 2</option>
+                        <option>Frequency 3</option>
+                      </select>
+                      <select id="selectDataTypeBrandLevel" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Brand Level</option>
+                        <option>Brand Level 1</option>
+                        <option>Brand Level 2</option>
+                        <option>Brand Level 3</option>
+                      </select>
+                      <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control">
+                        <option disabled value="">Channel Level</option>
+                        <option>Channel Level 1</option>
+                        <option>Channel Level 2</option>
+                        <option>Channel Level 3</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column w-100 ">
+                      <h4 class="card-title">Columns</h4>
+                      <ul id="dataTypeColumns" class="list-group dt__column mb-4">
+                        <li class="list-group-item  dt__column__item dt__column__header bg-dark text-light">
+                          <div class="col-sm-4">Column</div>
+                          <div class="col-sm-4 ml-3">Data Type</div>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" value="Column 1" disabled />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
+                            <option disabled value="">Choose Data Type</option>
+                            <option selected>Data Type</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" value="Column 2" disabled />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
+                            <option disabled value="">Choose Data Type</option>
+                            <option selected>Data Type 1</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" placeholder="Enter column name" />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3">
+                            <option disabled value="">Choose Data Type</option>
+                            <option>Data Type 1</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
+                        <button class="btn btn-primary save-btn ml-4">Save</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header p-1" id="dataTypeHeading-2">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#dataType-2"
+                    aria-expanded="true" aria-controls="dataType-2">
+                    Data Type #2
+                  </button>
+                </h2>
+              </div>
+              <div id="dataType-2" class="collapse show" aria-labelledby="dataTypeHeading-2"
+                data-parent="#brandDataTypes">
+                <div class="card-body">
+                  <div class="manage__org__form manage__org__data_type">
+                    <div class="d-flex flex-column w-100 mb-4">
+                      <h4 class="card-title">Data Level Details</h4>
+                      <select id="selectDataTypeLocation" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Location</option>
+                        <option>location 1</option>
+                        <option>location 2</option>
+                        <option>location 3</option>
+                      </select>
+                      <select id="selectDataTypeFrequency" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Frequency</option>
+                        <option>Frequency 1</option>
+                        <option>Frequency 2</option>
+                        <option>Frequency 3</option>
+                      </select>
+                      <select id="selectDataTypeBrandLevel" class="col-sm-4 form-control mb-3">
+                        <option disabled value="">Brand Level</option>
+                        <option>Brand Level 1</option>
+                        <option>Brand Level 2</option>
+                        <option>Brand Level 3</option>
+                      </select>
+                      <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control">
+                        <option disabled value="">Channel Level</option>
+                        <option>Channel Level 1</option>
+                        <option>Channel Level 2</option>
+                        <option>Channel Level 3</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column w-100 ">
+                      <h4 class="card-title">Columns</h4>
+                      <ul id="dataTypeColumns" class="list-group dt__column mb-4">
+                        <li class="list-group-item  dt__column__item dt__column__header bg-dark text-light">
+                          <div class="col-sm-4">Column</div>
+                          <div class="col-sm-4 ml-3">Data Type</div>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" value="Column 1" disabled />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
+                            <option disabled value="">Choose Data Type</option>
+                            <option selected>Data Type</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" value="Column 2" disabled />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3" disabled>
+                            <option disabled value="">Choose Data Type</option>
+                            <option selected>Data Type 1</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                        <li class="list-group-item dt__column__item sortable-drag">
+                          <input class="form-control col-sm-4" placeholder="Enter column name" />
+                          <select id="selectDataTypeChannelLevel" class="col-sm-4 form-control ml-3">
+                            <option disabled value="">Choose Data Type</option>
+                            <option>Data Type 1</option>
+                            <option>Data Type 2</option>
+                          </select>
+                          <span class="dt__column__item__action">
+                            <i class="edit__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-edit" viewBox="0 0 24 24">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                              </svg>
+                            </i>
+                            <i class="remove__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="feather feather-x" viewBox="0 0 24 24">
+                                <line x1="18" x2="6" y1="6" y2="18" />
+                                <line x1="6" x2="18" y1="6" y2="18" />
+                              </svg>
+                            </i>
+                          </span>
+                        </li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
+                        <button class="btn btn-primary save-btn ml-4">Save</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex align-items-center w-100" id="newDataType">
+                  <input type="text" class="col-sm-4 form-control" id="brandDataTypeName" placeholder="Data type name"
+                    required>
+                  <span class="col-sm-1"> OR </span>
+                  <select id="selectBrandDataType" class="col-sm-4 form-control">
+                    <option disabled value="">Choose from existing data type</option>
+                    <option>Data Type 1</option>
+                    <option>Data Type 2</option>
+                    <option>Data Type 3</option>
+                  </select>
+                  <span class="col-sm-1"> </span>
+                <button class="btn btn-primary col-sm-2">+ ADD</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="manage__form__action_btn">
+    <div class="container d-flex justify-content-between">
+      <button class="btn btn-outline-secondary deactivate-btn mr-4">Deactivate Organisation</button>
+      <button class="btn btn-primary publish-btn">Publish</button>
+    </div>
+  </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script>
-      $('#addBrandBtn').on('click', function () {
-        var brandName = $('#orgsBrandName').val();
-        if (brandName.length) {
-          $('#org-brands').append(`<li class="manage__org__form__brand_item">
-            <span class="item-name">${brandName}</span>
-            <a class="edit-item">edit</a>
-            <a class="remove-item">remove</a>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script>
+    $('#addBrandBtn').on('click', function () {
+      var brandName = $('#orgsBrandName').val();
+      if (brandName.length) {
+        $('#org-brands').append(`<li class="item">
+            <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name" value="${brandName}" disabled>
+            <button class="btn edit-item">edit</button>
+            <button class="btn remove-item">remove</button>
           </li>`);
-        }
-      });
+      }
+    });
 
-      $('#org-brands .item .edit-item').on('click', function () {
-        $(this).parent('.item').attr(e);
-      });
-      /* column sorting */
-      var columns = document.querySelector('#dataTypeColumns');
-      Sortable.create(columns, {
-        dragClass: "sortable-drag"
-      });
-    </script>
+    $('#org-brands .item .edit-item').on('click', function () {
+      $(this).parent('.item').attr(e);
+    });
+    /* column sorting */
+    var columns = document.querySelector('#dataTypeColumns');
+    Sortable.create(columns, {
+      dragClass: "sortable-drag"
+    });
+  </script>
 
 </body>
 

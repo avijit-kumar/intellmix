@@ -122,7 +122,9 @@ $body-color: #333;
     margin-bottom: 30px;
 
     input {
-      display: none;
+      &.radio__role { 
+        display: none;
+      }
 
       &:checked+label {
         color: $primary;

@@ -1,5 +1,6 @@
 $link-color: #0076FF;
 $primary: #F7931E;
+$body-bg: #f2f2f2;
 
 .manage__org__form {
   margin-bottom: 40px;
@@ -71,6 +72,7 @@ $primary: #F7931E;
   select:disabled {
     border-color: transparent;
     background: none;
+
     // line-height: 30px;
     // height: 30px;
     &:hover,
@@ -88,12 +90,14 @@ $primary: #F7931E;
     justify-content: space-between;
     width: 60px;
     height: 38px;
+
     .edit__icon,
     .remove__icon {
       cursor: pointer;
       opacity: 0.8;
       display: flex;
       align-content: center;
+
       svg {
         width: 20px;
         height: 20px;
@@ -107,5 +111,61 @@ $primary: #F7931E;
         color: $primary;
       }
     }
+  }
+}
+
+.nav {
+  &-link {
+    display: flex;
+    align-items: center;
+
+    &.active {
+      color: $primary;
+
+      .nav-steps-no {
+        background-color: $primary;
+      }
+    }
+
+    &.disabled {
+      .nav-steps-no {
+        background-color: #6c757d;
+      }
+    }
+  }
+
+  &-steps-no {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: $link-color;
+    margin-right: 10px;
+  }
+}
+
+.manage__org__nav { 
+  flex-wrap: nowrap;
+  position: relative;
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: $body-bg;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: #ced4da;
+    z-index: -1;
   }
 }
