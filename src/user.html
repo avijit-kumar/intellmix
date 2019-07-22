@@ -39,266 +39,329 @@
         <p>Edit user details</p>
       </div>
     </div>
+    <ul class="nav manage__org__nav justify-content-around mb-3" id="orgsForm" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="userBasic-tab" data-toggle="tab" href="#userBasic-content" role="tab"
+          aria-controls="userBasic-content" aria-selected="true">
+          <span class="nav-steps-no">1</span>
+          User Details
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="userPrivilages-tab" data-toggle="tab" href="#userPrivilages-content" role="tab"
+          aria-controls="userPrivilages-content" aria-selected="false">
+          <span class="nav-steps-no">2</span>
+          User Privileges
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="userDashboard-tab" data-toggle="tab" href="#userDashboard-content" role="tab"
+          aria-controls="userDashboard-content" aria-selected="false">
+          <span class="nav-steps-no">3</span>
+          Dashboard & KPI's
+        </a>
+      </li>
+    </ul>
     <!-- change class name based on action
       manage__create__new__user
       manage__view__user
       manage__edit__user
     -->
-    <div class="manage__create__new__user pb-100">
-      <div class="manage__form">
-        <div class="manage__form__title">
-          <h3><span>01</span>User Details</h3>
-          <p>Mandatory Fields</p>
-        </div>
-        <div class="manage__form__input">
-          <input type="text" id="first-name" name="first-name" required="">
-          <label for="first-name">First Name</label></div>
-        <div class="manage__form__input">
-          <input type="text" id="last-name" name="last-name" required="">
-          <label for="last-name">Last Name</label></div>
-        <div class="manage__form__input">
-          <input type="email" id="email" name="email" required="">
-          <label for="email">Email</label></div>
-        <div class="manage__form__input">
-          <input type="tel" id="phone" name="phone" required="">
-          <label for="phone">Phone</label></div>
-        <div class="manage__form__radio">
-          <h4>Select Role</h4>
-          <div class="d-flex align-items-center">
-            <input class="radio__role" type="radio" name="role" id="role-1" checked="">
-            <label for="role-1">Analyst</label>
-            <input class="radio__role" type="radio" name="role" id="role-2">
-            <label for="role-2">Admin</label>
-            <input class="radio__role" type="radio" name="role" id="role-3">
-            <label for="role-3">Executive</label>
+    <div class="tab-content manage__create__new__user pb-100" id="userFormContent">
+      <div class="tab-pane fade show active card" id="userBasic-content" role="tabpanel"
+        aria-labelledby="userBasic-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>User Details</h3>
+            <p>Mandatory Fields</p>
           </div>
-          <div class="input-group mt-3">
-            <input type="text" class="col-sm-3 form-control form-control-sm" id="roleName" placeholder="Enter role name"
-              required>
-            <div class="input-group-append">
-              <button class="btn btn-primary btn-sm" type="button" id="addRoleBtn">+ Add Role</button>
+          <div class="manage__form__input">
+            <input type="text" id="first-name" name="first-name" required="">
+            <label for="first-name">First Name</label></div>
+          <div class="manage__form__input">
+            <input type="text" id="last-name" name="last-name" required="">
+            <label for="last-name">Last Name</label></div>
+          <div class="manage__form__input">
+            <input type="email" id="email" name="email" required="">
+            <label for="email">Email</label></div>
+          <div class="manage__form__input">
+            <input type="tel" id="phone" name="phone" required="">
+            <label for="phone">Phone</label></div>
+          <div class="manage__form__checkbox mb-30">
+            <h4>Select Role</h4>
+            <div class="d-flex align-items-center">
+              <input class="checkbox__role" type="checkbox" name="role" id="role-1">
+              <label for="role-1">Analyst</label>
+              <input class="checkbox__role" type="checkbox" name="role" id="role-2">
+              <label for="role-2">Admin</label>
+              <input class="checkbox__role" type="checkbox" name="role" id="role-3">
+              <label for="role-3">Executive</label>
+            </div>
+            <div class="input-group mt-3">
+              <input type="text" class="col-sm-3 form-control form-control-sm" id="roleName"
+                placeholder="Enter role name" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary btn-sm" type="button" id="addRoleBtn">+ Add Role</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex w-100">
+            <div class="manage__form__select w-50">
+              <h4>Select Brand</h4>
+
+              <select id="userBrand" class="selectpicker manage__form__select_dd mb-4" multiple title="Select Brands"
+                data-live-search="true" data-size="5">
+                <option>Brand 1</option>
+                <option>Brand 2</option>
+                <option>Brand 3</option>
+                <option>Brand 4</option>
+                <option>Brand 5</option>
+                <option>Brand 6</option>
+                <option>Brand 7</option>
+                <option>Brand 8</option>
+                <option>Brand 9</option>
+                <option>Brand 10</option>
+              </select>
+            </div>
+            <div class="manage__form__selected w-50 pl-4">
+              <h4>Selected Brands</h4>
+              <ul id="selectedUserBrands" class="list-group manage__form__selected_list">
+                <!-- <li class="list-group-item">Brand 1</li> -->
+              </ul>
             </div>
           </div>
         </div>
-        <div class="d-flex w-100">
-          <div class="manage__form__select w-50">
-            <h4>Select Brand</h4>
+      </div>
+      <div class="tab-pane fade card" id="userPrivilages-content" role="tabpanel" aria-labelledby="userPrivilages-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>Select User Privileges</h3>
+          </div>
+          <div class="manage__form__radio mb-30">
+            <!-- <h4>Selected Role</h4> -->
+            <div class="d-flex align-items-center">
+              <input class="radio__role" type="radio" name="user-role" id="user-role-1">
+              <label for="user-role-1">Analyst</label>
+              <input class="radio__role" type="radio" name="user-role" id="user-role-2">
+              <label for="user-role-2">Admin</label>
+              <input class="radio__role" type="radio" name="user-role" id="user-role-3">
+              <label for="user-role-3">Executive</label>
+            </div>
+          </div>
+          <table class="manage__form__table">
+            <thead>
+              <tr>
+                <th>
+                  <p>Features</p>
+                </th>
+                <th>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-all" class="checkbox__role">
+                    <label for="select-privileges-all"></label>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>File Upload</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-1" checked="" class="checkbox__role">
+                    <label for="select-privileges-1"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>File Approval</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-2" class="checkbox__role">
+                    <label for="select-privileges-2"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>DB Approval</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-3" class="checkbox__role">
+                    <label for="select-privileges-3"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Publish</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-4" class="checkbox__role">
+                    <label for="select-privileges-4"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Manual Override</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-5" class="checkbox__role">
+                    <label for="select-privileges-5"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Dashboard</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-6" class="checkbox__role">
+                    <label for="select-privileges-6"></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Add New File Types</p>
+                </td>
+                <td>
+                  <div class="manage__form__checkbox">
+                    <input type="checkbox" id="select-privileges-7" class="checkbox__role">
+                    <label for="select-privileges-7"></label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade card" id="userDashboard-content" role="tabpanel"
+        aria-labelledby="userDashboard-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>Dashboards & Data Types </h3>
+          </div>
+          <div class="d-flex w-100 pb-5">
+            <div class="manage__form__select w-50">
+              <h4>Select Dashboard</h4>
+              <select id="userDashboard" class="selectpicker manage__form__select_dd" multiple title="Select Dashboards"
+                data-actions-box="true" data-size="5">
+                <option>Dashboard 1</option>
+                <option>Dashboard 2</option>
+                <option>Dashboard 3</option>
+                <option>Dashboard 4</option>
+                <option>Dashboard 5</option>
+                <option>Dashboard 6</option>
+              </select>
+            </div>
+            <div class="manage__form__selected w-50 pl-4">
+              <h4>Selected Dashboard</h4>
+              <ul id="selectedUserDashboards" class="list-group manage__form__selected_list">
+                <!-- <li class="list-group-item">Dashboard 1</li> -->
+              </ul>
+            </div>
+          </div>
 
-            <select id="userBrand" class="selectpicker manage__form__select_dd mb-4" multiple title="Select Brands"
-              data-live-search="true" data-size="5">
-              <option>Brand 1</option>
-              <option>Brand 2</option>
-              <option>Brand 3</option>
-              <option>Brand 4</option>
-              <option>Brand 5</option>
-              <option>Brand 6</option>
-              <option>Brand 7</option>
-              <option>Brand 8</option>
-              <option>Brand 9</option>
-              <option>Brand 10</option>
+          <div class="d-flex w-100 pb-5">
+            <div class="manage__form__select w-50">
+              <h4>Select Data Types</h4>
+              <select id="userDataTypes" class="selectpicker manage__form__select_dd" multiple title="Select Data Types"
+                data-actions-box="true" data-size="5">
+                <option>Data Type 1</option>
+                <option>Data Type 2</option>
+                <option>Data Type 3</option>
+                <option>Data Type 4</option>
+                <option>Data Type 5</option>
+                <option>Data Type 6</option>
+              </select>
+            </div>
+            <div class="manage__form__selected w-50 pl-4">
+              <h4>Selected Data Type</h4>
+              <ul id="selectedUserDataTypes" class="list-group manage__form__selected_list">
+                <!-- <li class="list-group-item">Data Type 1</li> -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="manage__form__title">
+            <h3>Select Default KPI's</h3>
+          </div>
+          <div class="manage__form__select">
+            <h4>Select Channel</h4>
+
+            <select class="manage__form__select_channel mb-4 w-50" id="kpiChannel" required>
+              <option value="" disabled selected>Select Channel</option>
+              <option value="channel1">Channel 1</option>
+              <option value="channel2">Channel 2</option>
+              <option value="channel3">Channel 3</option>
             </select>
           </div>
-          <div class="manage__form__selected w-50 pl-4">
-            <h4>Selected Brands</h4>
-            <ul id="selectedUserBrands" class="list-group manage__form__selected_list">
-              <!-- <li class="list-group-item">Brand 1</li> -->
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="manage__form">
-        <div class="manage__form__title">
-          <h3><span>02</span>Select User Privileges</h3>
-        </div>
-        <table class="manage__form__table">
-          <thead>
-            <tr>
-              <th>
-                <p>Features</p>
-              </th>
-              <th>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-all" class="select-privileges-view">
-                  <label for="select-privileges-all"></label>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>File Upload</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-1" checked="" class="select-privileges-view">
-                  <label for="select-privileges-1"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>File Approval</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-2" class="select-privileges-view">
-                  <label for="select-privileges-2"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>DB Approval</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-3" class="select-privileges-view">
-                  <label for="select-privileges-3"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Publish</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-4" class="select-privileges-view">
-                  <label for="select-privileges-4"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Manual Override</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-5" class="select-privileges-view">
-                  <label for="select-privileges-5"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Dashboard</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-6" class="select-privileges-view">
-                  <label for="select-privileges-6"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Add New File Types</p>
-              </td>
-              <td>
-                <div class="manage__form__checkbox">
-                  <input type="checkbox" id="select-privileges-7" class="select-privileges-view">
-                  <label for="select-privileges-7"></label>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="manage__form">
-        <div class="manage__form__title">
-          <h3><span>03</span>List of Dashboards</h3>
-        </div>
-        <div class="d-flex w-100">
-          <div class="manage__form__select w-50">
-            <h4>Select Dashboard</h4>
-            <select id="userDashboard" class="selectpicker manage__form__select_dd" multiple title="Select Dashboards"
-              data-actions-box="true" data-size="5">
-              <option>Dashboard 1</option>
-              <option>Dashboard 2</option>
-              <option>Dashboard 3</option>
-              <option>Dashboard 4</option>
-              <option>Dashboard 5</option>
-              <option>Dashboard 6</option>
-            </select>
-          </div>
-          <div class="manage__form__selected w-50 pl-4">
-            <h4>Selected Dashboard</h4>
-            <ul id="selectedUserDashboards" class="list-group manage__form__selected_list">
-              <!-- <li class="list-group-item">Dashboard 1</li> -->
-            </ul>
-          </div>
-        </div>
 
-      </div>
-      <div class="manage__form">
-        <div class="manage__form__title">
-          <h3><span>04</span>Select Defaukt KPI's</h3>
-        </div>
-        <div class="manage__form__select">
-          <h4>Select Channel</h4>
-
-          <select class="manage__form__select_channel mb-4 w-50" id="kpiChannel" required>
-            <option value="" disabled selected>Select Channel</option>
-            <option value="channel1">Channel 1</option>
-            <option value="channel2">Channel 2</option>
-            <option value="channel3">Channel 3</option>
-          </select>
-        </div>
-
-        <div class="manage__form__checkbox manage__form__kpi_checkbox">
-          <h4>Select KPI's</h4>
-          <div class="d-flex align-items-center flex-wrap">
-            <input type="checkbox" name="volume" id="kpi-1" checked="">
-            <label for="kpi-1">Volume</label>
-            <input type="checkbox" name="Spend" id="kpi-2">
-            <label for="kpi-2">Spend</label>
-            <input type="checkbox" name="efficiency" id="kpi-3">
-            <label for="kpi-3">Efficiency</label>
-            <input type="checkbox" name="incremental-volume" id="kpi-4">
-            <label for="kpi-4">Incremental Volume</label>
-            <input type="checkbox" name="return-on-investment" id="kpi-5">
-            <label for="kpi-5">Return on Investment</label>
-            <input type="checkbox" name="payout" id="kpi-6">
-            <label for="kpi-6">Payout</label>
-            <input type="checkbox" name="roi" id="kpi-7">
-            <label for="kpi-7">ROI</label>
+          <div class="manage__form__checkbox manage__form__kpi_checkbox">
+            <h4>Select KPI's</h4>
+            <div class="d-flex align-items-center flex-wrap">
+              <input class="checkbox__kpi" type="checkbox" name="volume" id="kpi-1" checked="">
+              <label for="kpi-1">Volume</label>
+              <input class="checkbox__kpi" type="checkbox" name="Spend" id="kpi-2">
+              <label for="kpi-2">Spend</label>
+              <input class="checkbox__kpi" type="checkbox" name="efficiency" id="kpi-3">
+              <label for="kpi-3">Efficiency</label>
+              <input class="checkbox__kpi" type="checkbox" name="incremental-volume" id="kpi-4">
+              <label for="kpi-4">Incremental Volume</label>
+              <input class="checkbox__kpi" type="checkbox" name="return-on-investment" id="kpi-5">
+              <label for="kpi-5">Return on Investment</label>
+              <input class="checkbox__kpi" type="checkbox" name="payout" id="kpi-6">
+              <label for="kpi-6">Payout</label>
+              <input class="checkbox__kpi" type="checkbox" name="roi" id="kpi-7">
+              <label for="kpi-7">ROI</label>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="manage__form__action_btn">
-        <div class="container d-flex justify-content-end">
-          <button class="btn btn-primary save-btn mr-4">Save</button>
-          <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
         </div>
       </div>
     </div>
+    <div class="manage__form__action_btn">
+      <div class="container d-flex justify-content-end">
+        <button class="btn btn-primary save-btn mr-4">Save</button>
+        <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-    <script>
-      function populateSelectedItems(select, selected) {
-        $(select).on('changed.bs.select', function () {
-          var values = $(this).val();
-          var selectedParent = $(selected);
-          var selectedList = [];
-          $.each(values, function (i, val) {
-            selectedList.push('<li class="list-group-item">' + val + '</li>');
-          });
-          selectedParent.html(selectedList);
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script>
+    function populateSelectedItems(select, selected) {
+      $(select).on('changed.bs.select', function () {
+        var values = $(this).val();
+        var selectedParent = $(selected);
+        var selectedList = [];
+        $.each(values, function (i, val) {
+          selectedList.push('<li class="list-group-item">' + val + '</li>');
         });
-      }
-      populateSelectedItems('#userDashboard', '#selectedUserDashboards');
-      populateSelectedItems('#userBrand', '#selectedUserBrands');
-    </script>
+        selectedParent.html(selectedList);
+      });
+    }
+    populateSelectedItems('#userDashboard', '#selectedUserDashboards');
+    populateSelectedItems('#userBrand', '#selectedUserBrands');
+    populateSelectedItems('#userDataTypes', '#selectedUserDataTypes');
+  </script>
 </body>
 
 </html>
