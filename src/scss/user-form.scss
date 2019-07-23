@@ -197,7 +197,7 @@ $body-color: #333;
     }
   }
 
-  .manage__form__table {
+  &__table {
     width: calc(100% + 100px);
     margin-left: -50px;
     display: block;

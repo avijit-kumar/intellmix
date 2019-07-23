@@ -10,6 +10,10 @@ $body-bg: #f2f2f2;
     font-weight: 600;
   }
 
+  .btn {
+    min-width: 120px;
+  }
+
   .form-control {
 
     &:hover,
@@ -64,6 +68,36 @@ $body-bg: #f2f2f2;
   }
 }
 
+.manage__form__item__action {
+  margin-left: auto;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+
+  .edit__icon,
+  .remove__icon {
+    cursor: pointer;
+    opacity: 0.8;
+    display: flex;
+    align-content: center;
+    padding-left: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+      line-height: 38px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      color: $primary;
+    }
+  }
+}
+
 .dt__column__item {
   display: flex;
   align-items: center;
@@ -79,37 +113,6 @@ $body-bg: #f2f2f2;
     &:active,
     &:focus {
       border-color: transparent;
-    }
-  }
-
-  &__action {
-    margin-left: auto;
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60px;
-    height: 38px;
-
-    .edit__icon,
-    .remove__icon {
-      cursor: pointer;
-      opacity: 0.8;
-      display: flex;
-      align-content: center;
-
-      svg {
-        width: 20px;
-        height: 20px;
-        line-height: 38px;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        opacity: 1;
-        color: $primary;
-      }
     }
   }
 }
@@ -149,23 +152,36 @@ $body-bg: #f2f2f2;
   }
 }
 
-.manage__org__nav { 
+.manage__org__nav {
   flex-wrap: nowrap;
   position: relative;
+
   .nav-item {
     display: flex;
     justify-content: center;
     white-space: nowrap;
-    background-color: $body-bg;
+    // background-color: $body-bg;
   }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 1px;
-    background-color: #ced4da;
-    z-index: -1;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   height: 1px;
+  //   background-color: #ced4da;
+  //   z-index: -1;
+  // }
+}
+
+.manage__org__content {
+  >.tab-pane.card {
+    // margin-top: -1px;
+    // position: relative;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 20px;
   }
 }

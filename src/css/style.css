@@ -230,24 +230,24 @@
     padding: 10px;
 }
 
-.manage__form .manage__form__table {
+.manage__form__table {
     width: calc(100% + 100px);
     margin-left: -50px;
     display: block;
 }
 
-.manage__form .manage__form__table thead,
-    .manage__form .manage__form__table tbody {
+.manage__form__table thead,
+    .manage__form__table tbody {
     display: block;
     width: 100%;
 }
 
-.manage__form .manage__form__table thead p {
+.manage__form__table thead p {
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.manage__form .manage__form__table tr {
+.manage__form__table tr {
     padding: 0 50px;
     width: 100%;
     display: -webkit-box;
@@ -260,33 +260,33 @@
     transition: all .3s;
 }
 
-.manage__form .manage__form__table tbody tr:nth-child(2n+1) {
+.manage__form__table tbody tr:nth-child(2n+1) {
     background: #f2f2f2;
 }
 
-.manage__form .manage__form__table th,
-    .manage__form .manage__form__table td {
+.manage__form__table th,
+    .manage__form__table td {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 10px 0;
 }
 
-.manage__form .manage__form__table th:first-child,
-      .manage__form .manage__form__table td:first-child {
+.manage__form__table th:first-child,
+      .manage__form__table td:first-child {
     width: 80%;
 }
 
-.manage__form .manage__form__table th:last-child,
-      .manage__form .manage__form__table td:last-child {
+.manage__form__table th:last-child,
+      .manage__form__table td:last-child {
     width: 20%;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
-.manage__form .manage__form__table label,
-    .manage__form .manage__form__table p {
+.manage__form__table label,
+    .manage__form__table p {
     font-size: 14px;
     margin-bottom: 0;
 }
@@ -709,6 +709,10 @@
     font-weight: 600;
 }
 
+.manage__org__form .btn {
+    min-width: 120px;
+}
+
 .manage__org__form .form-control:hover, .manage__org__form .form-control:focus, .manage__org__form .form-control:active {
     border-color: #F7931E;
     -webkit-box-shadow: none;
@@ -760,6 +764,49 @@
     color: #005ecc;
 }
 
+.manage__form__item__action {
+    margin-left: auto;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 38px;
+}
+
+.manage__form__item__action .edit__icon,
+  .manage__form__item__action .remove__icon {
+    cursor: pointer;
+    opacity: 0.8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding-left: 20px;
+}
+
+.manage__form__item__action .edit__icon svg,
+    .manage__form__item__action .remove__icon svg {
+    width: 20px;
+    height: 20px;
+    line-height: 38px;
+}
+
+.manage__form__item__action .edit__icon:hover, .manage__form__item__action .edit__icon:focus, .manage__form__item__action .edit__icon:active,
+    .manage__form__item__action .remove__icon:hover,
+    .manage__form__item__action .remove__icon:focus,
+    .manage__form__item__action .remove__icon:active {
+    opacity: 1;
+    color: #F7931E;
+}
+
 .dt__column__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,49 +827,6 @@
     .dt__column__item select:disabled:active,
     .dt__column__item select:disabled:focus {
     border-color: transparent;
-}
-
-.dt__column__item__action {
-    margin-left: auto;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 60px;
-    height: 38px;
-}
-
-.dt__column__item__action .edit__icon,
-    .dt__column__item__action .remove__icon {
-    cursor: pointer;
-    opacity: 0.8;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-    align-content: center;
-}
-
-.dt__column__item__action .edit__icon svg,
-      .dt__column__item__action .remove__icon svg {
-    width: 20px;
-    height: 20px;
-    line-height: 38px;
-}
-
-.dt__column__item__action .edit__icon:hover, .dt__column__item__action .edit__icon:focus, .dt__column__item__action .edit__icon:active,
-      .dt__column__item__action .remove__icon:hover,
-      .dt__column__item__action .remove__icon:focus,
-      .dt__column__item__action .remove__icon:active {
-    opacity: 1;
-    color: #F7931E;
 }
 
 .nav-link {
@@ -880,19 +884,13 @@
     -ms-flex-pack: center;
     justify-content: center;
     white-space: nowrap;
-    background-color: #f2f2f2;
 }
 
-.manage__org__nav::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    height: 1px;
-    background-color: #ced4da;
-    z-index: -1;
+.manage__org__content > .tab-pane.card {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 20px;
 }
 
 html,
@@ -954,6 +952,11 @@ header .navbar {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #fff;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #f9ab4f;
+    border-color: #f9ab4f;
 }
 
 .page-header {

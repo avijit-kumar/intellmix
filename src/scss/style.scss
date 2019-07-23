@@ -85,6 +85,11 @@ header {
     box-shadow: none;
     color: #fff;
   }
+  &.disabled,
+  &:disabled {
+    background-color: lighten($primary, 10%);
+    border-color: lighten($primary, 10%);
+  }
 }
 
 .page-header {
