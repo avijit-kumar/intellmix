@@ -61,65 +61,50 @@
         <input type="text" class="form-control search-user-input" id="searchUser" placeholder="Search user">
       </div>
     </form>
-    <div class="manage-user__table">
+    <div class="manage__user__table">
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Username</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Role</th>
-            <th scope="col">Status</th>
-            <th></th>
+            <th scope="col" class="name__col">Full Name</th>            
+            <th scope="col" class="username_col">Username</th>            
+            <th scope="col" class="role__col">Role</th>
+            <th scope="col" class="status__col">Status</th>
+            <th scope="col" class="edit__col"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>01</td>
-            <td>Katie</td>
-            <td>Duncan</td>
-            <td> 
+            <td class="name__col">Katie Duncan</td>
+            <td class="username_col"> 
               <a href="mailto:katieduncan@gmail.com">katieduncan@gmail.com</a>
             </td>
-            <td>
-              7123456789
-            </td>
-            <td>Analyst</td>
-            <td>
-              <div class="custom-control custom-switch manage-user__status">
+            <td class="role__col">Analyst, Admin</td>
+            <td class="status__col">
+              <div class="custom-control custom-switch manage__user__status">
                 <input type="checkbox" class="custom-control-input" id="user-status-1" checked>
                 <label class="custom-control-label" for="user-status-1"></label>
               </div>
             </td>
-            <td>
-              <div class="d-flex justify-content-end align-items-center manage-user__action">
+            <td class="edit__col">
+              <div class="d-flex justify-content-end align-items-center manage__user__action">
                 <i class="far fa-edit mr-2 manage-user__edit"></i>
               </div>
             </td>
           </tr>
-          <tr class="disabled">
-              <td>01</td>
-              <td>Katie</td>
-              <td>Duncan</td>
-              <td> 
-                <a href="mailto:katieduncan@gmail.com">katieduncan@gmail.com</a>
+          <tr>
+              <td class="name__col">Pablo Diego José Francisco de Picasso</td>
+              <td class="username_col"> 
+                <a href="mailto:katieduncan@gmail.com">PabloDiegoJoséFranciscodePicasso@gmail.com</a>
               </td>
-              <td>
-                7123456789
-              </td>
-              <td>Executive</td>
-              <td>
-                <div class="custom-control custom-switch manage-user__status">
-                  <input type="checkbox" class="custom-control-input" id="user-status-2" >
-                  <label class="custom-control-label" for="user-status-2"></label>
+              <td class="role__col">Analyst, Admin, Executive, Manager, Sales, Finance</td>
+              <td class="status__col">
+                <div class="custom-control custom-switch manage__user__status">
+                  <input type="checkbox" class="custom-control-input" id="user-status-1" checked>
+                  <label class="custom-control-label" for="user-status-1"></label>
                 </div>
               </td>
-              <td>
-                <!-- show this badge only if the user is disabled -->
-                <span class="badge badge-secondary disabled-badge" >Disabled</span>
-                <div class="d-flex justify-content-end align-items-center manage-user__action">
+              <td class="edit__col">
+                <div class="d-flex justify-content-end align-items-center manage__user__action">
                   <i class="far fa-edit mr-2 manage-user__edit"></i>
                 </div>
               </td>

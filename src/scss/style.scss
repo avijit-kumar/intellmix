@@ -134,18 +134,28 @@ header {
   }
 }
 
-.manage-user__table {
+.manage__user__table {
   td {
     line-height: 30px;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
+    vertical-align: middle;
+    width: calc((100% - 150px) / 5);
     p {
       margin: 0;
     }
+    &.status__col {
+      width: 100px;
+    }
+    &.edit__col {
+      width: 50px;
+    }
   }
-
-  .manage-user__action {
+  .manage__user__status {
+    display: flex;
+  }
+  .manage__user__action {
     height: 30px;
   }
 }
@@ -202,4 +212,8 @@ tr {
       display: block;
     }
   }
+}
+
+.modal-footer .btn {
+  min-width: 100px;
 }

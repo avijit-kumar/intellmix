@@ -1,10 +1,12 @@
 $primary: #F7931E;
 $body-color: #333;
 
-.manage__create__content {
-  padding: 30px;
-  overflow: scroll;
-  height: calc(100vh - 172px);
+.manage__user {
+  &> .tab-pane.card {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 .manage__form {
@@ -257,6 +259,7 @@ $body-color: #333;
     label {
       cursor: pointer;
       margin-right: 30px;
+      margin-left: 25px;
 
       &:before {
         font-family: "Font Awesome 5 Free";
@@ -271,6 +274,7 @@ $body-color: #333;
         justify-content: center;
         display: inline-flex;
         margin-right: 9px;
+        margin-left: -25px;
         border-radius: 4px;
         transition: all .3s;
       }

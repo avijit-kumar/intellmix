@@ -1,7 +1,7 @@
-.manage__create__content {
-    padding: 30px;
-    overflow: scroll;
-    height: calc(100vh - 172px);
+.manage__user > .tab-pane.card {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .manage__form {
@@ -298,6 +298,7 @@
 .manage__form__checkbox label {
     cursor: pointer;
     margin-right: 30px;
+    margin-left: 25px;
 }
 
 .manage__form__checkbox label:before {
@@ -317,6 +318,7 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
     margin-right: 9px;
+    margin-left: -25px;
     border-radius: 4px;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -1001,18 +1003,34 @@ header .navbar {
     }
 }
 
-.manage-user__table td {
+.manage__user__table td {
     line-height: 30px;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
+    vertical-align: middle;
+    width: calc((100% - 150px) / 5);
 }
 
-.manage-user__table td p {
+.manage__user__table td p {
     margin: 0;
 }
 
-.manage-user__table .manage-user__action {
+.manage__user__table td.status__col {
+    width: 100px;
+}
+
+.manage__user__table td.edit__col {
+    width: 50px;
+}
+
+.manage__user__table .manage__user__status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.manage__user__table .manage__user__action {
     height: 30px;
 }
 
@@ -1062,4 +1080,8 @@ tr.disabled td {
 
 tr.disabled .disabled-badge {
     display: block;
+}
+
+.modal-footer .btn {
+    min-width: 100px;
 }
