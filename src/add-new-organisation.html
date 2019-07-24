@@ -38,14 +38,14 @@
     </div>
     <ul class="nav nav-tabs manage__org__nav" id="orgsForm" role="tablist">
       <li class="nav-item">
-        <a class="nav-link" id="orgsBasic-tab" data-toggle="tab" href="#orgsBasic-content" role="tab"
+        <a class="nav-link active" id="orgsBasic-tab" data-toggle="tab" href="#orgsBasic-content" role="tab"
           aria-controls="orgsBasic-content" aria-selected="true">
           <span class="nav-steps-no">1</span>
           Basic Details
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" id="orgsDataTypes-tab" data-toggle="tab" href="#orgsDataTypes-content" role="tab"
+        <a class="nav-link" id="orgsDataTypes-tab" data-toggle="tab" href="#orgsDataTypes-content" role="tab"
           aria-controls="orgsDataTypes-content" aria-selected="false">
           <span class="nav-steps-no">2</span>
           Data Types
@@ -60,7 +60,7 @@
       </li>
     </ul>
     <div class="tab-content manage__org__content pb-100" id="orgsFormContent">
-      <div class="tab-pane fade card" id="orgsBasic-content" role="tabpanel" aria-labelledby="orgsBasic-tab">
+      <div class="tab-pane fade card show active" id="orgsBasic-content" role="tabpanel" aria-labelledby="orgsBasic-tab">
         <div class="manage__organisation card-body">
           <div class="manage__org__form">
             <h4 class="mb-4">Organisation Details:</h4>
@@ -93,7 +93,7 @@
               </li>
               <li class="list-group-item dt__column__item">
                 <input type="text" class="col-sm-4 form-control" id="orgsAdminName" placeholder="Enter admin name"
-                  value="Admin #1">
+                  value="Admin">
                 <input type="email" class="col-sm-4 form-control ml-3" id="orgsAdminEmail"
                   placeholder="Enter email address" value="admin@intellmix.com">
                 <span class="manage__form__item__action">
@@ -122,7 +122,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane fade card show active" id="orgsDataTypes-content" role="tabpanel"
+      <div class="tab-pane fade card" id="orgsDataTypes-content" role="tabpanel"
         aria-labelledby="orgsDataTypes-tab">
         <div class="manage__organisation card-body">
           <div class="manage__org__form">
@@ -426,7 +426,7 @@
                         <thead>
                           <tr>
                             <th>
-                              <p>Data Types</p>
+                              <p>Select Data Types to add for this brand</p>
                             </th>
                             <th>
                               <div class="manage__form__checkbox">
@@ -538,7 +538,7 @@
                         <thead>
                           <tr>
                             <th>
-                              <p>Data Types</p>
+                              <p>Select Data Types to add for this brand</p>
                             </th>
                             <th>
                               <div class="manage__form__checkbox">
