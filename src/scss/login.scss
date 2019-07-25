@@ -7,6 +7,7 @@ $primary-hover: #B86300;
   min-height: 100vh;
   text-align: center;
   padding: 20px 0;
+  font-size: 14px;
 
   &__content {
     text-align: center;
@@ -35,57 +36,28 @@ $primary-hover: #B86300;
 
       h1 {
         font-size: 30px;
-        font-weight: normal;
-        margin-bottom: 55px;
+        font-weight: normal;  
       }
+    }
+    .form-control {
+      font-size: 14px;
     }
 
     &__input {
-      width: 100%;
-      position: relative;
+      // width: 100%;
+      // position: relative;
       margin-bottom: 25px;
 
       input {
-        width: 100%;
-        border: 0;
-        border-bottom: 1px solid #cecece;
-        font-size: 14px;
-        font-weight: 400;
-        background: none;
-        line-height: 30px;
         &:valid,
         &:focus {
           outline: none;
-
-          &+label {
-            bottom: 100%;
-            color: #777;
-            font-size: 12px;
-          }
         }
-      }
-
-      label {
-        font-size: 14px;
-        font-weight: 400;
-        color: #888;
-        position: absolute;
-        left: 0;
-        bottom: 10px;
-        margin-bottom: 0;
-        transition: all .3s;
-        line-height: 20px;
-
-        &:before {
-          content: '';
-          position: absolute;
-          right: -10px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 6px;
-          height: 6px;
-          background-color: #fc3d39;
-          border-radius: 100%;
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: $primary;
+          box-shadow: none;
         }
       }
     }
@@ -138,14 +110,10 @@ $primary-hover: #B86300;
         }
       }
 
-      input[type="submit"] {
+      .login-btn {
         position: relative;
-        left: -50%;
-        transform: translate(50%);
-        font-size: 14px;
-        padding: 13px 30px;
-        border-radius: 25px;
-        display: inline-flex;
+        
+        min-width: 120px
       }
 
       p {

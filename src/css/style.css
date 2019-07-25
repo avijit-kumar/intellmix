@@ -23,7 +23,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .manage__form__title h3 {
@@ -78,61 +78,18 @@
     margin-right: 5px;
 }
 
-.manage__form__input {
-    width: 100%;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.manage__form__input input,
-    .manage__form__input textarea {
-    width: 50%;
-    border: 0;
-    border-bottom: 1px solid #cecece;
+.manage__form .form-control {
     font-size: 14px;
-    font-weight: 400;
-    background: none;
-    line-height: 33px;
 }
 
-.manage__form__input input:valid, .manage__form__input input:focus,
-      .manage__form__input textarea:valid,
-      .manage__form__input textarea:focus {
+.manage__form .form-control:valid, .manage__form .form-control:focus {
     outline: none;
 }
 
-.manage__form__input input:valid + label, .manage__form__input input:focus + label,
-        .manage__form__input textarea:valid + label,
-        .manage__form__input textarea:focus + label {
-    bottom: 100%;
-    color: #777;
-    font-size: 12px;
-}
-
-.manage__form__input label {
-    font-size: 14px;
-    font-weight: 400;
-    color: #888;
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    margin-bottom: 0;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    line-height: 20px;
-}
-
-.manage__form__input label:before {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: #fc3d39;
-    border-radius: 100%;
+.manage__form .form-control:hover, .manage__form .form-control:focus, .manage__form .form-control:active {
+    border-color: #F7931E;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .manage__form__radio {
@@ -188,7 +145,6 @@
     font-size: 14px;
     font-weight: 400;
     background: none;
-    border-radius: 0;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -198,10 +154,7 @@
 
 .manage__form__select select:not(.multiple),
     .manage__form__select_dd > .btn-light:not(.multiple) {
-    line-height: 35px;
-    height: 35px;
-    border: 0;
-    border-bottom: 1px solid #cecece;
+    border: 1px solid #cecece;
     background-image: url("./../img/chevron-down.svg");
     background-position: right 15px center;
     background-repeat: no-repeat;
@@ -228,6 +181,15 @@
 .manage__form__select select.multiple option,
       .manage__form__select_dd > .btn-light.multiple option {
     padding: 10px;
+}
+
+.manage__form__select select:hover, .manage__form__select select:focus, .manage__form__select select:active,
+    .manage__form__select_dd > .btn-light:hover,
+    .manage__form__select_dd > .btn-light:focus,
+    .manage__form__select_dd > .btn-light:active {
+    border-color: #F7931E !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .manage__form__table {
@@ -371,7 +333,6 @@
 .manage__form__select_dd .btn-light {
     width: 100% !important;
     outline: none;
-    padding: 0;
 }
 
 .manage__form__select_dd .btn-light .filter-option {
@@ -393,8 +354,8 @@
     box-shadow: none !important;
 }
 
-.manage__form__select_dd .show > .btn-light.dropdown-toggle {
-    background-color: transparent !important;
+.manage__form__select_dd.show > .btn-light.dropdown-toggle {
+    border-color: #F7931E;
 }
 
 .manage__form__select_dd li:focus {
@@ -444,6 +405,7 @@
     min-height: 100vh;
     text-align: center;
     padding: 20px 0;
+    font-size: 14px;
 }
 
 .login__content {
@@ -479,59 +441,24 @@
 .login__form__block h1 {
     font-size: 30px;
     font-weight: normal;
-    margin-bottom: 55px;
+}
+
+.login__form .form-control {
+    font-size: 14px;
 }
 
 .login__form__input {
-    width: 100%;
-    position: relative;
     margin-bottom: 25px;
-}
-
-.login__form__input input {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #cecece;
-    font-size: 14px;
-    font-weight: 400;
-    background: none;
-    line-height: 30px;
 }
 
 .login__form__input input:valid, .login__form__input input:focus {
     outline: none;
 }
 
-.login__form__input input:valid + label, .login__form__input input:focus + label {
-    bottom: 100%;
-    color: #777;
-    font-size: 12px;
-}
-
-.login__form__input label {
-    font-size: 14px;
-    font-weight: 400;
-    color: #888;
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    margin-bottom: 0;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    line-height: 20px;
-}
-
-.login__form__input label:before {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: #fc3d39;
-    border-radius: 100%;
+.login__form__input input:hover, .login__form__input input:focus, .login__form__input input:active {
+    border-color: #F7931E;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .login__form__checkbox {
@@ -592,17 +519,9 @@
     border: 1px solid #cecece;
 }
 
-.login__form input[type="submit"] {
+.login__form .login-btn {
     position: relative;
-    left: -50%;
-    -webkit-transform: translate(50%);
-    transform: translate(50%);
-    font-size: 14px;
-    padding: 13px 30px;
-    border-radius: 25px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    min-width: 120px;
 }
 
 .login__form p {

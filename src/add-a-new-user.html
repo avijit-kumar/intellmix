@@ -69,31 +69,30 @@
         <div class="manage__form card-body">
           <div class="manage__form__title">
             <h3>User Details</h3>
-            <p>Mandatory Fields</p>
           </div>
-          <div class="manage__form__input">
-            <input type="text" id="first-name" name="first-name" required="">
-            <label for="first-name">First Name</label>
+          <div class="form-group row">
+            <label for="first-name" class="col-sm-2 col-form-label">First Name:</label>
+            <input type="text" class="col-sm-4 form-control" id="first-name" placeholder="Enter first name">
           </div>
-          <div class="manage__form__input">
-            <input type="text" id="last-name" name="last-name" required="">
-            <label for="last-name">Last Name</label>
+          <div class="form-group row">
+            <label for="last-name" class="col-sm-2 col-form-label">Last Name:</label>
+            <input type="text" class="col-sm-4 form-control" id="last-name" placeholder="Enter last name">
           </div>
-          <div class="manage__form__input">
-            <input type="email" id="email" name="email" required="">
-            <label for="email">Email</label>
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <input type="email" class="col-sm-4 form-control" id="email" placeholder="Enter email address">
           </div>
-          <div class="manage__form__input">
-            <input type="tel" id="phone" name="phone" required="">
-            <label for="phone">Phone</label>
+          <div class="form-group row">
+            <label for="phone" class="col-sm-2 col-form-label">phone:</label>
+            <input type="text" class="col-sm-4 form-control" id="phone" placeholder="Enter phone">
           </div>
 
-          <div class="d-flex w-100">
-            <div class="manage__form__select w-50">
+
+          <div class="row mt-5">
+            <div class="manage__form__select col-sm-6">
               <h4>Select Brand</h4>
-
-              <select id="userBrand" class="selectpicker manage__form__select_dd mb-4" multiple title="Select Brands"
-                data-live-search="true" data-size="5">
+              <select id="userBrand" class="selectpicker manage__form__select_dd form-control" multiple
+                title="Select Brands" data-live-search="true" data-size="5">
                 <option>Brand 1</option>
                 <option>Brand 2</option>
                 <option>Brand 3</option>
@@ -106,12 +105,15 @@
                 <option>Brand 10</option>
               </select>
             </div>
-            <div class="manage__form__selected w-50 pl-4">
+            <div class="manage__form__selected col-sm-6 ">
               <h4>Selected Brands</h4>
               <ul id="selectedUserBrands" class="list-group manage__form__selected_list">
                 <!-- <li class="list-group-item">Brand 1</li> -->
               </ul>
             </div>
+          </div>
+          <div class="manage__org__form mt-5 m-0 d-flex justify-content-end">
+            <button class="btn btn-primary save-btn">Save</button>
           </div>
         </div>
       </div>
@@ -121,24 +123,18 @@
             <h3>Select Role</h3>
           </div>
 
-          <!-- <div class="d-flex align-items-center">
-              <input class="checkbox__role" type="checkbox" name="role" id="role-1">
-              <label for="role-1">Analyst</label>
-              <input class="checkbox__role" type="checkbox" name="role" id="role-2">
-              <label for="role-2">Admin</label>
-              <input class="checkbox__role" type="checkbox" name="role" id="role-3">
-              <label for="role-3">Executive</label>
-            </div> -->
-          <div class="w-50 mb-5">
-            <select id="userRole" class="selectpicker manage__form__select_dd" multiple title="Select Role"
-              data-live-search="true" data-size="5">
-              <option value="customRole">Add Custom role</option>
-              <option value="Analyst">Analyst</option>
-              <option value="Admin" selected>Admin</option>
-              <option value="Executive">Executive</option>
-              <option value="Finance">Finance</option>
-              <option value="Sales">Sales</option>
-            </select>
+          <div class="row">
+            <div class="col-sm-6 mb-5">
+              <select id="userRole" class="selectpicker manage__form__select_dd" multiple title="Select Role"
+                data-live-search="true" data-size="5">
+                <option value="customRole">Add Custom role</option>
+                <option value="Analyst">Analyst</option>
+                <option value="Admin" selected>Admin</option>
+                <option value="Executive">Executive</option>
+                <option value="Finance">Finance</option>
+                <option value="Sales">Sales</option>
+              </select>
+            </div>
           </div>
 
           <div class="manage__form__title">
@@ -243,6 +239,10 @@
               </tr>
             </tbody>
           </table>
+
+          <div class="manage__org__form mt-5 m-0 d-flex justify-content-end">
+            <button class="btn btn-primary save-btn">Save</button>
+          </div>
         </div>
       </div>
       <div class="tab-pane fade card" id="userDashboard-content" role="tabpanel" aria-labelledby="userDashboard-tab">
@@ -250,8 +250,8 @@
           <div class="manage__form__title">
             <h3>Dashboards & Data Types </h3>
           </div>
-          <div class="d-flex w-100 pb-5">
-            <div class="manage__form__select w-50">
+          <div class="row mb-5">
+            <div class="manage__form__select col-sm-6">
               <h4>Select Dashboard</h4>
               <select id="userDashboard" class="selectpicker manage__form__select_dd" multiple title="Select Dashboards"
                 data-actions-box="true" data-size="5">
@@ -263,7 +263,7 @@
                 <option>Dashboard 6</option>
               </select>
             </div>
-            <div class="manage__form__selected w-50 pl-4">
+            <div class="manage__form__selected col-sm-6">
               <h4>Selected Dashboard</h4>
               <ul id="selectedUserDashboards" class="list-group manage__form__selected_list">
                 <!-- <li class="list-group-item">Dashboard 1</li> -->
@@ -274,15 +274,17 @@
           <div class="manage__form__title">
             <h3>Select Default KPI's</h3>
           </div>
-          <div class="manage__form__select">
-            <h4>Select Channel</h4>
+          <div class="row">
+            <div class="manage__form__select col-sm-6">
+              <h4>Select Channel</h4>
 
-            <select class="manage__form__select_channel mb-4 w-50" id="kpiChannel" required>
-              <option value="" disabled selected>Select Channel</option>
-              <option value="channel1">Channel 1</option>
-              <option value="channel2">Channel 2</option>
-              <option value="channel3">Channel 3</option>
-            </select>
+              <select class="manage__form__select_channel form-control mb-4 " id="kpiChannel" required>
+                <option value="" disabled selected>Select Channel</option>
+                <option value="channel1">Channel 1</option>
+                <option value="channel2">Channel 2</option>
+                <option value="channel3">Channel 3</option>
+              </select>
+            </div>
           </div>
 
           <div class="manage__form__checkbox manage__form__kpi_checkbox">
@@ -304,13 +306,16 @@
               <label for="kpi-7">ROI</label>
             </div>
           </div>
+
+          <div class="manage__org__form mt-5 m-0 d-flex justify-content-end">
+            <button class="btn btn-primary save-btn">Save</button>
+          </div>
         </div>
       </div>
     </div>
     <div class="manage__form__action_btn">
       <div class="container d-flex justify-content-end">
-        <button class="btn btn-primary save-btn mr-4">Save</button>
-        <button class="btn btn-outline-secondary cancel-btn">Cancel</button>
+        <button class="btn btn-primary publish-btn" disabled>Publish</button>
       </div>
     </div>
   </div>
