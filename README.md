@@ -1,5 +1,5 @@
-# CPG
-CPG
+# Intellmix
+Intellmix - powered by TEG
 A light package for compiling Sass and running a dev server 
 
 ### Version
