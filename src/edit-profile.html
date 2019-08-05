@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>CPG by TEG</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header class="navbar navbar-expand navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+        <img src="img/intell-mix-logo.png" alt="intell mix logo">
+      </a>
+    </div>
+  </header>
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="manage-user-list.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <i class="fas fa-chevron-right pr-2"></i>Edit Profile</li>
+        </li>
+      </ol>
+    </nav>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="page-header">
+        <h3>Organisation Name</h3>
+        <p>Edit profile</p>
+      </div>
+    </div>
+    <ul class="nav nav-tabs manage__org__nav" id="orgsForm" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="profileDetails-tab" data-toggle="tab" href="#profileDetails-content" role="tab"
+          aria-controls="profileDetails-content" aria-selected="true">
+          <span class="nav-steps-no">1</span>
+          User Details
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profilePassword-tab" data-toggle="tab" href="#profilePassword-content" role="tab"
+          aria-controls="profilePassword-content" aria-selected="false">
+          <span class="nav-steps-no">2</span>
+          Change Password
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profileNotification-tab" data-toggle="tab" href="#profileNotification-content"
+          role="tab" aria-controls="profileNotification-content" aria-selected="false">
+          <span class="nav-steps-no">3</span>
+          Notification Settings
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content manage__user pb-100" id="profileFormContent">
+      <div class="tab-pane fade show active card" id="profileDetails-content" role="tabpanel"
+        aria-labelledby="profileDetails-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>User Details</h3>
+          </div>
+          <div class="mb-3 row">
+            <p class="col-sm-3 m-0">Username:</p>
+            <p class="col-sm-9 m-0">arun@123</p>
+          </div>
+          <div class="mb-3 row">
+            <p class="col-sm-3 m-0">Email:</p>
+            <p class="col-sm-9 m-0">arun@teganalytics.com</p>
+          </div>
+          <div class="mb-3 row">
+            <p class="col-sm-3 m-0">Role:</p>
+            <p class="col-sm-9 m-0">Analyst, Executive</p>
+          </div>
+          <div class="mb-3 row">
+            <p class="col-sm-3 m-0">Priviledges Assigned:</p>
+            <p class="col-sm-9 m-0">File Upload, DB Approval, Publish</p>
+          </div>
+
+          <div class="manage__form__title mt-5">
+            <h3>Process Actions:</h3>
+          </div>
+
+          <ul id="profileProcessAction" class="list-group profile__pa col-md-8">
+            <li class="list-group-item  d-flex profile__pa__item profile__pa__header bg-dark text-light">
+              <div class="col-sm-4">Column</div>
+              <div class="col-sm-8">Data Type</div>
+            </li>
+            <li class="list-group-item d-flex profile__pa__item">
+              <div class="col-sm-4">File 1</div>
+              <div class="col-sm-8">Upload, Approval, ETL</div>
+            </li>
+            <li class="list-group-item d-flex profile__pa__item">
+              <div class="col-sm-4">File 2</div>
+              <div class="col-sm-8">Upload, ETL</div>
+            </li>
+            <li class="list-group-item d-flex profile__pa__item">
+              <div class="col-sm-4">File 3</div>
+              <div class="col-sm-8">ETL</div>
+            </li>
+            <li class="list-group-item d-flex profile__pa__item">
+              <div class="col-sm-4">File 4</div>
+              <div class="col-sm-8">Upload</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane fade card" id="profilePassword-content" role="tabpanel"
+        aria-labelledby="profilePassword-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>Change Password:</h3>
+          </div>
+          <div class="form-group row">
+            <label for="first-name" class="col-sm-2 col-form-label">First Name:</label>
+            <input type="text" class="col-sm-4 form-control" id="first-name" placeholder="Enter first name">
+          </div>
+          <div class="form-group row">
+            <label for="last-name" class="col-sm-2 col-form-label">Last Name:</label>
+            <input type="text" class="col-sm-4 form-control" id="last-name" placeholder="Enter last name">
+          </div>
+
+          <div class="d-flex justify-content-end col-sm-6 p-0">
+            <button class="btn btn-primary change-btn col-sm-4">Change</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade card" id="profileNotification-content" role="tabpanel"
+        aria-labelledby="profileNotification-tab">
+        <div class="manage__form card-body">
+          <div class="manage__form__title">
+            <h3>Notification Settings:</h3>
+          </div>
+          <div class="row">
+            <div class="manage__form__checkbox manage__form__email__notification col-sm-3">
+              <h4>Receive Emails For:</h4>
+              <div class="d-flex flex-column">
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="upload" id="email-ns-1" checked>
+                  <label for="email-ns-1">Upload</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="approval" id="email-ns-2">
+                  <label for="email-ns-2">Approval</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="publish" id="email-ns-3">
+                  <label for="email-ns-3">Publish</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="etl" id="email-ns-4">
+                  <label for="email-ns-4">ETL</label>
+                </div>
+              </div>
+            </div>
+            <div class="manage__form__checkbox manage__form__push__notification col-sm-3">
+              <h4>Get Push Notifications for:</h4>
+              <div class="">
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="upload" id="push-ns-1" checked>
+                  <label for="push-ns-1">Upload</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="approval" id="push-ns-2">
+                  <label for="push-ns-2">Approval</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="publish" id="push-ns-3">
+                  <label for="push-ns-3">Publish</label>
+                </div>
+                <div>
+                  <input class="checkbox__ns" type="checkbox" name="etl" id="push-ns-4">
+                  <label for="push-ns-4">ETL</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="manage__org__form mt-2 mb-0 p-0 d-flex">
+            <button class="btn btn-primary save-btn col-sm-2">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="manage__form__action_btn">
+      <div class="container d-flex justify-content-end">
+        <button class="btn btn-primary publish-btn" disabled>Publish</button>
+      </div>
+    </div> -->
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+</body>
+
+</html>
