@@ -257,6 +257,10 @@
     display: none;
 }
 
+.manage__form__checkbox.disabled label {
+    cursor: not-allowed;
+}
+
 .manage__form__checkbox label {
     cursor: pointer;
     margin-right: 30px;
@@ -1028,6 +1032,24 @@ header .navbar {
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
+    background-color: #f9ab4f;
+    border-color: #f9ab4f;
+}
+
+.btn-outline-primary {
+    color: #F7931E;
+    border-color: #F7931E;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+    background-color: #F7931E;
+    border-color: #F7931E;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
     background-color: #f9ab4f;
     border-color: #f9ab4f;
 }

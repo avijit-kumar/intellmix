@@ -59,9 +59,17 @@
           Brands
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="orgsAdmins-tab" data-toggle="tab" href="#orgsAdmins-content" role="tab"
+          aria-controls="orgsAdmins-content" aria-selected="false">
+          <span class="nav-steps-no">4</span>
+          Admin
+        </a>
+      </li>
     </ul>
     <div class="tab-content manage__org__content pb-100" id="orgsFormContent">
-      <div class="tab-pane fade card show active" id="orgsBasic-content" role="tabpanel" aria-labelledby="orgsBasic-tab">
+      <div class="tab-pane fade card show active" id="orgsBasic-content" role="tabpanel"
+        aria-labelledby="orgsBasic-tab">
         <div class="manage__organisation card-body">
           <div class="manage__org__form">
             <h4 class="mb-4">Organisation Details:</h4>
@@ -84,47 +92,23 @@
                 <option>Yearly</option>
               </select>
             </div>
-          </div>
-          <div class="manage__org__form">
-            <h4 class="mb-4">Admin Details:</h4>
-            <div class="row mt-5">
-              <div class="manage__form__select col-sm-6">
-                <h4>Select Brand</h4>
-                <select id="adminList" class="selectpicker manage__form__select_dd form-control" multiple
-                  title="Select Admins" data-live-search="true" data-size="5">
-                  <option>Avijit Kumar</option>
-                  <option>Arvind Prasad</option>
-                  <option>Arun Prem</option>
-                  <option>Ujjwal</option>
-                  <option>Avijit Kumar</option>
-                  <option>Arvind Prasad</option>
-                  <option>Arun Prem</option>
-                  <option>Ujjwal</option>
-                  <option>Avijit Kumar</option>
-                  <option>Arvind Prasad</option>
-                  <option>Arun Prem</option>
-                  <option>Ujjwal</option>
-                  <option>Avijit Kumar</option>
-                  <option>Arvind Prasad</option>
-                  <option>Arun Prem</option>
-                  <option>Ujjwal</option>
-                </select>
-              </div>
-              <div class="manage__form__selected col-sm-6">
-                <h4>Selected Admins</h4>
-                <ul id="selectedAdminList" class="list-group manage__form__selected_list">
-                  <!-- <li class="list-group-item">Brand 1</li> -->
-                </ul>
-              </div>
+            <div class="form-group row">
+              <label for="orgsStatus" class="col-sm-4 col-form-label">Organisation State:</label>
+              <select id="orgsStatus" class="col-sm-4 form-control">
+                <option>Draft</option>
+                <option>Approved</option>
+                <option>Publish</option>
+                <option>Unpublish</option>
+              </select>
             </div>
           </div>
+
           <div class="manage__org__form m-0 d-flex justify-content-end">
             <button class="btn btn-primary save-btn">Save</button>
           </div>
         </div>
       </div>
-      <div class="tab-pane fade card" id="orgsDataTypes-content" role="tabpanel"
-        aria-labelledby="orgsDataTypes-tab">
+      <div class="tab-pane fade card" id="orgsDataTypes-content" role="tabpanel" aria-labelledby="orgsDataTypes-tab">
         <div class="manage__organisation card-body">
           <div class="manage__org__form">
             <h4 class="mb-4">Data Types:</h4>
@@ -611,7 +595,7 @@
                           </tr>
                         </tbody>
                       </table>
-                      
+
                     </div>
                     <div class="manage__org__form m-0 d-flex justify-content-end">
                       <button class="btn btn-primary save-btn">Save</button>
@@ -630,20 +614,60 @@
           </div>
         </div>
       </div>
+      <div class="tab-pane fade card" id="orgsAdmins-content" role="tabpanel" aria-labelledby="orgsAdmins-tab">
+        <div class="manage__create__new__organisation card-body">
+          <div class="manage__org__form">
+              <div class="d-flex mb-4 justify-content-between">
+            <h4 class="m-0">Admin:</h4>
+            
+              <a href="add-a-new-user.html" class="btn btn-outline-primary create-btn">+ CREATE ADMIN</a>
+            </div>
+            <div class="row">
+              <div class="manage__form__select col-sm-6">
+                <h4>Select Admins</h4>
+                <select id="adminList" class="selectpicker manage__form__select_dd form-control" multiple
+                  title="Select Admins" data-live-search="true" data-size="5">
+                  <option>Avijit Kumar</option>
+                  <option>Arvind Prasad</option>
+                  <option>Arun Prem</option>
+                  <option>Ujjwal</option>
+                  <option>Avijit Kumar</option>
+                  <option>Arvind Prasad</option>
+                  <option>Arun Prem</option>
+                  <option>Ujjwal</option>
+                  <option>Avijit Kumar</option>
+                  <option>Arvind Prasad</option>
+                  <option>Arun Prem</option>
+                  <option>Ujjwal</option>
+                  <option>Avijit Kumar</option>
+                  <option>Arvind Prasad</option>
+                  <option>Arun Prem</option>
+                  <option>Ujjwal</option>
+                </select>
+              </div>
+              <div class="manage__form__selected col-sm-6">
+                <h4>Selected Admins</h4>
+                <ul id="selectedAdminList" class="list-group manage__form__selected_list">
+                  <!-- <li class="list-group-item">Brand 1</li> -->
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="manage__org__form m-0 d-flex justify-content-end">
+            <button class="btn btn-primary save-btn">Save</button>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
   <div class="manage__form__action_btn">
     <div class="container d-flex justify-content-between">
       <button class="btn btn-outline-secondary deactivate-btn mr-4" disabled>Deactivate Organisation</button>
-      <div class="page-action">
-      <select id="subsPeriod" class="form-control float-left status-dropdown">
-        <option>Draft</option>
-        <option>Approved</option>
-        <option>Publish</option>
-        <option>Unpublish</option>
-      </select>
-      <button class="btn btn-primary publish-btn float-left" disabled>Save</button>
-      </div>
+      <!-- <div class="page-action">
+        <button class="btn btn-primary publish-btn float-left" disabled>Save</button>
+      </div> -->
     </div>
   </div>
 
@@ -715,7 +739,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <script>
     $(document).ready(function () {
-    function populateSelectedItems(select, selectedParent) {
+      function populateSelectedItems(select, selectedParent) {
         $(select).on('changed.bs.select', function () {
           var values = $(this).val();
           var selectedList = [];
@@ -727,28 +751,28 @@
       }
       // populateSelectedItems('#userDashboard', '#selectedUserDashboards');
       populateSelectedItems('#adminList', '#selectedAdminList');
-    
-    $('#addBrandBtn').on('click', function () {
-      var brandName = $('#orgsBrandName').val();
-      if (brandName.length) {
-        $('#org-brands').append(`<li class="item">
+
+      $('#addBrandBtn').on('click', function () {
+        var brandName = $('#orgsBrandName').val();
+        if (brandName.length) {
+          $('#org-brands').append(`<li class="item">
             <input type="text" class="col-sm-4 form-control item-name" placeholder="Enter brand name" value="${brandName}" disabled>
             <button class="btn edit-item">edit</button>
             <button class="btn remove-item">remove</button>
           </li>`);
-      }
-    });
+        }
+      });
 
-    $('#org-brands .item .edit-item').on('click', function () {
-      $(this).parent('.item').attr(e);
-    });
-    /* column sorting */
-    var columns = document.querySelector('#dataTypeColumns');
-    Sortable.create(columns, {
-      dragClass: "sortable-drag",
-      handle: '.handle', // handle's class
-      animation: 150
-    });
+      $('#org-brands .item .edit-item').on('click', function () {
+        $(this).parent('.item').attr(e);
+      });
+      /* column sorting */
+      var columns = document.querySelector('#dataTypeColumns');
+      Sortable.create(columns, {
+        dragClass: "sortable-drag",
+        handle: '.handle', // handle's class
+        animation: 150
+      });
     });
   </script>
 
