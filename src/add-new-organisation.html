@@ -635,7 +635,15 @@
   <div class="manage__form__action_btn">
     <div class="container d-flex justify-content-between">
       <button class="btn btn-outline-secondary deactivate-btn mr-4" disabled>Deactivate Organisation</button>
-      <button class="btn btn-primary publish-btn" disabled>Publish</button>
+      <div class="page-action">
+      <select id="subsPeriod" class="form-control float-left status-dropdown">
+        <option>Draft</option>
+        <option>Approved</option>
+        <option>Publish</option>
+        <option>Unpublish</option>
+      </select>
+      <button class="btn btn-primary publish-btn float-left" disabled>Save</button>
+      </div>
     </div>
   </div>
 

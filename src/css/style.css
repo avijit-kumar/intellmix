@@ -822,6 +822,11 @@
     padding: 20px;
 }
 
+.status-dropdown {
+    width: auto;
+    margin-right: 15px;
+}
+
 .content {
     padding-top: 55px;
 }
