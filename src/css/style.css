@@ -843,7 +843,7 @@
     top: 55px;
     bottom: 0;
     left: 0;
-    z-index: 1029;
+    z-index: 1030;
     padding-top: 30px;
     padding-bottom: 30px;
     -webkit-transition: all ease-in .2s;
@@ -884,7 +884,7 @@
     align-content: center;
 }
 
-.sidebar__toggle__btn:hover, .sidebar__toggle__btn.toggle {
+.sidebar__toggle__btn:hover, .sidebar__toggle__btn:active, .sidebar__toggle__btn.toggle {
     background-color: #B6BEC7;
     outline: 0;
     -webkit-box-shadow: none;
@@ -979,19 +979,6 @@ body {
 body {
     background-color: #f2f2f2;
     color: #333;
-}
-
-.container {
-    padding-left: 250px;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-right: 30px;
-    -webkit-transition: all ease-in .2s;
-    transition: all ease-in .2s;
-}
-
-.container.expand {
-    padding-left: 100px !important;
 }
 
 html,
@@ -1110,7 +1097,7 @@ header .navbar {
 }
 
 .manage__user__table td {
-    line-height: normal;
+    line-height: 30px;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
     position: relative;

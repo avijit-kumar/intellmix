@@ -1,7 +1,6 @@
 $body-bg: #f2f2f2;
 $body-color: #333;
-$font-family-base: 'Barlow',
-sans-serif;
+$font-family-base: 'Barlow', sans-serif;
 $primary: #F7931E;
 $primary-hover: #B86300;
 $secondary: #4B4A4C;
@@ -27,239 +26,216 @@ $link-color: #0076FF;
 
 html,
 body {
-    height: 100%;
-    font-family: $font-family-base;
+  height: 100%;
+  font-family: $font-family-base;
 }
 
 body {
-    background-color: $body-bg;
-    color: $body-color;
-}
-
-.container {
-    padding-left: 250px;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-right: 30px;
-    transition: all ease-in .2s;
-    &.expand {
-      padding-left: 100px !important;
-    }
+  background-color: $body-bg;
+  color: $body-color;
 }
 
 
 html,
 body .table {
-    color: $body-color;
+  color: $body-color;
 }
 
 a {
-    color: $link-color;
+  color: $link-color;
 
-    &:hover,
-    &:focus {
-        color: darken($link-color, 10%);
-    }
+  &:hover,
+  &:focus {
+    color: darken($link-color, 10%);
+  }
 }
 
 .content-wrapper {
-    height: calc(100% - 50px);
+  height: calc(100% - 50px);
 }
 
 header {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 
-    .navbar {
-        height: 50px;
-    }
+  .navbar {
+    height: 50px;
+  }
 }
 
 .im-logo {
-    max-width: 130px;
-    display: block;
+  max-width: 130px;
+  display: block;
 
-    img {
-        display: block;
-        max-width: 100%;
-    }
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .btn-primary {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+    box-shadow: none;
     color: #fff;
-    background-color: $primary;
-    border-color: $primary;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled):active:focus {
-        background-color: $primary-hover;
-        border-color: $primary-hover;
-        box-shadow: none;
-        color: #fff;
-    }
-
-    &.disabled,
-    &:disabled {
-        background-color: lighten($primary, 10%);
-        border-color: lighten($primary, 10%);
-    }
+  }
+  &.disabled,
+  &:disabled {
+    background-color: lighten($primary, 10%);
+    border-color: lighten($primary, 10%);
+  }
 }
 
 .btn-outline-primary {
-    color: $primary;
+  color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    background-color: $primary;
     border-color: $primary;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled):active:focus {
-        background-color: $primary;
-        border-color: $primary;
-        box-shadow: none;
-        color: #fff;
-    }
-
-    &.disabled,
-    &:disabled {
-        background-color: lighten($primary, 10%);
-        border-color: lighten($primary, 10%);
-    }
+    box-shadow: none;
+    color: #fff;
+  }
+  &.disabled,
+  &:disabled {
+    background-color: lighten($primary, 10%);
+    border-color: lighten($primary, 10%);
+  }
 }
 
 
 .page-header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    h3 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
 
-    p {
-        font-size: 17px;
-        font-weight: 300;
-        color: #888;
-        margin-bottom: 0;
-    }
+  p {
+    font-size: 17px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 0;
+  }
 }
 
 .breadcrumb {
-    background: none;
-    padding-left: 0;
-    font-size: 14px;
+  background: none;
+  padding-left: 0;
+  font-size: 14px;
 
-    .breadcrumb-item {
-        a {
-            color: #4A90E2;
-        }
+  .breadcrumb-item {
+    a {
+      color: #4A90E2;
     }
+  }
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    content: '';
-    display: none;
+  content: '';
+  display: none;
 }
 
 .search-user-wrapper {
-    width: 250px;
+  width: 250px;
 
-    @media (max-width: 992px) {
-        width: 200px;
-    }
+  @media (max-width: 992px) {
+    width: 200px;
+  }
 }
 
 .manage__user__table {
-    td {
-        // line-height: 30px;
-        line-height: normal;
-        background-color: #fff;
-        border-bottom: 1px solid #e7e7e7;
-        position: relative;
-        vertical-align: middle;
-        width: calc((100% - 150px) / 5);
-
-        p {
-            margin: 0;
-        }
-
-        &.status__col {
-            width: 100px;
-        }
-
-        &.edit__col {
-            width: 50px;
-        }
+  td {
+    line-height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    vertical-align: middle;
+    width: calc((100% - 150px) / 5);
+    p {
+      margin: 0;
     }
-
-    .manage__user__status {
-        display: flex;
+    &.status__col {
+      width: 100px;
     }
-
-    .manage__user__action {
-        height: 30px;
+    &.edit__col {
+      width: 50px;
     }
+  }
+  .manage__user__status {
+    display: flex;
+  }
+  .manage__user__action {
+    height: 30px;
+  }
 }
 
 .manage-user__filters {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .manage-user__filter-role,
 .manage-user__filter-status {
-    width: 150px;
-    ;
+  width: 150px;
+  ;
 }
 
 .manage-user__edit {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover,
-    &:focus {
-        color: var(--success);
-    }
+  &:hover,
+  &:focus {
+    color: var(--success);
+  }
 }
 
 .manage-user__delete {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover,
-    &:focus {
-        color: var(--danger);
-    }
+  &:hover,
+  &:focus {
+    color: var(--danger);
+  }
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-    border-color: $primary;
-    background-color: $primary;
+  border-color: $primary;
+  background-color: $primary;
 }
 
 
 .disabled-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 tr {
+  .disabled-badge {
+    display: none;
+  }
+  &.disabled {
+    td {
+      background-color: #eee;
+    }
     .disabled-badge {
-        display: none;
+      display: block;
     }
-
-    &.disabled {
-        td {
-            background-color: #eee;
-        }
-
-        .disabled-badge {
-            display: block;
-        }
-    }
+  }
 }
 
 .modal-footer .btn {
-    min-width: 100px;
+  min-width: 100px;
 }
