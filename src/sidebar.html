@@ -17,7 +17,7 @@
 
 <body cz-shortcut-listen="true">
   <header class="navbar fixed-top navbar-expand navbar-light bg-white">
-    <button class="btn sidebar__toggle__btn toggle mr-3">
+    <button class="btn sidebar__toggle__btn mr-3">
       <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <path d="M0 10v2h20v-2H0zm0-5v2h20V5H0zm0-5v2h20V0H0z" id="a" />
@@ -111,9 +111,8 @@
           <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give SuperAdmin Access</button>
         </div>
       </nav>
-     
     </div>
-    <div class="sidebar__open__sheen"></div>
+    <!-- <div class="sidebar__open__sheen"></div> -->
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -244,15 +243,17 @@
   <script>
     $('.sidebar__toggle__btn').on('click', function () {
       if ($('.sidebar').hasClass('sidebar__open')) {
-        $('.sidebar__toggle__btn').removeClass('toggle');
+        // $('.sidebar__toggle__btn').removeClass('toggle');
         $('.sidebar').removeClass('sidebar__open');
-        $('.sidebar__open__sheen').hide();
+        // $('.sidebar__open__sheen').hide();
         $('.sidebar__link__text').hide();
+        $('.container').addClass('expand');
       } else {
-        $('.sidebar__toggle__btn').addClass('toggle');
+        // $('.sidebar__toggle__btn').addClass('toggle');
         $('.sidebar').addClass('sidebar__open');
-        $('.sidebar__open__sheen').fadeIn();
+        // $('.sidebar__open__sheen').fadeIn();
         $('.sidebar__link__text').fadeIn('500');
+        $('.container').removeClass('expand');
       }
     });
   </script>
