@@ -1,0 +1,91 @@
+.header-right {
+    &.logout-block {}
+    p {
+        float: left;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+    .dropdown {
+        width: 100%;
+
+        a.btn {
+            background-color: #fff;
+            color: #555;
+            border: 0;
+            font-size: 15px;
+            width: 100%;
+            line-height: 40px;
+            min-height: 40px;
+            padding: 0 15px;
+            text-align: left;
+            letter-spacing: 0px;
+            font-weight: 500;
+            min-width: 10px;
+            // border-radius: 0;
+
+            &:hover {
+                background-color: #dbdbdb;
+            }
+
+            &:focus {
+                box-shadow: none;
+                background-color: #dbdbdb;
+            }
+
+            &:active {
+                box-shadow: none;
+                background-color: #dbdbdb;
+            }
+
+            &:not(:disabled):not(.disabled).active:focus {
+                box-shadow: none;
+                background-color: #dbdbdb;
+            }
+
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: none;
+                background-color: transparent;
+            }
+
+            &.show>.dropdown-toggle:focus {
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+
+        .dropdown-menu.show {
+            line-height: 30px;
+            // margin-left: 30px;
+            left: auto !important;
+            right: 0 !important;
+            padding: 0;
+            border-radius: 0;
+            min-width: 140px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+            .dropdown-item {
+                text-align: right;
+            }
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
+
+.user-name {
+    margin-top: 0;
+}
+
+.user-profile-icon {
+    background: url(./../img/user-profile-default-icon.svg) no-repeat;
+    background-size: 100% auto;
+    width: 22px;
+    height: 25px;
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: 10px;
+}

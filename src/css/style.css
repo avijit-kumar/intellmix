@@ -970,6 +970,100 @@
     box-shadow: none;
 }
 
+.header-right p {
+    float: left;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.header-right .dropdown {
+    width: 100%;
+}
+
+.header-right .dropdown a.btn {
+    background-color: #fff;
+    color: #555;
+    border: 0;
+    font-size: 15px;
+    width: 100%;
+    line-height: 40px;
+    min-height: 40px;
+    padding: 0 15px;
+    text-align: left;
+    letter-spacing: 0px;
+    font-weight: 500;
+    min-width: 10px;
+}
+
+.header-right .dropdown a.btn:hover {
+    background-color: #dbdbdb;
+}
+
+.header-right .dropdown a.btn:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #dbdbdb;
+}
+
+.header-right .dropdown a.btn:active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #dbdbdb;
+}
+
+.header-right .dropdown a.btn:not(:disabled):not(.disabled).active:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #dbdbdb;
+}
+
+.header-right .dropdown a.btn:not(:disabled):not(.disabled):active:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.header-right .dropdown a.btn.show > .dropdown-toggle:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.header-right .dropdown .dropdown-menu.show {
+    line-height: 30px;
+    left: auto !important;
+    right: 0 !important;
+    padding: 0;
+    border-radius: 0;
+    min-width: 140px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-right .dropdown .dropdown-menu.show .dropdown-item {
+    text-align: right;
+}
+
+.header-right .dropdown-toggle::after {
+    display: none;
+}
+
+.user-name {
+    margin-top: 0;
+}
+
+.user-profile-icon {
+    background: url(./../img/user-profile-default-icon.svg) no-repeat;
+    background-size: 100% auto;
+    width: 22px;
+    height: 25px;
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
 html,
 body {
     height: 100%;
