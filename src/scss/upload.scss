@@ -26,6 +26,9 @@
 
   &__action {
     margin-left: auto;
+    .btn {
+      min-width: 100px;
+    }
   }
 
   &__tab__content {
@@ -51,6 +54,7 @@
   }
 
   &__table {
+    margin-bottom: 0;
     &__header {
       padding-bottom: 5px;
       border-bottom: 1px solid #979797;
@@ -113,6 +117,37 @@
       &:focus {
         background-color: transparent;
       }
+    }
+  }
+  &__file__accordion {
+    .card {
+      border-color: transparent;
+    }
+    .card-header {
+      border-color: #999;
+      background-color: #333;
+     
+      .btn {
+        color: #fff;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-weight: 500;
+        &:not(.collapsed) svg {
+          transform: rotate(180deg)
+        }
+      }
+    }
+    .card-body {
+      border: 1px solid#999;
+    }
+  }
+  &__file__details {
+    .card-body {
+      background-color: #eee;
+    }
+    tr {
+      background-color: #fff;
     }
   }
 }

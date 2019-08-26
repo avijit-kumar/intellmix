@@ -1096,6 +1096,10 @@
     margin-left: auto;
 }
 
+.data__uploads__action .btn {
+    min-width: 100px;
+}
+
 .data__uploads__tab__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1125,6 +1129,10 @@
     padding: 9px 20px;
 }
 
+.data__uploads__table {
+    margin-bottom: 0;
+}
+
 .data__uploads__table__header {
     padding-bottom: 5px;
     border-bottom: 1px solid #979797;
@@ -1140,7 +1148,7 @@
 }
 
 .data__uploads__table th,
-  .data__uploads__table td {
+    .data__uploads__table td {
     white-space: nowrap;
 }
 
@@ -1194,6 +1202,44 @@
 
 .data__uploads__filter select:hover, .data__uploads__filter select:focus {
     background-color: transparent;
+}
+
+.data__uploads__file__accordion .card {
+    border-color: transparent;
+}
+
+.data__uploads__file__accordion .card-header {
+    border-color: #999;
+    background-color: #333;
+}
+
+.data__uploads__file__accordion .card-header .btn {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.data__uploads__file__accordion .card-header .btn:not(.collapsed) svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.data__uploads__file__accordion .card-body {
+    border: 1px solid #999;
+}
+
+.data__uploads__file__details .card-body {
+    background-color: #eee;
+}
+
+.data__uploads__file__details tr {
+    background-color: #fff;
 }
 
 @-webkit-keyframes timer-spin {
