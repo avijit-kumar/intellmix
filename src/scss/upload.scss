@@ -1,11 +1,19 @@
 
+.btn-upload {
+  width: 175px;;
+}
+
 .data__uploads {
   display: flex;
+  margin-bottom: 50px;
+
   &__nav__tab {
     width: 175px;
+
     .nav-link {
       color: #888;
       text-transform: uppercase;
+
       &.active {
         background-color: #fff;
         color: #333;
@@ -15,47 +23,108 @@
       }
     }
   }
+
+  &__action {
+    margin-left: auto;
+  }
+
   &__tab__content {
     display: flex;
     width: calc(100% - 175px);
     background-color: #fff;
     border-radius: 0 0.25rem 0.25rem 0.25rem;
+
     .tab-pane {
       &.active {
         display: flex;
       }
+
       width: 100%;
       padding: 20px 20px 50px;
       flex-direction: column;
     }
+
     .alert {
       line-height: 20px;
-      padding: 9px 20px; 
+      padding: 9px 20px;
     }
   }
-  &__table{
+
+  &__table {
     &__header {
       padding-bottom: 5px;
       border-bottom: 1px solid #979797;
     }
+
     &__title {
-    font-weight: bold;
+      font-weight: bold;
+
+      .file__version {
+        font-weight: 500;
+        color: #777;
+      }
     }
+
     th,
     td {
       white-space: nowrap;
     }
+
+    &__last__updated {
+      p {
+        color: #777;
+        font-size: 12px;
+        text-align: right;
+        margin: 0;
+      }
+    }
+
+    &__status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 50px;
+
+      svg {
+        margin-bottom: 15px;
+
+        .rotate {
+          animation: timer-spin 2s linear infinite;
+          transform-origin: center;
+        }
+      }
+    }
   }
+
   &__filter {
     .col-form-label {
       white-space: nowrap;
       font-weight: 600;
     }
+
     select {
       background-color: transparent;
       min-width: 150px;
       margin-left: 15px;
       border-color: #d8d8d8;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
     }
+  }
+}
+
+@keyframes timer-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
