@@ -25,7 +25,7 @@
         display: flex;
       }
       width: 100%;
-      padding: 15px;
+      padding: 20px 20px 50px;
       flex-direction: column;
     }
     .alert {
@@ -44,6 +44,18 @@
     th,
     td {
       white-space: nowrap;
+    }
+  }
+  &__filter {
+    .col-form-label {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    select {
+      background-color: transparent;
+      min-width: 150px;
+      margin-left: 15px;
+      border-color: #d8d8d8;
     }
   }
 }

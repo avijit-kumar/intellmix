@@ -1098,7 +1098,7 @@
 
 .data__uploads__tab__content .tab-pane {
     width: 100%;
-    padding: 15px;
+    padding: 20px 20px 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1128,6 +1128,18 @@
 .data__uploads__table th,
   .data__uploads__table td {
     white-space: nowrap;
+}
+
+.data__uploads__filter .col-form-label {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.data__uploads__filter select {
+    background-color: transparent;
+    min-width: 150px;
+    margin-left: 15px;
+    border-color: #d8d8d8;
 }
 
 html,
