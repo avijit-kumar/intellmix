@@ -224,6 +224,30 @@
       </div>
     </div> -->
   </div>
+    <!-- SuperAdmin Access confimation Modal -->
+    <div class="modal fade" id="superAdminAccessModal" tabindex="-1" role="dialog" aria-labelledby="superAdminAccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pl-30">
+                    <h5 class="modal-title" id="superAdminAccessModalLabel">Grant Superadmin Access?</h5>
+                </div>
+                <div class="modal-body p-30">
+                    <div class="manage__form__input mb-3">
+                        <label for="accessConfirmPassword">Enter your Current Password for verification.</label>
+                        <input class="form-control" id="accessConfirmPassword" placeholder="Enter password" type="password">
+                    </div>
+                    <div class="manage__form__checkbox">
+                        <input type="checkbox" id="accessConfirm" class="checkbox__dataTypes">
+                        <label for="accessConfirm">I understand this will delete the data type & cannot be recoverd again.</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary save-btn">Procced</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

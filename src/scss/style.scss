@@ -1,4 +1,4 @@
-$body-bg: #f2f2f2;
+$body-bg: #e2e8ef;
 $body-color: #333;
 $font-family-base: 'Barlow', sans-serif;
 $primary: #F7931E;
@@ -36,6 +36,7 @@ body {
   background-color: $body-bg;
   color: $body-color;
 }
+
 
 
 html,
@@ -76,6 +77,7 @@ header {
 
 .btn-primary {
   color: #fff;
+  font-weight: 500;
   background-color: $primary;
   border-color: $primary;
   &:hover,
@@ -122,13 +124,14 @@ header {
   h3 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   p {
-    font-size: 17px;
-    font-weight: 300;
-    color: #888;
+    font-size: 15px;
+    // font-weight: 300;
+    color: #666;
     margin-bottom: 0;
   }
 }
@@ -137,6 +140,7 @@ header {
   background: none;
   padding-left: 0;
   font-size: 14px;
+  margin-bottom: 0;
 
   .breadcrumb-item {
     a {
@@ -240,4 +244,26 @@ tr {
 
 .modal-footer .btn {
   min-width: 100px;
+}
+
+.wait-sheen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1500;
+  background-color: rgba(255,255,255,0.9);
+  .sheen-content {
+        text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+      font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+    }
+  }
 }

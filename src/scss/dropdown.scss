@@ -1,5 +1,7 @@
 .header-right {
-    &.logout-block {}
+    &.logout-block {
+        margin-left: auto;
+    }
     p {
         float: left;
         margin-bottom: 0;

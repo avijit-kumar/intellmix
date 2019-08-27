@@ -102,105 +102,78 @@
                 <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give SuperAdmin Access</button>
             </div>
         </div>
+        <div class="sidebar__open__sheen"></div>
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="super-admin-dashboard.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="data-upload.html">Data Ingestion</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <i class="fas fa-chevron-right pr-2"></i>Organisations</li>
+                        <i class="fas fa-chevron-right pr-2"></i>Upload a new file</li>
                 </ol>
             </nav>
-            <div class="d-flex align-items-start">
+            <div class="d-flex justify-content-between align-items-start">
                 <div class="page-header">
-                    <h3>Dashboard</h3>
+                    <h3>Upload a new file</h3>
+                    <p>Enter the below details to upload a new file</p>
                 </div>
             </div>
-            <div class="admin__dashboard">
-                <div class="card admin__dashboard__card">
-                    <div class="card-body">
-                        <span class="admin__dashboard__card_item_vol">
-                            32
-                        </span>
-                        <span class="admin__dashboard__card_item_desc">
-                            Organisations
-                        </span>
+            <div class="row clearfix data__upload__form">
+                <div class="col-6 data__uploads__filter">
+                    <div class="row d-flex align-items-center form-group">
+                        <label for="data__uploads__filter__qtr" class="col-4 col-form-label">Select Period</label>
+                        <select id="data__uploads__filter__qtr" disabled class="col-4 form-control form-control-sm m-0">
+                            <option>2019 Q1</option>
+                            <option>2019 Q2</option>
+                            <option>2019 Q3</option>
+                            <option>2019 Q4</option>
+                        </select>
                     </div>
-                </div>
-                <div class="card admin__dashboard__card">
-                    <div class="card-body">
-                        <span class="admin__dashboard__card_item_vol">
-                            64
-                        </span>
-                        <span class="admin__dashboard__card_item_desc">
-                            Users
-                        </span>
+                    <div class="row d-flex align-items-center form-group">
+                        <label for="data__uploads__filter__brand" class="col-4 col-form-label">Select BU</label>
+                        <select id="data__uploads__filter__brand" class="col-4 form-control form-control-sm m-0">
+                            <option>Brand 1</option>
+                            <option>Brand 2</option>
+                            <option>Brand 3</option>
+                        </select>
                     </div>
-                </div>
-                <div class="card admin__dashboard__card">
-                    <div class="card-body">
-                        <span class="admin__dashboard__card_item_vol">
-                            8
-                        </span>
-                        <span class="admin__dashboard__card_item_desc">
-                            File Types
-                        </span>
+                    <div class="row d-flex align-items-center form-group">
+                        <label for="data__uploads__filter__brand" class="col-4 col-form-label">Select File Type</label>
+                        <select id="data__uploads__filter__brand" class="col-4 form-control form-control-sm m-0">
+                            <option>Spend</option>
+                            <option>Shipments</option>
+                            <option>Financial</option>
+                            <option>Volume</option>
+                            <option>Event</option>
+                            <option>Brand Hierarchy</option>
+                        </select>
                     </div>
-                </div>
-                <div class="card admin__dashboard__card">
-                    <div class="card-body">
-                        <span class="admin__dashboard__card_item_vol">
-                            12
-                        </span>
-                        <span class="admin__dashboard__card_item_desc">
-                            Brands
-                        </span>
+                    <div class="row d-flex align-items-center form-group">
+                        <label for="data__uploads__filter__brand" class="col-4 col-form-label">Choose File</label>
+                        <div class="col-8 input-group custom-upload-block">
+                            <input type="text" class="form-control form-control-sm" readonly>
+                            <div class="input-group-btn">
+                                <span class="fileUpload btn">
+                                    <span class="upl" id="upload">Browse</span>
+                                    <input type="file" class="upload up" id="up" onchange="readURL(this);" />
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <div class="page-header mb-0">
-                    <h3>List of Organisations</h3>
-                </div>
-                <a href="add-new-organisation.html" class="btn btn-primary">+ ADD</a>
-            </div>
-            <div class="admin__organisation">
-                <div class="card admin__organisation__card">
-                    <div class="card-body">
-                        <h5 class="card-title">Organisation Name</h5>
-                        <h6 class="card-subtitle">Active Since</h6>
-                        <p class="admin__organisation__card_subtitle">21st January 2019</p>
-                        <a href="#" class="card-link">edit</a>
-                        <a href="manage-user-list.html" class="card-link">manage user</a>
-                    </div>
-                </div>
-                <div class="card admin__organisation__card">
-                    <div class="card-body">
-                        <h5 class="card-title">Organisation Name</h5>
-                        <h6 class="card-subtitle">Active Since</h6>
-                        <p class="admin__organisation__card_subtitle">21st January 2019</p>
-                        <a href="#" class="card-link">edit</a>
-                        <a href="manage-user-list.html" class="card-link">manage user</a>
-                    </div>
-                </div>
-                <div class="card admin__organisation__card">
-                    <div class="card-body">
-                        <h5 class="card-title">Organisation Name</h5>
-                        <h6 class="card-subtitle">Active Since</h6>
-                        <p class="admin__organisation__card_subtitle">21st January 2019</p>
-                        <a href="#" class="card-link">edit</a>
-                        <a href="manage-user-list.html" class="card-link">manage user</a>
-                    </div>
-                </div>
-                <div class="card admin__organisation__card">
-                    <div class="card-body">
-                        <h5 class="card-title">Organisation Name</h5>
-                        <h6 class="card-subtitle">Active Since</h6>
-                        <p class="admin__organisation__card_subtitle">21st January 2019</p>
-                        <a href="#" class="card-link">edit</a>
-                        <a href="manage-user-list.html" class="card-link">manage user</a>
+                    <div class="d-flex align-items-center form-group">
+                        <button type="button" class="btn btn-outline-secondary mr-3">Cancel</button>
+                        <button type="button" class="btn btn-primary">Submit File</button>
                     </div>
                 </div>
             </div>
+            <div class="d-flex data__uploads">
+            </div>
+        </div>
+    </div>
+    <!-- Wait Sheen - this can be used anywhere. The messaging will have to be changed as per the scenario -->
+    <div class="wait-sheen d-none">
+        <div class="sheen-content">
+            <p>Please Wait...</p>
+            <p>File is getting uploaded</p>
         </div>
     </div>
     <!-- SuperAdmin Access confimation Modal -->
@@ -227,13 +200,13 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script>
+    // For sidebar
     $('.sidebar__toggle__btn').on('click', function() {
         if ($('.sidebar').hasClass('sidebar__open')) {
             $('.sidebar__toggle__btn').removeClass('toggle');
@@ -243,6 +216,21 @@
             $('.sidebar__toggle__btn').addClass('toggle');
             $('.sidebar').addClass('sidebar__open');
             $('.container').removeClass('expand');
+        }
+    });
+    // For custom file upload
+    $(document).on('change', '.up', function() {
+        var names = [];
+        var length = $(this).get(0).files.length;
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            names.push($(this).get(0).files[i].name);
+        }
+        // $("input[name=file]").val(names);
+        if (length > 2) {
+            var fileName = names.join(', ');
+            $(this).closest('.form-group').find('.form-control').attr("value", length + " files selected");
+        } else {
+            $(this).closest('.form-group').find('.form-control').attr("value", names);
         }
     });
     </script>

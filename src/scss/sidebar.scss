@@ -1,125 +1,204 @@
 .content {
-  padding-top: 55px;
+    padding-top: 55px;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 250px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    // transition: all ease 0.3s;
+
+    &.expand {
+        padding-left: 95px;
+    }
+}
+
+.admin__access__toggle {
+    margin-top: 15px;
+    padding: 0;
+
+    &__title {
+        font-size: 12px;
+        color: #999;
+        padding-left: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #999;
+    }
+
+    &__btn {
+        color: #fff;
+        font-size: 11px;
+        padding: 5px;
+        text-align: left;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $primary;
+            outline: 0;
+            box-shadow: none;
+            background-color: #020B15;
+        }
+    }
 }
 
 .sidebar {
-  width: 70px;
-  background-color: #002147;
-  color: #fff;
-  position: fixed;
-  top: 55px;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  transition: all ease-in .2s;
-  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  overflow-x: hidden;
-  font-size: 15px;
-
-  &__open {
-    width: 225px;
-
-    +.sidebar__open__sheen {
-
-      background-color: rgba(0, 0, 0, 0.2);
-      position: fixed;
-      z-index: 1029;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-    }
-  }
-
-  &__toggle__btn {
-    border-radius: 50%;
-    padding: 0;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    &:hover,
-    &:active,
-    &.toggle {
-      background-color: #B6BEC7;
-      outline: 0;
-      box-shadow: none;
-    }
-
-    &:focus {
-      outline: 0;
-      box-shadow: none;
-    }
-
-  }
-
-  &__link {
+    width: 70px;
+    background-color: #002147;
     color: #fff;
-    &:hover,
-    &:focus {
-      color: $primary;
-      outline: 0;
-    }
-    &.active {
-      background-color: #020B15;
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    padding-top: 0;
+    padding-bottom: 15px;
+    // transition: all ease-in .2s;
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 15px;
+
+    &__open {
+        width: 225px;
+        padding-top: 20px;
+
+        .sidebar__link {
+            padding: 10px;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .sidebar__link__text {
+            white-space: nowrap;
+            margin-left: 10px;
+            display: inline-block;
+            width: auto;
+            font-size: 16px;
+            line-height: 24px;
+            vertical-align: middle;
+        }
+
+        .sidebar__link__icon {
+            display: inline-block;
+            margin-bottom: 0;
+            text-align: center;
+            width: 26px;
+            margin-bottom: 0;
+        }
+
+        .admin__access__toggle {
+            margin-top: 75px;
+            padding: 0;
+
+            &__title {
+                font-size: 12px;
+                padding-left: 15px;
+                padding-bottom: 2px;
+                color: #999;
+                border-bottom: 1px solid #999;
+            }
+
+            &__btn {
+                color: #fff;
+                font-size: 15px;
+                width: 100%;
+                padding: 10px 15px;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $primary;
+                    outline: 0;
+                    box-shadow: none;
+                    background-color: #020B15;
+                }
+            }
+        }
+
     }
 
-    &__icon {
-      margin-left: 5px;
-      margin-right: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24px;
-      width: 26px;
+    &__toggle__btn {
+        border-radius: 50%;
+        padding: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: #dbdbdb;
+            outline: 0;
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+            // background-color: #B6BEC7;
+        }
+
     }
 
-    &__text {
-      white-space: nowrap;
-      margin-left: 10px;
+    &__link {
+        color: #fff;
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+        margin-bottom: 2px;
+
+        // transition: all ease 0.3s;
+        &:hover,
+        &:focus {
+            color: $primary;
+            outline: 0;
+            background-color: #020B15;
+        }
+
+        &.active {
+            background-color: #020B15;
+        }
+
+        &__icon {
+            margin-left: 5px;
+            margin-right: 5px;
+            // height: 24px;
+            width: 20px;
+            display: inline-block;
+            margin-bottom: 2px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__text {
+            word-break: break-word;
+            display: inline-block;
+            width: 100%;
+            font-size: 12px;
+            line-height: normal;
+        }
     }
-  }
 
-  &::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track {
 
-    border-radius: 6px;
-    background-color: #020B15;
-  }
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    height: 150px;
-    background-color: $primary;
-    border-radius: 6px;
-  }
-  .admin__access__toggle {
-    margin-top: 75px;
-    padding: 0 25px;
-    &__title {
-      font-size: 12px;
-      color: #999;
-      border-bottom: 1px solid #999;
+        border-radius: 6px;
+        background-color: #020B15;
     }
-    &__btn {
-      color: #fff;
-      font-size: 15px;
-      padding: 0;
-      &:hover,
-      &:focus,
-      &:active {
-        color: $primary;
-        outline: 0;
-        box-shadow: none;
-      }
+
+    &::-webkit-scrollbar {
+        width: 6px;
     }
-  }
+
+    &::-webkit-scrollbar-thumb {
+        height: 150px;
+        background-color: $primary;
+        border-radius: 6px;
+    }
+
 }
