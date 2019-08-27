@@ -13,15 +13,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .sidebar__link__text {
-      display: none;
-    }
-
-    .sidebar__open .sidebar__link__text {
-      display: block;
-    }
-  </style>
 </head>
 
 <body cz-shortcut-listen="true">
@@ -64,7 +55,7 @@
 
   </header>
   <div class="content">
-    <div class="sidebar">
+    <div class="sidebar sidebar__open">
       <nav>
         <ul class="nav flex-column navbar__top">
           <li class="nav-item">
@@ -76,7 +67,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link sidebar__link" href="#">
+            <a class="nav-link sidebar__link active" href="#">
               <span class="sidebar__link__icon">
                 <img src="./img/upload.png" alt="upload icon" />
               </span>
@@ -124,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link sidebar__link active" href="manage-user-list.html">
+            <a class="nav-link sidebar__link" href="manage-user-list.html">
               <span class="sidebar__link__icon">
                 <img src="./img/manage-users.png" alt="manage users icon" />
               </span>
@@ -748,17 +739,15 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
   <script>
-    $('.sidebar__toggle__btn').on('click', function () {
+    $('.sidebar__toggle__btn').on('click', function() {
       if ($('.sidebar').hasClass('sidebar__open')) {
-        $('.sidebar__toggle__btn').removeClass('toggle');
-        $('.sidebar').removeClass('sidebar__open');
-        $('.sidebar__open__sheen').hide();
-        $('.sidebar__link__text').hide();
+          $('.sidebar__toggle__btn').removeClass('toggle');
+          $('.sidebar').removeClass('sidebar__open');
+          $('.container').addClass('expand');
       } else {
-        $('.sidebar__toggle__btn').addClass('toggle');
-        $('.sidebar').addClass('sidebar__open');
-        $('.sidebar__open__sheen').fadeIn();
-        $('.sidebar__link__text').fadeIn('500');
+          $('.sidebar__toggle__btn').addClass('toggle');
+          $('.sidebar').addClass('sidebar__open');
+          $('.container').removeClass('expand');
       }
     });
   </script>

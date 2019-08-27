@@ -11,7 +11,8 @@
 
             // border: 2px solid transparent;
             // border-right: none;
-            // text-transform: uppercase;
+            text-transform: capitalize;
+
             &:hover {
                 color: #333;
                 // background-color: #fff;
@@ -26,6 +27,14 @@
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
+        }
+    }
+
+    &__action {
+        margin-left: auto;
+
+        .btn {
+            min-width: 100px;
         }
     }
 
@@ -52,6 +61,7 @@
     }
 
     &__table {
+        margin-bottom: 0;
         &__header {
             padding-bottom: 5px;
             border-bottom: 1px solid #979797;
@@ -65,6 +75,33 @@
         th,
         td {
             white-space: nowrap;
+        }
+
+        &__last__updated {
+            p {
+                color: #777;
+                font-size: 12px;
+                text-align: right;
+                margin: 0;
+            }
+        }
+
+        &__status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            svg {
+                margin-bottom: 15px;
+
+                .rotate {
+                    animation: timer-spin 2s linear infinite;
+                    transform-origin: center;
+                }
+            }
         }
     }
 
@@ -81,21 +118,59 @@
             border-color: #d8d8d8;
         }
     }
+
+    &__file__accordion {
+        .card {
+            border-color: transparent;
+        }
+
+        .card-header {
+            border-color: #999;
+            background-color: #333;
+
+            .btn {
+                color: #fff;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                font-weight: 500;
+
+                &:not(.collapsed) svg {
+                    transform: rotate(180deg)
+                }
+            }
+        }
+
+        .card-body {
+            border: 1px solid#999;
+        }
+    }
+
+    &__file__details {
+        .card-body {
+            background-color: #e2e8ef;
+        }
+
+        tr {
+            background-color: #fff;
+        }
+    }
 }
 
 
 .fileUpload {
     position: relative;
     overflow: hidden;
-        min-width: 120px;
+    min-width: 120px;
     min-height: 31px;
     line-height: 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: #333;
     color: #fff;
+
     &:hover {
-      color: #fff !important;
+        color: #fff !important;
     }
 }
 
@@ -112,14 +187,15 @@
 }
 
 .custom-upload-block {
-  padding-left: 0 !important;
-  .form-control[readonly] {
-    background-color: #fff;
-  }
+    padding-left: 0 !important;
+
+    .form-control[readonly] {
+        background-color: #fff;
+    }
 }
 
 .data__upload__form {
-  padding: 30px 15px;
-  background-color: #fff;
-  border-radius: 5px;
+    padding: 30px 15px;
+    background-color: #fff;
+    border-radius: 5px;
 }

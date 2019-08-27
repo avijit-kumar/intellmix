@@ -1150,6 +1150,7 @@
     border: none;
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
+    text-transform: capitalize;
 }
 
 .data__uploads__nav__tab .nav-link:hover {
@@ -1163,6 +1164,14 @@
     font-weight: bold;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.data__uploads__action {
+    margin-left: auto;
+}
+
+.data__uploads__action .btn {
+    min-width: 100px;
 }
 
 .data__uploads__tab__content {
@@ -1194,6 +1203,10 @@
     padding: 9px 20px;
 }
 
+.data__uploads__table {
+    margin-bottom: 0;
+}
+
 .data__uploads__table__header {
     padding-bottom: 5px;
     border-bottom: 1px solid #979797;
@@ -1205,8 +1218,45 @@
 }
 
 .data__uploads__table th,
-  .data__uploads__table td {
+    .data__uploads__table td {
     white-space: nowrap;
+}
+
+.data__uploads__table__last__updated p {
+    color: #777;
+    font-size: 12px;
+    text-align: right;
+    margin: 0;
+}
+
+.data__uploads__table__status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.data__uploads__table__status svg {
+    margin-bottom: 15px;
+}
+
+.data__uploads__table__status svg .rotate {
+    -webkit-animation: timer-spin 2s linear infinite;
+    animation: timer-spin 2s linear infinite;
+    -webkit-transform-origin: center;
+    transform-origin: center;
 }
 
 .data__uploads__filter .col-form-label {
@@ -1219,6 +1269,44 @@
     min-width: 150px;
     margin-left: 15px;
     border-color: #d8d8d8;
+}
+
+.data__uploads__file__accordion .card {
+    border-color: transparent;
+}
+
+.data__uploads__file__accordion .card-header {
+    border-color: #999;
+    background-color: #333;
+}
+
+.data__uploads__file__accordion .card-header .btn {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.data__uploads__file__accordion .card-header .btn:not(.collapsed) svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.data__uploads__file__accordion .card-body {
+    border: 1px solid #999;
+}
+
+.data__uploads__file__details .card-body {
+    background-color: #e2e8ef;
+}
+
+.data__uploads__file__details tr {
+    background-color: #fff;
 }
 
 .fileUpload {
