@@ -1,0 +1,60 @@
+.data__approval {
+  &__data__type {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  &__file__ {
+    &name {
+      font-weight: 500;
+    }
+    &desc {
+      font-size: 14px;
+    }
+    &info {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    &status {
+      color: #999;
+      text-transform: uppercase;
+    }
+  }
+
+  &__links {
+    a {
+      white-space: nowrap;
+    }
+  }
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1rem;
+    background-color: transparent;
+  }
+  .btn {
+    min-width: 145px;
+    text-transform: uppercase;
+  }
+  .btn-approved {
+    cursor: default;
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+  .text-success {
+    color: #7ED321 !important;
+    font-weight: bold;
+  }
+  .text-danger {
+    color: var(--danger) !important;
+    font-weight: bold;
+  }
+  .text-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}

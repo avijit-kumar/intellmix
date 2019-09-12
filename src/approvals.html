@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CPG by TEG</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header class="navbar fixed-top navbar-expand navbar-light bg-white">
+    <button class="btn sidebar__toggle__btn toggle mr-3">
+      <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path d="M0 10v2h20v-2H0zm0-5v2h20V5H0zm0-5v2h20V0H0z" id="a" />
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <mask id="b" fill="#fff">
+            <use xlink:href="#a" />
+          </mask>
+          <g mask="url(#b)">
+            <path d="M-15-19h50v50h-50z" fill="#000" />
+          </g>
+        </g>
+      </svg>
+    </button>
+    <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+      <img src="img/intell-mix-logo.png" alt="intell mix logo">
+    </a>
+    <div class="header-right logout-block">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle dropdown-toggle-split" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+          <p class="user-name text-truncate">Hello, Avijit!</p>
+          <span class="user-profile-icon"></span>
+          <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="edit-profile.html">Profile</a>
+          <a class="dropdown-item" href="login.html">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="sidebar sidebar__open">
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/home.png" alt="home icon" />
+        </span>
+        <span class="sidebar__link__text">Home</span>
+      </a>
+      <a class="nav-link sidebar__link" href="data-upload.html">
+        <span class="sidebar__link__icon">
+          <img src="./img/upload.png" alt="upload icon" />
+        </span>
+        <span class="sidebar__link__text">Data Ingestion</span>
+      </a>
+      <a class="nav-link sidebar__link active" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/data-approval.png" alt="data approval icon" />
+        </span>
+        <span class="sidebar__link__text">Approval</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/process-update.png" alt="process update icon" />
+        </span>
+        <span class="sidebar__link__text">Process Update</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/dashboard.png" alt="dashboard icon" />
+        </span>
+        <span class="sidebar__link__text">Dashboards</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/simulator.png" alt="simulator icon" />
+        </span>
+        <span class="sidebar__link__text">Media Simulator</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/cube.png" alt="cube icon" />
+        </span>
+        <span class="sidebar__link__text">Data Cube</span>
+      </a>
+      <a class="nav-link sidebar__link" href="manage-user-list.html">
+        <span class="sidebar__link__icon">
+          <img src="./img/manage-users.png" alt="manage users icon" />
+        </span>
+        <span class="sidebar__link__text">Manage Users</span>
+      </a>
+      <div class="admin__access__toggle">
+        <p class="admin__access__toggle__title">Admin</p>
+        <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give
+          SuperAdmin Access</button>
+        <a class="nav-link sidebar__link" href="add-a-new-role.html">
+          <span class="sidebar__link__icon">
+            <img src="./img/manage-users.png" alt="create role icon" />
+          </span>
+          <span class="sidebar__link__text">Create Role</span>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar__open__sheen"></div>
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="data-upload.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <i class="fas fa-chevron-right pr-2"></i>
+            Approvals
+          </li>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="page-header">
+          <h3>Approvals</h3>
+          <!-- <p>Enter the below details to upload a new file</p> -->
+        </div>
+      </div>
+      <div class="row clearfix data__approval d-flex flex-column">
+        <p class="text-center text-muted"><small>1st step card - when uploaded file has to be approved</small></p>
+        <div class="card data__approval__item mb-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between mb-2">
+              <div>
+                <h4 class="card-title data__approval__data__type m-0">SPEND</h4>
+                <p class="card-sub-title data__approval__file__name m-0">Spend_PS_C8_new.csv</p>
+              </div>
+              <div class="data__approval__file__info text-right">
+                <p class="data__approval__file__status m-0">Uploaded by</p>
+                <p class="data__approval__file__status_update m-0">Arun Prem on 28 May 2019, Tue 06:23 AM</p>
+              </div>
+            </div>
+            <p class="card-text data__approval__file__desc"><b>File Summary - </b>Here the summary of this file type
+              will be shown. It will be a two liner description about the content inside that file type. </p>
+          </div>
+          <div class="card-footer data__approval__footer d-flex justify-content-between align-items-center">
+            <div class="data__approval__links">
+              <a href="#" class="mr-4">Show Data Pivot</a>
+              <a href="#" class="mr-4">Download Data</a>
+            </div>
+            <div class="data__approval__actions d-flex">
+              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+              <button class="btn btn-primary data__approval__approve__btn">Approve</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card data__approval__item mb-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between mb-2">
+              <div>
+                <h4 class="card-title data__approval__data__type m-0">SHIPMENTS</h4>
+                <p class="card-sub-title data__approval__file__name m-0">Shipments_PS_C2_d_new.csv</p>
+              </div>
+              <div class="data__approval__file__info text-right">
+                <p class="data__approval__file__status m-0">Approved by</p>
+                <p class="data__approval__file__status_update m-0">Arun Prem on 28 May 2019, Tue 06:23 AM</p>
+              </div>
+            </div>
+            <p class="card-text data__approval__file__desc"><b>File Summary - </b>Here the summary of this file type
+              will be shown. It will be a two liner description about the content inside that file type. </p>
+          </div>
+          <div class="card-footer data__approval__footer d-flex justify-content-between align-items-center">
+            <div class="data__approval__links">
+              <a href="#" class="mr-4">Show Data Pivot</a>
+              <a href="#" class="mr-4">Download Data</a>
+            </div>
+            <div class="data__approval__actions d-flex">
+              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+              <button class="btn btn-approved text-success">Approved</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card data__approval__item mb-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-2">
+                <div>
+                  <h4 class="card-title data__approval__data__type m-0">SHIPMENTS</h4>
+                  <p class="card-sub-title data__approval__file__name m-0">Shipments_PS_C2_d_new.csv</p>
+                </div>
+                <div class="data__approval__file__info text-right">
+                  <p class="data__approval__file__status m-0">Rejected by</p>
+                  <p class="data__approval__file__status_update m-0">Arun Prem on 28 May 2019, Tue 06:23 AM</p>
+                </div>
+              </div>
+              <p class="card-text data__approval__file__desc"><b>File Summary - </b>Here the summary of this file type
+                will be shown. It will be a two liner description about the content inside that file type. </p>
+            </div>
+            <div class="card-footer data__approval__footer d-flex justify-content-between align-items-center">
+              <div class="data__approval__links">
+                <a href="#" class="mr-4">Show Data Pivot</a>
+                <a href="#" class="mr-4">Download Data</a>
+              </div>
+              <div class="data__approval__actions d-flex">
+                <button class="btn btn-outline-secondary data__approval__revert__btn mr-2">Revert Approval</button>
+                <button class="btn btn-rejected text-danger">Rejected</button>
+              </div>
+            </div>
+          </div>
+
+        <p class="text-center text-muted"><small>2nd step card - data preparations step</small></p>
+        <div class="card data__approval__item mb-4">
+          <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h4 class="card-title data__approval__brand m-0"><span class="text-grey">BRAND NAME - </span>XYZ</h4>
+              </div>
+              <div class="data__approval__file__info text-right">
+                <p class="data__approval__file__status m-0">Approved by</p>
+                <p class="data__approval__file__status_update m-0">Arun Prem on 28 May 2019, Tue 06:23 AM</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body d-flex justify-content-between align-items-end">
+            <div class="mr-3">
+              <div class="data__approval__file__desc">
+                <p class="card-text text-success mb-2">All file types were approved.</p>
+                <p class="card-text text-question mb-0">Approve data preparations?</p>
+                <p class="card-text">This step will approve the data preparations process to happen.</p>
+              </div>
+
+            </div>
+            <div class="data__approval__actions d-flex">
+              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+              <button class="btn btn-primary data__approval__approve__btn">Approve</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted"><small>3rd step card - data reports step</small></p>
+        <div class="card data__approval__item mb-4">
+          <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h4 class="card-title data__approval__brand m-0"><span class="text-grey">BRAND NAME - </span>XYZ</h4>
+              </div>
+              <div class="data__approval__file__info text-right">
+                <p class="data__approval__file__status m-0">Approved by</p>
+                <p class="data__approval__file__status_update m-0">Arun Prem on 28 May 2019, Tue 06:23 AM</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="data__approval__file__desc">
+              <p class="card-text text-success mb-1">All file types were approved.</p>
+              <p class="card-text text-success mb-2">Data preparations was approved.</p>
+              <p class="card-text text-question mb-0">Approve data reports?</p>
+              <p class="card-text">This step will approve the data preparations process to happen.</p>
+            </div>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-end">
+            <div class="data__approval__links">
+              <a href="#" class="mr-4">Preview Dashboard</a>
+              <a href="#" class="mr-4">Preview Data Through Pivot</a>
+              <a href="#" class="mr-4">Download Dashboard as PDF</a>
+            </div>
+            <div class="data__approval__actions d-flex">
+              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+              <button class="btn btn-primary data__approval__approve__btn">Approve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SuperAdmin Access confimation Modal -->
+  <div class="modal fade" id="superAdminAccessModal" tabindex="-1" role="dialog"
+    aria-labelledby="superAdminAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header pl-30">
+          <h5 class="modal-title" id="superAdminAccessModalLabel">Grant Superadmin Access?</h5>
+        </div>
+        <div class="modal-body p-30">
+          <div class="manage__form__input mb-3">
+            <label for="accessConfirmPassword">Enter your Current Password for verification.</label>
+            <input class="form-control" id="accessConfirmPassword" placeholder="Enter password" type="password">
+          </div>
+          <div class="manage__form__checkbox">
+            <input type="checkbox" id="accessConfirm" class="checkbox__dataTypes">
+            <label for="accessConfirm">I understand this will delete the data type & cannot be recoverd again.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Procced</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script>
+    // For sidebar
+    $('.sidebar__toggle__btn').on('click', function () {
+      if ($('.sidebar').hasClass('sidebar__open')) {
+        $('.sidebar__toggle__btn').removeClass('toggle');
+        $('.sidebar').removeClass('sidebar__open');
+        $('.container').addClass('expand');
+      } else {
+        $('.sidebar__toggle__btn').addClass('toggle');
+        $('.sidebar').addClass('sidebar__open');
+        $('.container').removeClass('expand');
+      }
+    });
+    // For custom file upload
+    $(document).on('change', '.up', function () {
+      var names = [];
+      var length = $(this).get(0).files.length;
+      for (var i = 0; i < $(this).get(0).files.length; ++i) {
+        names.push($(this).get(0).files[i].name);
+      }
+      // $("input[name=file]").val(names);
+      if (length > 2) {
+        var fileName = names.join(', ');
+        $(this).closest('.form-group').find('.form-control').attr("value", length + " files selected");
+      } else {
+        $(this).closest('.form-group').find('.form-control').attr("value", names);
+      }
+    });
+  </script>
+</body>
+
+</html>

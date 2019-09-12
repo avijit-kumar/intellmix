@@ -417,6 +417,10 @@
     padding-left: 30px;
 }
 
+.text-grey {
+    color: #999;
+}
+
 .login {
     min-height: 100vh;
     text-align: center;
@@ -1349,6 +1353,70 @@
     padding: 30px 15px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+.data__approval__data__type {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.data__approval__file__name {
+    font-weight: 500;
+}
+
+.data__approval__file__desc {
+    font-size: 14px;
+}
+
+.data__approval__file__info {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.data__approval__file__status {
+    color: #999;
+    text-transform: uppercase;
+}
+
+.data__approval__links a {
+    white-space: nowrap;
+}
+
+.data__approval .card-header,
+.data__approval .card-body,
+.data__approval .card-footer {
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.data__approval .btn {
+    min-width: 145px;
+    text-transform: uppercase;
+}
+
+.data__approval .btn-approved {
+    cursor: default;
+}
+
+.data__approval .btn-approved:hover, .data__approval .btn-approved:active, .data__approval .btn-approved:focus {
+    outline: 0;
+}
+
+.data__approval .text-success {
+    color: #7ED321 !important;
+    font-weight: bold;
+}
+
+.data__approval .text-danger {
+    color: var(--danger) !important;
+    font-weight: bold;
+}
+
+.data__approval .text-question {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 html,
