@@ -7,8 +7,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>CPG by TEG</title>
     <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -34,7 +36,8 @@
         </a>
         <div class="header-right logout-block">
             <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-split" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-split" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="sr-only">Toggle Dropdown</span>
                     <p class="user-name text-truncate">Hello, Avijit!</p>
                     <span class="user-profile-icon"></span>
@@ -49,66 +52,98 @@
     </header>
     <div class="content">
         <div class="sidebar sidebar__open">
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/home.png" alt="home icon" />
-                </span>
-                <span class="sidebar__link__text">Home</span>
-            </a>
-            <a class="nav-link sidebar__link" href="data-upload.html">
-                <span class="sidebar__link__icon">
-                    <img src="./img/upload.png" alt="upload icon" />
-                </span>
-                <span class="sidebar__link__text">Data Ingestion</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/data-approval.png" alt="data approval icon" />
-                </span>
-                <span class="sidebar__link__text">Approval</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/process-update.png" alt="process update icon" />
-                </span>
-                <span class="sidebar__link__text">Process Update</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/dashboard.png" alt="dashboard icon" />
-                </span>
-                <span class="sidebar__link__text">Dashboards</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/simulator.png" alt="simulator icon" />
-                </span>
-                <span class="sidebar__link__text">Media Simulator</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/cube.png" alt="cube icon" />
-                </span>
-                <span class="sidebar__link__text">Data Cube</span>
-            </a>
-            <a class="nav-link sidebar__link" href="manage-user-list.html">
-                <span class="sidebar__link__icon">
-                    <img src="./img/manage-users.png" alt="manage users icon" />
-                </span>
-                <span class="sidebar__link__text">Manage Users</span>
-            </a>
-            <div class="admin__access__toggle">
-                <p class="admin__access__toggle__title">Admin</p>
-                <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give SuperAdmin Access</button>
-                <a class="nav-link sidebar__link" href="add-a-new-role.html">
-                    <span class="sidebar__link__icon">
-                        <img src="./img/manage-users.png" alt="create role icon" />
-                    </span>
-                    <span class="sidebar__link__text">Create Role</span>
-                </a>
-            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/home.png" alt="home icon" />
+                        </span>
+                        <span class="sidebar__link__text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="data-upload.html">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/upload.png" alt="upload icon" />
+                        </span>
+                        <span class="sidebar__link__text">Data Ingestion</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/data-approval.png" alt="data approval icon" />
+                        </span>
+                        <span class="sidebar__link__text">Approval</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/process-update.png" alt="process update icon" />
+                        </span>
+                        <span class="sidebar__link__text">Process Update</span>
+                    </a>
+                </li>
+                <li class="nav-item dropright">
+                    <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" id="dashboardMenu"
+                        href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/dashboard.png" alt="dashboard icon" />
+                        </span>
+                        <span class="sidebar__link__text">Dashboards</span>
+                    </a>
+                    <ul class="sidebar__aside__nav dropdown-menu" aria-labelledby="dashboardMenu">
+                        <a class="sidebar__aside__link dropdown-item" href="#">Executive Dashboard</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Media Effectiveness</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Trend Analysis</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Volume Contribution</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Campaign Deep Dive</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Data Summary</a>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/simulator.png" alt="simulator icon" />
+                        </span>
+                        <span class="sidebar__link__text">Media Simulator</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/cube.png" alt="cube icon" />
+                        </span>
+                        <span class="sidebar__link__text">Data Cube</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="manage-user-list.html">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/manage-users.png" alt="manage users icon" />
+                        </span>
+                        <span class="sidebar__link__text">Manage Users</span>
+                    </a>
+                </li>
+                <li class="nav-item dropright">
+                    <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/manage-users.png" alt="manage users icon" />
+                        </span>
+                        <span class="sidebar__link__text">Admin Settings</span>
+                    </a>
+                    <div class="sidebar__aside__nav dropdown-menu">
+                        <a class="sidebar__aside__link dropdown-item" href="#" role="button" data-toggle="modal"
+                            data-target="#superAdminAccessModal">Give SuperAdmin Access</a>
+                        <a class="sidebar__aside__link dropdown-item" href="add-a-new-role.html">Create Role</a>
+                    </div>
+                </li>
+            </ul>
+
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="super-admin-dashboard.html">Home</a></li>
@@ -210,7 +245,8 @@
         </div>
     </div>
     <!-- SuperAdmin Access confimation Modal -->
-    <div class="modal fade" id="superAdminAccessModal" tabindex="-1" role="dialog" aria-labelledby="superAdminAccessModalLabel" aria-hidden="true">
+    <div class="modal fade" id="superAdminAccessModal" tabindex="-1" role="dialog"
+        aria-labelledby="superAdminAccessModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header pl-30">
@@ -219,38 +255,45 @@
                 <div class="modal-body p-30">
                     <div class="manage__form__input mb-3">
                         <label for="accessConfirmPassword">Enter your Current Password for verification.</label>
-                        <input class="form-control" id="accessConfirmPassword" placeholder="Enter password" type="password">
+                        <input class="form-control" id="accessConfirmPassword" placeholder="Enter password"
+                            type="password">
                     </div>
                     <div class="manage__form__checkbox">
                         <input type="checkbox" id="accessConfirm" class="checkbox__dataTypes">
-                        <label for="accessConfirm">I understand this will delete the data type & cannot be recoverd again.</label>
+                        <label for="accessConfirm">I understand this will delete the data type & cannot be recoverd
+                            again.</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-secondary cancel-btn"
+                        data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary save-btn">Procced</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     <script>
-    $('.sidebar__toggle__btn').on('click', function() {
-        if ($('.sidebar').hasClass('sidebar__open')) {
-            $('.sidebar__toggle__btn').removeClass('toggle');
-            $('.sidebar').removeClass('sidebar__open');
-            $('.container').addClass('expand');
-        } else {
-            $('.sidebar__toggle__btn').addClass('toggle');
-            $('.sidebar').addClass('sidebar__open');
-            $('.container').removeClass('expand');
-        }
-    });
+        $('.sidebar__toggle__btn').on('click', function () {
+            if ($('.sidebar').hasClass('sidebar__open')) {
+                $('.sidebar__toggle__btn').removeClass('toggle');
+                $('.sidebar').removeClass('sidebar__open');
+                $('.container').addClass('expand');
+            } else {
+                $('.sidebar__toggle__btn').addClass('toggle');
+                $('.sidebar').addClass('sidebar__open');
+                $('.container').removeClass('expand');
+            }
+        });
+
     </script>
 </body>
 
