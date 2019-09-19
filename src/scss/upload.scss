@@ -43,6 +43,8 @@
         width: calc(100% - 155px);
         background-color: #fff;
         border-radius: 0 0.25rem 0.25rem 0.25rem;
+        min-height: 460px;
+        position: relative;
 
         .tab-pane {
             &.active {
@@ -62,6 +64,7 @@
 
     &__table {
         margin-bottom: 0;
+
         &__header {
             padding-bottom: 5px;
             border-bottom: 1px solid #979797;
@@ -69,7 +72,11 @@
 
         &__title {
             font-weight: 600;
-            font-size: 22px;
+            font-size: 20px;
+            .file__version {
+                font-weight: 300;
+                font-size: 16px;
+            }
         }
 
         th,
@@ -87,20 +94,26 @@
         }
 
         &__status {
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            svg {
-                margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            font-weight: 500;
 
-                .rotate {
-                    animation: timer-spin 2s linear infinite;
-                    transform-origin: center;
-                }
+            .loader {
+                overflow: visible;
+            }
+
+            .rotate {
+                animation: rotate 2s linear infinite;
+                transform-origin: center;   
             }
         }
     }
@@ -109,6 +122,8 @@
         .col-form-label {
             white-space: nowrap;
             font-weight: 600;
+            line-height: 31px;
+            padding: 0;
         }
 
         select {
@@ -155,6 +170,39 @@
             background-color: #fff;
         }
     }
+
+    &__file__stage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 15px;
+
+        span {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        svg {
+            margin-left: 10px;
+            fill: inherit;
+        }
+    }
+    &__due {
+        font-weight: 500;
+        line-height: 1.2em;
+        margin-bottom: 1rem;
+        &__text {
+            font-size: 14px;
+        }
+        &__date {
+            font-size: 18px;
+        }
+    }
+    &__file__error__text {
+        font-weight: 600;
+    }
 }
 
 
@@ -198,4 +246,14 @@
     padding: 30px 15px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }

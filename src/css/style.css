@@ -421,6 +421,67 @@
     color: #999;
 }
 
+.text-success {
+    color: #7ED321;
+}
+
+.text-progress {
+    color: #F7931E;
+}
+
+.text-blink {
+    -webkit-animation: statusBlinkerInfinite 2s linear infinite;
+    animation: statusBlinkerInfinite 2s linear infinite;
+}
+
+@-webkit-keyframes statusBlinkerInfinite {
+    50% {
+        color: #999;
+        background-color: transparent;
+    }
+}
+
+@keyframes statusBlinkerInfinite {
+    50% {
+        color: #999;
+        background-color: transparent;
+    }
+}
+
+.btn-upload {
+    min-width: 150px;
+}
+
+.alert-danger {
+    background-color: #fff2f2;
+    border-color: #D0021B;
+    color: #D0021B;
+}
+
+.alert-danger .btn {
+    border-color: inherit;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.alert-warning {
+    background-color: #FCF8E3;
+    border-color: #8A6D3B;
+    color: #8A6D3B;
+}
+
+.alert-warning .btn {
+    border-color: inherit;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.alert-success {
+    background-color: #BDFFBD;
+    border-color: #417505;
+    color: #417505;
+}
+
 .login {
     min-height: 100vh;
     text-align: center;
@@ -861,6 +922,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    width: calc(100% - 70px);
 }
 
 .sidebar {
@@ -890,6 +952,10 @@
     -ms-flex: 0 0 225px;
     flex: 0 0 225px;
     padding-top: 20px;
+}
+
+.sidebar__open + .container-fluid {
+    width: calc(100% - 225px) !important;
 }
 
 .sidebar__open .nav-item {
@@ -1205,6 +1271,8 @@
     width: calc(100% - 155px);
     background-color: #fff;
     border-radius: 0 0.25rem 0.25rem 0.25rem;
+    min-height: 460px;
+    position: relative;
 }
 
 .data__uploads__tab__content .tab-pane {
@@ -1238,7 +1306,12 @@
 
 .data__uploads__table__title {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
+}
+
+.data__uploads__table__title .file__version {
+    font-weight: 300;
+    font-size: 16px;
 }
 
 .data__uploads__table th,
@@ -1254,6 +1327,7 @@
 }
 
 .data__uploads__table__status {
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1268,17 +1342,21 @@
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-weight: 500;
 }
 
-.data__uploads__table__status svg {
-    margin-bottom: 15px;
+.data__uploads__table__status .loader {
+    overflow: visible;
 }
 
-.data__uploads__table__status svg .rotate {
-    -webkit-animation: timer-spin 2s linear infinite;
-    animation: timer-spin 2s linear infinite;
+.data__uploads__table__status .rotate {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
     -webkit-transform-origin: center;
     transform-origin: center;
 }
@@ -1286,6 +1364,8 @@
 .data__uploads__filter .col-form-label {
     white-space: nowrap;
     font-weight: 600;
+    line-height: 31px;
+    padding: 0;
 }
 
 .data__uploads__filter select {
@@ -1333,6 +1413,49 @@
     background-color: #fff;
 }
 
+.data__uploads__file__stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.data__uploads__file__stage span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.data__uploads__file__stage svg {
+    margin-left: 10px;
+    fill: inherit;
+}
+
+.data__uploads__due {
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.data__uploads__due__text {
+    font-size: 14px;
+}
+
+.data__uploads__due__date {
+    font-size: 18px;
+}
+
+.data__uploads__file__error__text {
+    font-weight: 600;
+}
+
 .fileUpload {
     position: relative;
     overflow: hidden;
@@ -1373,6 +1496,30 @@
     padding: 30px 15px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 }
 
 .data__approval__data__type {

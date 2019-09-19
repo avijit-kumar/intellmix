@@ -22,3 +22,57 @@
 .text-grey {
   color: #999;
 }
+
+.text-success {
+  color: #7ED321;
+}
+
+.text-progress {
+  color: #F7931E;
+}
+
+.text-blink {
+  animation: statusBlinkerInfinite 2s linear infinite;
+}
+
+@keyframes statusBlinkerInfinite {
+  50% {
+      // opacity: 0;
+      color: #999;
+      background-color: transparent;
+  }
+}
+
+.btn-upload {
+  min-width: 150px;
+}
+
+@mixin alert-btn {
+  border-color: inherit;
+  color: inherit;
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.alert {
+  &-danger {
+    background-color: #fff2f2;
+    border-color: #D0021B;
+    color: #D0021B;
+    .btn {
+      @include alert-btn;
+    }
+  }
+  &-warning {
+    background-color: #FCF8E3;
+    border-color: #8A6D3B;
+    color: #8A6D3B;
+    .btn {
+      @include alert-btn;
+    }
+  }
+  &-success {
+    background-color: #BDFFBD;
+    border-color: #417505;
+    color: #417505;
+  }
+}

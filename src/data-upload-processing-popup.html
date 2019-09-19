@@ -130,7 +130,7 @@
         </div>
         <a href="upload-file.html" class="btn btn-primary btn-upload">+ UPLOAD</a>
       </div>
-      <div class="d-flex data__uploads__filter manage__org__form m-0 align-items-end">
+      <div class="d-flex data__uploads__filter manage__org__form m-0">
         <div class="d-flex align-items-center form-group mr-5">
           <label for="data__uploads__filter__qtr" class="col-form-label">SELECT QUARTER</label>
           <select id="data__uploads__filter__qtr" class="form-control form-control-sm">
@@ -369,9 +369,7 @@
           <div class="tab-pane fade show active" id="v-pills-shipments" role="tabpanel" aria-labelledby="v-pills-shipments-tab">
             <div class="d-flex w-100 justify-content-between mb-3">
                 <div class="data__uploads__action">
-                  <a class="mr-3" href="#">Help?</a>
                   <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
-                  <button class="btn btn-outline-secondary ml-3">LOG</button>
                 </div>
               </div>
               <div class="d-flex w-100 justify-content-between align-items-end data__uploads__table__header mb-3">
@@ -383,156 +381,32 @@
                   <P class="font-weight-bold">Arun Prem on 28 May, Tue 2019 06:23 AM</P>
                 </div>
               </div>
-
-              <div class="data__uploads__file__details data__uploads__file__accordion accordion" id="fileDetails">
-                  <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
-                    <span class="data__uploads__file__error__text d-flex align-items-center">
-                        <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                          <g fill="#D0021B" fill-rule="nonzero">
-                            <path d="M5.858 5.858c7.809-7.809 20.475-7.809 28.284 0 7.809 7.809 7.809 20.47 0 28.284-7.809 7.809-20.475 7.809-28.284 0-7.809-7.814-7.809-20.475 0-28.284zm1.06 1.06c-7.223 7.224-7.223 18.94 0 26.164 7.23 7.223 18.94 7.218 26.164 0 7.223-7.224 7.223-18.94 0-26.164-7.224-7.218-18.935-7.223-26.164 0z"/>
-                            <path d="M26.683 12.256c.696-.695 1.756.365 1.06 1.06L21.062 20l6.683 6.683c.695.696-.365 1.756-1.06 1.06L20 21.062l-6.683 6.683c-.696.7-1.761-.36-1.06-1.06L18.938 20l-6.683-6.683c-.7-.7.365-1.761 1.06-1.06L20 18.938l6.683-6.683z"/>
-                          </g>
-                        </svg>
-                        3 Errors, 4 Warnings&nbsp; <span class="font-weight-normal">found</span>
-                    </span>
-                    <a class="data__uploads__file__error__link btn" href="#">Show Details</a>
-                  </div>
-                  <div class="alert alert-warning d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
-                      <span class="data__uploads__file__error__text d-flex align-items-center">
-                          <svg class="mr-3" width="45" height="40" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="#8A6D3B" fill-rule="evenodd">
-                              <path d="M26.502 2.27l17.849 30.92c1.73 3.026-.433 6.81-4.002 6.81H4.65C1.19 40-1.082 36.216.757 33.19L18.606 2.27c1.73-3.027 6.166-3.027 7.896 0zm-2.38 1.406c-.648-1.298-2.487-1.298-3.136 0L3.137 34.595c-.757 1.189.108 2.702 1.514 2.702H40.35c1.514 0 2.38-1.513 1.622-2.702L24.123 3.675z"/>
-                              <path d="M22.5 10.919c.865 0 1.623.649 1.623 1.513v12.433c0 .865-.758 1.513-1.623 1.513-.757 0-1.514-.648-1.514-1.513V12.432c0-.864.757-1.513 1.514-1.513zM22.5 28.216c1.082 0 1.947.865 1.947 1.946a1.938 1.938 0 0 1-1.947 1.946 1.938 1.938 0 0 1-1.947-1.946c0-1.08.865-1.946 1.947-1.946z"/>
-                            </g>
-                          </svg>
-                          4 Warnings&nbsp;<span class="font-weight-normal">found</span>
-                      </span>
-                      <a class="data__uploads__file__error__link btn" href="#">Show Details</a>
-                    </div>
-                    <div class="alert alert-success d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
-                        <span class="data__uploads__file__error__text d-flex align-items-center">
-                            <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 0C8.973 0 0 8.973 0 20s8.973 20 20 20 20-8.973 20-20S31.027 0 20 0zm0 38.222C9.951 38.222 1.778 30.05 1.778 20 1.778 9.951 9.95 1.778 20 1.778 30.049 1.778 38.222 9.95 38.222 20c0 10.049-8.173 18.222-18.222 18.222zm9.96-25.07a.89.89 0 0 1 0 1.257L17.516 26.853a.886.886 0 0 1-1.253-.004l-6.223-6.222a.89.89 0 0 1 1.258-1.258l5.59 5.595 11.819-11.817a.881.881 0 0 1 1.253.004z" fill="#417505" fill-rule="nonzero"/>
-                            </svg>
-                            Success! All issues resolved. You are ready to send this file for approval.
-                        </span>
-                      </div>
-                  <div class="card">
-                    <div class="card-header p-0" id="fileDetailsHeader">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#fileDetailsContent" aria-expanded="true" aria-controls="fileDetailsContent">
-                        <span>FILE DETAILS</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-down" viewBox="0 0 24 24">
-                          <polyline points="6 9 12 15 18 9"/>
-                        </svg>
-                      </button>
-                    </div>
-                
-                    <div id="fileDetailsContent" class="collapse show" aria-labelledby="fileDetailsHeader" data-parent="#fileDetails">
-                      <div class="card-body">
-                        <div class="table-responsive">
-                          <table class="table data__uploads__table">
-                            <thead class="thead-dark">
-                              <tr>
-                                <th scope="col">Data Table 1</th>
-                                <th scope="col">Data Table 2</th>
-                                <th scope="col">Data Table 3</th>
-                                <th scope="col">Data Table 4</th>
-                                <th scope="col">Data Table 5</th>
-                                <th scope="col">Data Table 6</th>
-                                <th scope="col">Data Table 7</th>
-                                <th scope="col">Data Table 8</th>
-                                <th scope="col">Data Table 9</th>
-                                <th scope="col">Data Table 10</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>Dummy Data 1</td>
-                                <td>Dummy Data 2</td>
-                                <td>Dummy Data 3</td>
-                                <td>Dummy Data 4</td>
-                                <td>Dummy Data 5</td>
-                                <td>Dummy Data 6</td>
-                                <td>Dummy Data 7</td>
-                                <td>Dummy Data 8</td>
-                                <td>Dummy Data 9</td>
-                                <td>Dummy Data 10</td>
-                              </tr>
-                              <tr>
-                                <td>Dummy Data 1</td>
-                                <td>Dummy Data 2</td>
-                                <td>Dummy Data 3</td>
-                                <td>Dummy Data 4</td>
-                                <td>Dummy Data 5</td>
-                                <td>Dummy Data 6</td>
-                                <td>Dummy Data 7</td>
-                                <td>Dummy Data 8</td>
-                                <td>Dummy Data 9</td>
-                                <td>Dummy Data 10</td>
-                              </tr>
-                              <tr>
-                                <td>Dummy Data 1</td>
-                                <td>Dummy Data 2</td>
-                                <td>Dummy Data 3</td>
-                                <td>Dummy Data 4</td>
-                                <td>Dummy Data 5</td>
-                                <td>Dummy Data 6</td>
-                                <td>Dummy Data 7</td>
-                                <td>Dummy Data 8</td>
-                                <td>Dummy Data 9</td>
-                                <td>Dummy Data 10</td>
-                              </tr>
-                              <tr>
-                                <td>Dummy Data 1</td>
-                                <td>Dummy Data 2</td>
-                                <td>Dummy Data 3</td>
-                                <td>Dummy Data 4</td>
-                                <td>Dummy Data 5</td>
-                                <td>Dummy Data 6</td>
-                                <td>Dummy Data 7</td>
-                                <td>Dummy Data 8</td>
-                                <td>Dummy Data 9</td>
-                                <td>Dummy Data 10</td>
-                              </tr>
-                              <tr>
-                                <td>Dummy Data 1</td>
-                                <td>Dummy Data 2</td>
-                                <td>Dummy Data 3</td>
-                                <td>Dummy Data 4</td>
-                                <td>Dummy Data 5</td>
-                                <td>Dummy Data 6</td>
-                                <td>Dummy Data 7</td>
-                                <td>Dummy Data 8</td>
-                                <td>Dummy Data 9</td>
-                                <td>Dummy Data 10</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-end align-items-center mt-3">
-                      <button class="btn btn-outline-secondary mr-3">Discard</button>
-                      <button class="btn btn-primary">Re-Upload</button>
-                      <span class="ml-3 mr-3">OR</span>
-                      <button class="btn btn-primary">Submit for Approval</button>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-end align-items-center mt-3">
-                    <span class="text-success d-flex align-items-center">
-                      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                        <g fill="none" fill-rule="evenodd">
-                          <path fill="#F2F2F2" d="M-941-826H499V474H-941z"/>
-                          <g fill-rule="nonzero">
-                            <circle fill="currentColor" cx="10" cy="10" r="10"/>
-                            <path stroke="#FFF" fill="#FFF" d="M14.568 7.5l-5.145 4.277-2.738-2.276-.435.362L9.423 12.5 15 7.861z"/>
-                          </g>
-                        </g>
-                      </svg>
-                      <span class="ml-2">File successfully submitted for approval.</span> 
-                    </span>
-                  </div>
+              <div class="data__uploads__table__status">
+                <svg class="loader mb-4" width="102" height="102" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#000" fill-rule="nonzero" opacity=".597">
+                    <path class="rotate" d="M51 0C31.233 0 21.368 6.56 12.75 15.07V2.125a2.125 2.125 0 1 0-4.25 0V21.25a2.125 2.125 0 0 0 2.125 2.125h17a2.125 2.125 0 1 0 0-4.25H14.713A45.089 45.089 0 0 1 51 4.25c25.82 0 46.75 20.93 46.75 46.75S76.82 97.75 51 97.75c-2.037 0-4.071-.131-6.09-.392a2.124 2.124 0 0 0-.549 4.212A51.031 51.031 0 0 0 102 51C101.968 22.847 79.153.032 51 0zM10.085 81.454a2.125 2.125 0 0 0 3.408-2.54 46.893 46.893 0 0 1-5.161-8.779 2.125 2.125 0 1 0-3.877 1.744 51.098 51.098 0 0 0 5.63 9.575zM20.107 88.935c-.701.94-.507 2.272.433 2.973a50.993 50.993 0 0 0 9.573 5.632 2.125 2.125 0 0 0 1.744-3.876 46.787 46.787 0 0 1-8.776-5.163 2.124 2.124 0 0 0-2.974.434zM2.125 48.875A2.124 2.124 0 0 0 0 51c0 2.22.143 4.437.43 6.639a2.124 2.124 0 1 0 4.212-.548A47.526 47.526 0 0 1 4.25 51a2.124 2.124 0 0 0-2.125-2.125z"/>
+                    <path d="M78.625 51c0-15.257-12.368-27.625-27.625-27.625S23.375 35.743 23.375 51 35.743 78.625 51 78.625C66.25 78.607 78.607 66.25 78.625 51zm-51 0c0-12.91 10.465-23.375 23.375-23.375S74.375 38.09 74.375 51 63.91 74.375 51 74.375C38.096 74.36 27.64 63.904 27.625 51z"/>
+                    <path d="M52.962 51.811c.107-.257.162-.532.163-.811v-8.5a2.125 2.125 0 1 0-4.25 0v7.62l-7.877 7.878a2.125 2.125 0 1 0 3.004 3.004l8.498-8.497c.198-.199.355-.434.462-.694z"/>
+                  </g>
+                </svg>
+                <p class="mb-1 font-weight-bold">File Name: <span class="text-grey">Shipment_PS_C2_d_new.csv</span></p>
+                <p class="m-0">You will be notified when the file gets uploaded.</p>
+                <div class="data__uploads__file__stage">
+                  <span class="text-success">Upload Started
+                    <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                    </svg>
+                  </span>
+                 
+                  <span class="text-progress text-blink">Upload in Progress 
+                    <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                    </svg>
+                  </span>
+                  <span>Upload Completed</span>
                 </div>
+                <button class="btn btn-outline-secondary mt-4">Show Data Summary</button>
+              </div>
           </div>
           <div class="tab-pane fade" id="v-pills-volume" role="tabpanel" aria-labelledby="v-pills-volume-tab">
             <div class="d-flex w-100 justify-content-between mb-3">
@@ -868,15 +742,15 @@
     </script>
   <script>
     $('.sidebar__toggle__btn').on('click', function() {
-        if ($('.sidebar').hasClass('sidebar__open')) {
-            $('.sidebar__toggle__btn').removeClass('toggle');
-            $('.sidebar').removeClass('sidebar__open');
-            $('.container').addClass('expand');
-        } else {
-            $('.sidebar__toggle__btn').addClass('toggle');
-            $('.sidebar').addClass('sidebar__open');
-            $('.container').removeClass('expand');
-        }
+      if ($('.sidebar').hasClass('sidebar__open')) {
+          $('.sidebar__toggle__btn').removeClass('toggle');
+          $('.sidebar').removeClass('sidebar__open');
+          $('.container').addClass('expand');
+      } else {
+          $('.sidebar__toggle__btn').addClass('toggle');
+          $('.sidebar').addClass('sidebar__open');
+          $('.container').removeClass('expand');
+      }
     });
   </script>
 </body>
