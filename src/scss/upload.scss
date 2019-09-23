@@ -1,5 +1,16 @@
+$link-color: #0076FF;
+
 .data__uploads {
     display: flex;
+
+    &__header {
+        .btn-back {
+            background-color: #fff;
+            color: $link-color;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
 
     &__nav__tab {
         width: 155px;
@@ -82,6 +93,7 @@
         th,
         td {
             white-space: nowrap;
+            vertical-align: middle;
         }
 
         &__last__updated {
@@ -114,6 +126,19 @@
             .rotate {
                 animation: rotate 2s linear infinite;
                 transform-origin: center;   
+            }
+        }
+        &__column__mapping {
+            td:first-child {
+                border-left-color: transparent;
+            }
+            td:last-child {
+                border-right-color: transparent;
+            }
+            tr:last-child {
+                td {
+                    border-bottom-color: transparent;
+                }
             }
         }
     }
@@ -194,7 +219,7 @@
         line-height: 1.2em;
         margin-bottom: 1rem;
         &__text {
-            font-size: 14px;
+            font-size: 13px;
         }
         &__date {
             font-size: 18px;
@@ -202,6 +227,36 @@
     }
     &__file__error__text {
         font-weight: 600;
+    }
+    &__errors__accordion {
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+        .heading {
+            flex: auto;
+            display: flex;
+        }
+        .show-hide-toggle {
+            width: 200px;
+            flex: 0 0 200px;
+            text-align: center;
+            text-transform: uppercase;
+            &:not(.collapsed) {
+                svg {
+                    transform: rotate(180deg);
+    
+                }
+            }
+        }
+        .action__col {
+            width: 200px;
+            .btn-fix {
+                width: 100%;
+                min-width: auto;
+            }
+            .btn-undo {
+                min-width: auto;
+                width: auto;
+            }
+        }
     }
 }
 
