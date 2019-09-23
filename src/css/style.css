@@ -1559,6 +1559,14 @@
     transform: rotate(180deg);
 }
 
+.data__uploads__errors__accordion .show-hide-toggle:not(.collapsed) .show {
+    display: none;
+}
+
+.data__uploads__errors__accordion .show-hide-toggle.collapsed .hide {
+    display: none;
+}
+
 .data__uploads__errors__accordion .action__col {
     width: 200px;
 }

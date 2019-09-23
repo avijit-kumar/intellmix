@@ -52,65 +52,96 @@
     </header>
     <div class="content">
         <div class="sidebar sidebar__open">
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/home.png" alt="home icon" />
-                </span>
-                <span class="sidebar__link__text">Home</span>
-            </a>
-            <a class="nav-link sidebar__link active" href="data-upload.html">
-                <span class="sidebar__link__icon">
-                    <img src="./img/upload.png" alt="upload icon" />
-                </span>
-                <span class="sidebar__link__text">Data Ingestion</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/data-approval.png" alt="data approval icon" />
-                </span>
-                <span class="sidebar__link__text">Approval</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/process-update.png" alt="process update icon" />
-                </span>
-                <span class="sidebar__link__text">Process Update</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/dashboard.png" alt="dashboard icon" />
-                </span>
-                <span class="sidebar__link__text">Dashboards</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/simulator.png" alt="simulator icon" />
-                </span>
-                <span class="sidebar__link__text">Media Simulator</span>
-            </a>
-            <a class="nav-link sidebar__link" href="#">
-                <span class="sidebar__link__icon">
-                    <img src="./img/cube.png" alt="cube icon" />
-                </span>
-                <span class="sidebar__link__text">Data Cube</span>
-            </a>
-            <a class="nav-link sidebar__link" href="manage-user-list.html">
-                <span class="sidebar__link__icon">
-                    <img src="./img/manage-users.png" alt="manage users icon" />
-                </span>
-                <span class="sidebar__link__text">Manage Users</span>
-            </a>
-            <div class="admin__access__toggle">
-                <p class="admin__access__toggle__title">Admin</p>
-                <button class="btn admin__access__toggle__btn" data-toggle="modal"
-                    data-target="#superAdminAccessModal">Give SuperAdmin Access</button>
-                <a class="nav-link sidebar__link" href="add-a-new-role.html">
-                    <span class="sidebar__link__icon">
-                        <img src="./img/manage-users.png" alt="create role icon" />
-                    </span>
-                    <span class="sidebar__link__text">Create Role</span>
-                </a>
-            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/home.png" alt="home icon" />
+                        </span>
+                        <span class="sidebar__link__text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="data-upload.html">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/upload.png" alt="upload icon" />
+                        </span>
+                        <span class="sidebar__link__text">Data Ingestion</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/data-approval.png" alt="data approval icon" />
+                        </span>
+                        <span class="sidebar__link__text">Approval</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/process-update.png" alt="process update icon" />
+                        </span>
+                        <span class="sidebar__link__text">Process Update</span>
+                    </a>
+                </li>
+                <li class="nav-item dropright">
+                    <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" id="dashboardMenu"
+                        href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/dashboard.png" alt="dashboard icon" />
+                        </span>
+                        <span class="sidebar__link__text">Dashboards</span>
+                    </a>
+                    <ul class="sidebar__aside__nav dropdown-menu" aria-labelledby="dashboardMenu">
+                        <a class="sidebar__aside__link dropdown-item" href="#">Executive Dashboard</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Media Effectiveness</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Trend Analysis</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Volume Contribution</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Campaign Deep Dive</a>
+                        <a class="sidebar__aside__link dropdown-item" href="#">Data Summary</a>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/simulator.png" alt="simulator icon" />
+                        </span>
+                        <span class="sidebar__link__text">Media Simulator</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="#">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/cube.png" alt="cube icon" />
+                        </span>
+                        <span class="sidebar__link__text">Data Cube</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar__link" href="manage-user-list.html">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/manage-users.png" alt="manage users icon" />
+                        </span>
+                        <span class="sidebar__link__text">Manage Users</span>
+                    </a>
+                </li>
+                <li class="nav-item dropright">
+                    <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sidebar__link__icon">
+                            <img src="./img/manage-users.png" alt="manage users icon" />
+                        </span>
+                        <span class="sidebar__link__text">Admin Settings</span>
+                    </a>
+                    <div class="sidebar__aside__nav dropdown-menu">
+                        <a class="sidebar__aside__link dropdown-item" href="#" role="button" data-toggle="modal"
+                            data-target="#superAdminAccessModal">Give SuperAdmin Access</a>
+                        <a class="sidebar__aside__link dropdown-item" href="add-a-new-role.html">Create Role</a>
+                    </div>
+                </li>
+            </ul>
+
         </div>
         <div class="container-fluid">
             <div class="pr-5">
@@ -122,7 +153,7 @@
                     </ol>
                 </nav>
 
-                <div class="d-flex justify-content-between align-items-end data__uploads__header mb-4">
+                <div class="d-flex justify-content-between align-items-end data__uploads__header mb-3 mt-2">
                     <div>
                         <button class="btn btn-sm btn-back d-flex align-items-center">
                             <svg width="25" height="9" xmlns="http://www.w3.org/2000/svg">
@@ -131,23 +162,24 @@
                             <span>&nbsp;&nbsp;back to spend page</span>
                         </button>
                     </div>
-                    <div class="text-right data__uploads__due mb-0">
-                        <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
-                        <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
-                    </div>
                 </div>
                 <div class="d-flex data__uploads__header justify-content-between align-items-center">
                     <div class="page-header">
                         <h3>List of errors/warnings</h3>
                         <p>Resolve the errors and warnings to continue with file upload</p>
                     </div>
-                    <div class="text-right data__uploads__due">
+
+                    <div class="text-right data__uploads__due mb-30">
+                        <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
+                        <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-30">
+                    <div class="data__uploads__due mb-0">
                         <p class="m-0 text-grey text-uppercase text-12 data__uploads__file_type">For File Type: Spend
                         </p>
                         <p class="m-0 data__uploads__file_name">Spend_PS_C2_d_new.csv</p>
                     </div>
-                </div>
-                <div class="d-flex justify-content-end">
                     <button class="btn btn-outline-secondary">Download File</button>
                 </div>
                 <div class="data__uploads_errors file__errors mb-4">
@@ -159,14 +191,15 @@
                                     <div class="col font-weight-bold py-3 px-4">
                                         Columnn Mapping Check
                                     </div>
-                                    <div class="col border-left border-right py-3 px-4">
+                                    <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
                                         2 issues
                                     </div>
                                 </div>
                                 <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
                                     data-target="#columnMappingCheckContent" aria-expanded="false"
                                     aria-controls="collapseOne">
-                                    <span class="text-nowrap text-13">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
                                     <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
@@ -312,14 +345,15 @@
                                     <div class="col font-weight-bold py-3 px-4">
                                         Data Type Validation
                                     </div>
-                                    <div class="col border-left border-right py-3 px-4">
+                                    <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
                                         3 issues
                                     </div>
                                 </div>
                                 <div class="show-hide-toggle py-3 px-4" data-toggle="collapse"
                                     data-target="#dataTypeValidationContent" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                    <span class="text-nowrap text-13">Hide Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
                                     <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
