@@ -385,6 +385,7 @@
               </div>
 
               <div class="data__uploads__file__details data__uploads__file__accordion accordion" id="fileDetails">
+                <!-- When file is having both Errors+Warnings -->
                   <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
                     <span class="data__uploads__file__error__text d-flex align-items-center">
                         <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -395,8 +396,10 @@
                         </svg>
                         3 Errors, 4 Warnings&nbsp; <span class="font-weight-normal">found</span>
                     </span>
+                    <!-- this link will take the user to data-upload-file-errors.html -->
                     <a class="data__uploads__file__error__link btn" href="#">Show Details</a>
                   </div>
+                  <!-- When file is having only Warnings -->
                   <div class="alert alert-warning d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
                       <span class="data__uploads__file__error__text d-flex align-items-center">
                           <svg class="mr-3" width="45" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -407,8 +410,10 @@
                           </svg>
                           4 Warnings&nbsp;<span class="font-weight-normal">found</span>
                       </span>
+                      <!-- this link will take the user to data-upload-file-errors.html -->
                       <a class="data__uploads__file__error__link btn" href="#">Show Details</a>
                     </div>
+                    <!-- When file has no errors and warnings next -->
                     <div class="alert alert-success d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
                         <span class="data__uploads__file__error__text d-flex align-items-center">
                             <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +425,7 @@
                   <div class="card">
                     <div class="card-header p-0" id="fileDetailsHeader">
                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#fileDetailsContent" aria-expanded="true" aria-controls="fileDetailsContent">
-                        <span>FILE DETAILS</span>
+                        <span>FILE DETAILS (Showing Top 5 rows from the file)</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-down" viewBox="0 0 24 24">
                           <polyline points="6 9 12 15 18 9"/>
                         </svg>
@@ -511,13 +516,18 @@
                         </div>
                       </div>
                     </div>
+                    <!-- This complete DIV can be hidden after the file is succefully submitted for approval -->
                     <div class="d-flex justify-content-end align-items-center mt-3">
-                      <button class="btn btn-outline-secondary mr-3">Discard</button>
+                      <button class="btn btn-outline-secondary mr-3">Discard this file</button>
+                      <!-- Re-upload button will not come if all the errors(only) are resolved -->
                       <button class="btn btn-primary">Re-Upload</button>
-                      <span class="ml-3 mr-3">OR</span>
+                      <!-- Show OR UI in case when current file is only having Warnings left -->
+                      <span class="ml-3 mr-3 font-weight-bold">OR</span>
+                      <!-- This button will be shown only when file is left with warnings or with no errors+warnings -->
                       <button class="btn btn-primary">Submit for Approval</button>
                     </div>
                   </div>
+                  <!-- this UI comes when the current file is successfully submitted for approval -->
                   <div class="d-flex justify-content-end align-items-center mt-3">
                     <span class="text-success d-flex align-items-center">
                       <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
