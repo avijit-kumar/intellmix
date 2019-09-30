@@ -138,7 +138,7 @@
                     </select>
                 </div>
                 <div class="d-flex align-items-center form-group">
-                    <label for="data__uploads__filter__brand" class="col-form-label">Select Brand</label>
+                    <label for="data__uploads__filter__brand" class="col-form-label">Select BU</label>
                     <select id="data__uploads__filter__brand" class="form-control form-control-sm">
                         <option>Brand 1</option>
                         <option>Brand 2</option>
@@ -168,34 +168,32 @@
                         aria-selected="false">Brand Hierarchy</a>
                 </div>
                 <div class="tab-content data__uploads__tab__content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-spend" role="tabpanel"
-                        aria-labelledby="v-pills-spend-tab">
-                        <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
-                            <div class="data__uploads__table__title">
-                                Spend_PS_C2_d_new.csv
+                    <div class="tab-pane fade show active" id="v-pills-spend" role="tabpanel" aria-labelledby="v-pills-spend-tab">
+                        <div class="column-mapping-container">
+                            <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+                                <div class="data__uploads__table__title">
+                                    Spend_PS_C2_d_new.csv
+                                </div>
+                                <div class="data__uploads__table__links">
+                                    <a href="#">Help</a>
+                                </div>
                             </div>
-                            <div class="data__uploads__table__links">
-                                <a href="#">Help</a>
+                            <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+                                <div class="data__uploads__table__title">
+                                    Column Mapping Check
+                                </div>  
                             </div>
-                        </div>
-                        <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
-                            <div class="data__uploads__table__title">
-                                Column Mapping Check
-                            </div>
-                        </div>
-                        <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error"
-                            role="alert">
-                            <span class="data__uploads__file__error__text d-flex align-items-center">
-                                <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                            <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
+                              <span class="data__uploads__file__error__text d-flex align-items-center">
+                                  <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="#D0021B" fill-rule="nonzero">
-                                        <path
-                                            d="M5.858 5.858c7.809-7.809 20.475-7.809 28.284 0 7.809 7.809 7.809 20.47 0 28.284-7.809 7.809-20.475 7.809-28.284 0-7.809-7.814-7.809-20.475 0-28.284zm1.06 1.06c-7.223 7.224-7.223 18.94 0 26.164 7.23 7.223 18.94 7.218 26.164 0 7.223-7.224 7.223-18.94 0-26.164-7.224-7.218-18.935-7.223-26.164 0z" />
-                                        <path
-                                            d="M26.683 12.256c.696-.695 1.756.365 1.06 1.06L21.062 20l6.683 6.683c.695.696-.365 1.756-1.06 1.06L20 21.062l-6.683 6.683c-.696.7-1.761-.36-1.06-1.06L18.938 20l-6.683-6.683c-.7-.7.365-1.761 1.06-1.06L20 18.938l6.683-6.683z" />
+                                      <path d="M5.858 5.858c7.809-7.809 20.475-7.809 28.284 0 7.809 7.809 7.809 20.47 0 28.284-7.809 7.809-20.475 7.809-28.284 0-7.809-7.814-7.809-20.475 0-28.284zm1.06 1.06c-7.223 7.224-7.223 18.94 0 26.164 7.23 7.223 18.94 7.218 26.164 0 7.223-7.224 7.223-18.94 0-26.164-7.224-7.218-18.935-7.223-26.164 0z"/>
+                                      <path d="M26.683 12.256c.696-.695 1.756.365 1.06 1.06L21.062 20l6.683 6.683c.695.696-.365 1.756-1.06 1.06L20 21.062l-6.683 6.683c-.696.7-1.761-.36-1.06-1.06L18.938 20l-6.683-6.683c-.7-.7.365-1.761 1.06-1.06L20 18.938l6.683-6.683z"/>
                                     </g>
-                                </svg>
-                                4 Columns are not mapped
-                            </span>
+                                  </svg>
+                                  4 Columns are not mapped
+                              </span>
+                            </div>
                         </div>
                         <div class="table-responsive border border-dark">
                             <table
@@ -285,8 +283,8 @@
                             </table>
                         </div>
                         <div class="d-flex justify-content-end align-items-center mt-3">
-                            <button class="btn btn-outline-secondary mr-3 text-uppercase">Discard</button>
-                            <button class="btn btn-primary">Request Changes</button>
+                          <button class="btn btn-outline-secondary mr-3">Discard this file</button>
+                          <button class="btn btn-primary">Request Changes</button>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-financial" role="tabpanel"

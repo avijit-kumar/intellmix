@@ -252,7 +252,14 @@ $primary: #F7931E;
             &:not(.collapsed) {
                 svg {
                     transform: rotate(180deg);
-    
+                }
+                .show {
+                    display: none;
+                }
+            }
+            &.collapsed {
+                .hide {
+                    display: none;
                 }
             }
         }
