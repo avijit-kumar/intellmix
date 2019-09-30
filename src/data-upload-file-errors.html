@@ -317,9 +317,9 @@
                                     </div>
                                 </div>
                                 <div class="show-hide-toggle py-3 px-4" data-toggle="collapse"
-                                    data-target="#dataTypeValidationContent" aria-expanded="true"
+                                    data-target="#dataTypeValidationContent" aria-expanded="false"
                                     aria-controls="collapseOne">
-                                    <span class="text-nowrap text-13">Hide Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13">Show Preview &nbsp; &nbsp;</span>
                                     <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
@@ -328,7 +328,7 @@
                                 </div>
                             </div>
 
-                            <div id="dataTypeValidationContent" class="collapse show"
+                            <div id="dataTypeValidationContent" class="collapse"
                                 aria-labelledby="dataTypeValidationHeading" data-parent="#dataTypeValidation">
                                 <div class="card-body">
                                     <div class="table-responsive border border-dark">
@@ -350,8 +350,9 @@
                                                     <td>lorem</td>
                                                     <td>int</td>
                                                     <td class="action__col">
-                                                        <button class="btn btn-outline-secondary btn-fix" data-toggle="modal"
-                                                        data-target="#DTVChangeModal">CHANGE</button>
+                                                        <button class="btn btn-outline-secondary btn-fix"
+                                                            data-toggle="modal"
+                                                            data-target="#DTVChangeModal">CHANGE</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -360,7 +361,8 @@
                                                     <td>11</td>
                                                     <td>string</td>
                                                     <td class="action__col">
-                                                        <button class="btn btn-outline-secondary btn-fix" data-toggle="modal"
+                                                        <button class="btn btn-outline-secondary btn-fix"
+                                                            data-toggle="modal"
                                                             data-target="#DTVChangeModal">CHANGE</button>
                                                     </td>
                                                 </tr>
@@ -382,7 +384,8 @@
                                                                 </svg>
                                                                 <span>&nbsp;Changed</span>
                                                             </span>
-                                                            <button class="btn btn-outline-secondary btn-undo ml-3" data-toggle="modal"
+                                                            <button class="btn btn-outline-secondary btn-undo ml-3"
+                                                                data-toggle="modal"
                                                                 data-target="#DTVUndoModal">UNDO</button>
                                                         </div>
                                                     </td>
@@ -396,16 +399,42 @@
                     </div>
 
                 </div>
+                <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error mt-5"
+                    role="alert">
+                    <span class="data__uploads__file__error__text d-flex align-items-center">
+                        <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#D0021B" fill-rule="nonzero">
+                                <path
+                                    d="M5.858 5.858c7.809-7.809 20.475-7.809 28.284 0 7.809 7.809 7.809 20.47 0 28.284-7.809 7.809-20.475 7.809-28.284 0-7.809-7.814-7.809-20.475 0-28.284zm1.06 1.06c-7.223 7.224-7.223 18.94 0 26.164 7.23 7.223 18.94 7.218 26.164 0 7.223-7.224 7.223-18.94 0-26.164-7.224-7.218-18.935-7.223-26.164 0z" />
+                                <path
+                                    d="M26.683 12.256c.696-.695 1.756.365 1.06 1.06L21.062 20l6.683 6.683c.695.696-.365 1.756-1.06 1.06L20 21.062l-6.683 6.683c-.696.7-1.761-.36-1.06-1.06L18.938 20l-6.683-6.683c-.7-.7.365-1.761 1.06-1.06L20 18.938l6.683-6.683z" />
+                            </g>
+                        </svg>
+                        Uploaded file has more than 20 errors, please re-upload another file.
+                    </span>
+                </div>
             </div>
             <div class="right__side__dot__nav">
-                <a href="#columnMappingCheck" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title data-original-title="Columnn Mapping Check"></a>
-                <a href="#dataTypeValidation" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title data-original-title="Data Type Validation"></a>
+                <a href="#columnMappingCheck" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Columnn Mapping Check"></a>
+                <a href="#dataTypeValidation" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Data Type Validation"></a>
             </div>
             <div class="p-2"></div>
             <div class="manage__form__action_btn">
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-outline-secondary reset-btn">Reset Changes</button>
-                    <button class="btn btn-primary save-btn">Save</button>
+                    <button class="btn btn-outline-secondary reset-btn" disabled>Reset Changes</button>
+                    <div class="d-flex align-items-center">
+                        <div class="file__upload">
+                            <input type="file" class="hidden w-0" id="inputGroupFile03"
+                                aria-describedby="inputGroupFileAddon03">
+                            <label class="file__upload__label btn btn-primary mb-0" for="inputGroupFile03">
+                                Re-Upload
+                            </label>
+                        </div>
+                        <span class="mr-3"></span>
+                        <button class="btn btn-primary save-btn">Save</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -439,8 +468,8 @@
         </div>
     </div>
     <!-- Data type validation change Modal -->
-    <div class="modal fade" id="DTVChangeModal" tabindex="-1" role="dialog"
-        aria-labelledby="DTVChangeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="DTVChangeModal" tabindex="-1" role="dialog" aria-labelledby="DTVChangeModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header pl-30">
@@ -452,11 +481,11 @@
                         <span class="font-weight-bold pl-3">int</span>
                     </div>
                     <div class="manage__form__input mb-3 d-flex flex-column">
-                            <label for="currentDataType">New Data Type: </label>
-                            <input class="form-control w-50" id="currentDataType" placeholder="Add a new data type"
-                                type="text" value="">
-                        </div>
-                    
+                        <label for="currentDataType">New Data Type: </label>
+                        <input class="form-control w-50" id="currentDataType" placeholder="Add a new data type"
+                            type="text" value="">
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary cancel-btn"
@@ -468,14 +497,14 @@
     </div>
 
     <!-- Data type validation undo Modal -->
-    <div class="modal fade" id="DTVUndoModal" tabindex="-1" role="dialog"
-        aria-labelledby="DTVUndoModalLabel" aria-hidden="true">
+    <div class="modal fade" id="DTVUndoModal" tabindex="-1" role="dialog" aria-labelledby="DTVUndoModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-               
+
                 <div class="modal-body p-30">
                     <p class="m-0">Are you sure you want to change to previous data type?</h3>
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary cancel-btn"

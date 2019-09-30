@@ -417,6 +417,10 @@
     padding-left: 30px;
 }
 
+.w-0 {
+    width: 0;
+}
+
 .w-30 {
     width: 30%;
 }
@@ -496,6 +500,18 @@
     background-color: #BDFFBD;
     border-color: #417505;
     color: #417505;
+}
+
+.alert-progress {
+    background-color: #ffe2c1;
+    border-color: #F7931E;
+    color: #F7931E;
+}
+
+.alert-secondary {
+    color: #333;
+    background-color: #fefefe;
+    border-color: #333;
 }
 
 .login {
@@ -1509,8 +1525,18 @@
 }
 
 .data__uploads__file__stage svg {
-    margin-left: 10px;
+    margin: 0 15px;
     fill: inherit;
+}
+
+.data__uploads__file__stage .steps {
+    min-width: 200px;
+    margin: 0;
+    text-align: center;
+}
+
+.data__uploads__file__stage .steps h3 {
+    font-size: 1.5rem;
 }
 
 .data__uploads__due {

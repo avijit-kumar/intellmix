@@ -19,6 +19,10 @@
   padding-left: 30px;
 }
 
+.w-0 {
+  width: 0;
+}
+
 .w-30 {
   width: 30%;
 }
@@ -90,5 +94,15 @@
     background-color: #BDFFBD;
     border-color: #417505;
     color: #417505;
+  }
+  &-progress {
+    background-color: #ffe2c1;
+    border-color: #F7931E;
+    color: #F7931E;
+  }
+  &-secondary {
+    color: #333;
+    background-color:#fefefe;
+    border-color: #333;
   }
 }

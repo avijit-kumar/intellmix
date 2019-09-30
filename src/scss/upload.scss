@@ -1,4 +1,6 @@
 $link-color: #0076FF;
+$body-color: #333;
+$primary: #F7931E;
 
 .data__uploads {
     display: flex;
@@ -210,8 +212,16 @@ $link-color: #0076FF;
         }
 
         svg {
-            margin-left: 10px;
+            margin: 0 15px;
             fill: inherit;
+        }
+        .steps {
+            min-width: 200px;
+            margin: 0;
+            text-align: center;
+            h3 {
+                font-size: 1.5rem;
+            }
         }
     }
     &__due {

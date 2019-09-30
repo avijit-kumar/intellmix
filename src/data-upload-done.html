@@ -385,6 +385,31 @@
               </div>
 
               <div class="data__uploads__file__details data__uploads__file__accordion accordion" id="fileDetails">
+                  <div class="data__uploads__file__stage mb-5 d-flex align-items-center justify-content-center">
+                      <div class="steps alert alert-success">
+                        <h3 class="m-0">STEP 01</h3>
+                        <p class="m-0">(Data Upload)</p>
+                      </div>
+                      <div class="text-success">
+                        <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                        </svg>
+                      </div>
+                      <div class="steps alert alert-progress">
+                        <h3 class="m-0">STEP 02</h3>
+                        <p class="m-0">(Column Mapping)</p>
+                      </div>
+                      <div class="text-progress">
+                        <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                        </svg>
+                      </div>
+                      <div class="steps alert alert-secondary">
+                          <h3 class="m-0">STEP 03</h3>
+                          <p class="m-0">(File Approval)</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="alert alert-danger d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
                     <span class="data__uploads__file__error__text d-flex align-items-center">
                         <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -409,10 +434,10 @@
                       </span>
                       <a class="data__uploads__file__error__link btn" href="#">Show Details</a>
                     </div>
-                    <div class="alert alert-success d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
+                    <div class="alert alert-primary d-flex justify-content-between align-items-center data__uploads__file__error" role="alert">
                         <span class="data__uploads__file__error__text d-flex align-items-center">
                             <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 0C8.973 0 0 8.973 0 20s8.973 20 20 20 20-8.973 20-20S31.027 0 20 0zm0 38.222C9.951 38.222 1.778 30.05 1.778 20 1.778 9.951 9.95 1.778 20 1.778 30.049 1.778 38.222 9.95 38.222 20c0 10.049-8.173 18.222-18.222 18.222zm9.96-25.07a.89.89 0 0 1 0 1.257L17.516 26.853a.886.886 0 0 1-1.253-.004l-6.223-6.222a.89.89 0 0 1 1.258-1.258l5.59 5.595 11.819-11.817a.881.881 0 0 1 1.253.004z" fill="#417505" fill-rule="nonzero"/>
+                              <path d="M20 0C8.973 0 0 8.973 0 20s8.973 20 20 20 20-8.973 20-20S31.027 0 20 0zm0 38.222C9.951 38.222 1.778 30.05 1.778 20 1.778 9.951 9.95 1.778 20 1.778 30.049 1.778 38.222 9.95 38.222 20c0 10.049-8.173 18.222-18.222 18.222zm9.96-25.07a.89.89 0 0 1 0 1.257L17.516 26.853a.886.886 0 0 1-1.253-.004l-6.223-6.222a.89.89 0 0 1 1.258-1.258l5.59 5.595 11.819-11.817a.881.881 0 0 1 1.253.004z" fill="currentColor" fill-rule="nonzero"/>
                             </svg>
                             Success! All issues resolved. You are ready to send this file for approval.
                         </span>
@@ -513,7 +538,10 @@
                     </div>
                     <div class="d-flex justify-content-end align-items-center mt-3">
                       <button class="btn btn-outline-secondary mr-3">Discard</button>
-                      <button class="btn btn-primary">Re-Upload</button>
+                      <div class="file__upload">            
+                          <input type="file" class="hidden w-0" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                          <label class="file__upload__label btn btn-primary mb-0" for="inputGroupFile03">Re-Upload</label>
+                      </div>
                       <span class="ml-3 mr-3">OR</span>
                       <button class="btn btn-primary">Submit for Approval</button>
                     </div>
