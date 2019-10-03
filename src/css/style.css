@@ -1518,9 +1518,8 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
-    padding-top: 15px;
 }
 
 .data__uploads__file__stage span {
@@ -1529,18 +1528,28 @@
 }
 
 .data__uploads__file__stage svg {
-    margin: 0 15px;
+    margin: 0 10px;
     fill: inherit;
 }
 
 .data__uploads__file__stage .steps {
-    min-width: 200px;
+    max-width: 200px;
     margin: 0;
     text-align: center;
 }
 
 .data__uploads__file__stage .steps h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.data__uploads__file__stage .alert {
+    padding: 5px 10px;
+    line-height: 15px;
+}
+
+.data__uploads__file__stage .alert.alert-secondary {
+    color: #999;
+    border-color: #999;
 }
 
 .data__uploads__due {
