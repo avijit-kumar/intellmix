@@ -185,6 +185,10 @@ $primary: #F7931E;
                     transform: rotate(180deg)
                 }
             }
+            .btn-link.focus, 
+            .btn-link:focus {
+                text-decoration: none;
+            }
         }
 
         .card-body {

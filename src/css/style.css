@@ -1496,6 +1496,11 @@
     transform: rotate(180deg);
 }
 
+.data__uploads__file__accordion .card-header .btn-link.focus,
+    .data__uploads__file__accordion .card-header .btn-link:focus {
+    text-decoration: none;
+}
+
 .data__uploads__file__accordion .card-body {
     border: 1px solid #999;
 }
