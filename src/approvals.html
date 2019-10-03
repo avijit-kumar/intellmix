@@ -122,13 +122,17 @@
           </li>
         </ol>
       </nav>
-      <div class="d-flex justify-content-between align-items-start">
+      <div class="d-flex justify-content-between align-items-between">
         <div class="page-header">
           <h3>Approvals</h3>
           <!-- <p>Enter the below details to upload a new file</p> -->
         </div>
+        <div class="d-flex align-self-end ml-auto text-right flex-column data__uploads__due">
+          <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
+          <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
       </div>
-      <div class="row clearfix data__approval d-flex flex-column">
+      </div>
+      <div class="clearfix data__approval d-flex flex-column">
         <p class="text-center text-muted"><small>1st step card - when uploaded file has to be approved</small></p>
         <div class="card data__approval__item mb-4">
           <div class="card-body">
@@ -178,7 +182,7 @@
               <a href="#" class="mr-4">Download Data</a>
             </div>
             <div class="data__approval__actions d-flex">
-              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+              <button class="btn btn-outline-secondary data__approval__revert__approval__btn mr-2">Revert Approval</button>
               <button class="btn btn-approved text-success">Approved</button>
             </div>
           </div>
@@ -205,7 +209,7 @@
                 <a href="#" class="mr-4">Download Data</a>
               </div>
               <div class="data__approval__actions d-flex">
-                <button class="btn btn-outline-secondary data__approval__revert__btn mr-2">Revert Approval</button>
+                <button class="btn btn-outline-secondary data__approval__undo__reject__btn mr-2">Undo Reject</button>
                 <button class="btn btn-rejected text-danger">Rejected</button>
               </div>
             </div>
