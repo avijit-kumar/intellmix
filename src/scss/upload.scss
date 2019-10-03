@@ -86,6 +86,7 @@ $primary: #F7931E;
         &__title {
             font-weight: 600;
             font-size: 20px;
+
             .file__version {
                 font-weight: 300;
                 font-size: 16px;
@@ -127,16 +128,19 @@ $primary: #F7931E;
 
             .rotate {
                 animation: rotate 2s linear infinite;
-                transform-origin: center;   
+                transform-origin: center;
             }
         }
+
         &__column__mapping {
             td:first-child {
                 border-left-color: transparent;
             }
+
             td:last-child {
                 border-right-color: transparent;
             }
+
             tr:last-child {
                 td {
                     border-bottom-color: transparent;
@@ -215,69 +219,93 @@ $primary: #F7931E;
             margin: 0 10px;
             fill: inherit;
         }
+
         .steps {
             max-width: 200px;
             margin: 0;
             text-align: center;
+            width: 33.33%;
+
             h3 {
                 // font-size: 1.5rem;
                 font-size: 1rem;
             }
         }
+
         .alert {
             padding: 5px 10px;
             line-height: 15px;
+
             &.alert-secondary {
                 color: #999;
                 border-color: #999;
             }
+
+            &.alert-success {
+                background-color: #BDFFBD !important;
+                border-color: #417505 !important;
+                color: #417505 !important;
+            }
         }
     }
+
     &__due {
         font-weight: 500;
         line-height: 1.2em;
         margin-bottom: 1rem;
+
         &__text {
             font-size: 13px;
         }
+
         &__date {
             font-size: 18px;
         }
     }
+
     &__file__error__text {
         font-weight: 600;
     }
+
     &__errors__accordion {
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
         .heading {
             flex: auto;
             display: flex;
         }
+
         .show-hide-toggle {
             width: 200px;
             flex: 0 0 200px;
             text-align: center;
             text-transform: uppercase;
+
             &:not(.collapsed) {
                 svg {
                     transform: rotate(180deg);
                 }
+
                 .show {
                     display: none;
                 }
             }
+
             &.collapsed {
                 .hide {
                     display: none;
                 }
             }
         }
+
         .action__col {
             width: 200px;
+
             .btn-fix {
                 width: 100%;
                 min-width: auto;
             }
+
             .btn-undo {
                 min-width: auto;
                 width: auto;

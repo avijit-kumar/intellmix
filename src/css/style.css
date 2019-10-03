@@ -1536,6 +1536,7 @@
     max-width: 200px;
     margin: 0;
     text-align: center;
+    width: 33.33%;
 }
 
 .data__uploads__file__stage .steps h3 {
@@ -1550,6 +1551,12 @@
 .data__uploads__file__stage .alert.alert-secondary {
     color: #999;
     border-color: #999;
+}
+
+.data__uploads__file__stage .alert.alert-success {
+    background-color: #BDFFBD !important;
+    border-color: #417505 !important;
+    color: #417505 !important;
 }
 
 .data__uploads__due {

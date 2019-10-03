@@ -461,6 +461,7 @@
                 <div class="d-flex justify-content-between">
                     <button class="btn btn-outline-secondary reset-btn" disabled>Reset Changes</button>
                     <div class="d-flex align-items-center">
+                        <!-- Show this UI if the error threshold is more than 20 -->
                         <div class="file__upload">
                             <input type="file" class="hidden w-0" id="inputGroupFile03"
                                 aria-describedby="inputGroupFileAddon03">
@@ -468,8 +469,8 @@
                                 Re-Upload
                             </label>
                         </div>
-                        <span class="mr-3"></span>
-                        <button class="btn btn-primary save-btn">Save</button>
+                        <!-- This button will be shown in all cases except the error threshold scenario -->
+                        <button class="btn btn-primary save-btn d-none">Request Changes</button>
                     </div>
                 </div>
             </div>
