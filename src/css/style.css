@@ -429,6 +429,10 @@
     width: 20%;
 }
 
+.fw-500 {
+    font-weight: 500;
+}
+
 .text-12 {
     font-size: 12px;
 }
@@ -1792,6 +1796,220 @@
 .data__approval .text-question {
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.process__update {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    min-width: 1200px;
+}
+
+.process__update__status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    min-width: 1200px;
+}
+
+.process__update__step {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #999;
+    position: relative;
+}
+
+.process__update__step .step__no {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #eee;
+    font-weight: 500;
+}
+
+.process__update__step .step__text {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.process__update__step:not(:last-child) .step__no::before {
+    content: '';
+    height: 10px;
+    width: calc(100% - 38px);
+    position: absolute;
+    left: calc(50% + 19px);
+    background-color: #eee;
+}
+
+.process__update__step.success .step__no {
+    background-color: #417505;
+    color: #fff;
+}
+
+.process__update__step.success .step__no::before {
+    background-color: #417505;
+}
+
+.process__update__step.success .step__text {
+    color: #417505;
+}
+
+.process__update__wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.process__update__file__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.process__update__file__column:not(:last-child) {
+    border-right: 1px solid #dbdbdb;
+}
+
+.process__update__file__column.right {
+    min-height: 100%;
+}
+
+.process__update__file__column.right .process__update__file__row {
+    height: 100%;
+}
+
+.process__update__file__column.right .process__update__msg {
+    bottom: auto;
+    right: auto;
+}
+
+.process__update__file__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.process__update__file__row:not(:last-child) {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.process__update__file__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 15px 25px 20px;
+    color: #888;
+    width: 50%;
+}
+
+.process__update__file__block:not(:last-child) {
+    border-right: 1px solid #dbdbdb;
+}
+
+.process__update__file__block svg {
+    width: 28px;
+    height: 28px;
+    color: #dbdbdb;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+}
+
+.process__update__file__block .file__block__text {
+    padding-left: 15px;
+}
+
+.process__update__file__block .file__block__text h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.process__update__file__block .file__block__text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.process__update__file__block .badge {
+    font-weight: 500;
+    border-radius: 0;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0 15px;
+}
+
+.process__update__file__block.danger .date {
+    color: #d0021b;
+}
+
+.process__update__file__block.danger .badge {
+    color: #d0021b;
+    background-color: rgba(208, 2, 27, 0.1);
+}
+
+.process__update__file__block.success .date {
+    color: #417505;
+}
+
+.process__update__file__block.success .badge {
+    color: #417505;
+    background-color: rgba(65, 117, 5, 0.1);
+}
+
+.process__update__file__block.warning .date {
+    color: #FDAE30;
+}
+
+.process__update__file__block.warning .badge {
+    color: #FDAE30;
+    background-color: rgba(253, 174, 48, 0.1);
+}
+
+.process__update__msg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 html,
