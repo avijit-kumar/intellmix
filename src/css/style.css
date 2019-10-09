@@ -1719,6 +1719,21 @@
     font-weight: 700;
     font-size: 24px;
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.data__approval__data__type .badge {
+    padding: 5px 25px;
+}
+
+.data__approval__data__type .badge-secondary {
+    background-color: #d8d8d8;
+    color: #333;
 }
 
 .data__approval__file__name {

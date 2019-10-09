@@ -127,18 +127,30 @@
           <h3>Approvals</h3>
           <!-- <p>Enter the below details to upload a new file</p> -->
         </div>
-        <div class="d-flex align-self-end ml-auto text-right flex-column data__uploads__due">
-          <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
-          <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
-      </div>
+       
       </div>
       <div class="clearfix data__approval d-flex flex-column">
+          <div class="d-flex justify-content-between  align-items-end data__approval__filter data__uploads__filter manage__org__form mb-3">
+              <div class="d-flex align-items-center form-group mr-5 mb-0">
+                  <label for="data__approval__filter__brand" class="col-form-label">SELECT BU</label>
+                  <select id="data__approval__filter__brand" class="form-control form-control-sm">
+                      <option>Brand 1</option>
+                      <option>Brand 2</option>
+                      <option>Brand 3</option>
+                      <option>Brand 4</option>
+                  </select>
+              </div>
+              <div class="d-flex align-self-end ml-auto text-right flex-column data__uploads__due">
+                  <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
+                  <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
+              </div>
+          </div>
         <p class="text-center text-muted"><small>1st step card - when uploaded file has to be approved</small></p>
         <div class="card data__approval__item mb-4">
           <div class="card-body">
             <div class="d-flex justify-content-between mb-2">
               <div>
-                <h4 class="card-title data__approval__data__type m-0">SPEND</h4>
+                <h4 class="card-title data__approval__data__type m-0">SPEND <span class="badge badge-secondary text-14 ml-3">BU: XYZ</span></h4>
                 <p class="card-sub-title data__approval__file__name m-0">Spend_PS_C8_new.csv</p>
               </div>
               <div class="data__approval__file__info text-right">
@@ -165,7 +177,7 @@
           <div class="card-body">
             <div class="d-flex justify-content-between mb-2">
               <div>
-                <h4 class="card-title data__approval__data__type m-0">SHIPMENTS</h4>
+                <h4 class="card-title data__approval__data__type m-0">SHIPMENTS<span class="badge badge-secondary text-14 ml-3">BU: XYZ</span></h4>
                 <p class="card-sub-title data__approval__file__name m-0">Shipments_PS_C2_d_new.csv</p>
               </div>
               <div class="data__approval__file__info text-right">
@@ -182,8 +194,15 @@
               <a href="#" class="mr-4">Download Data</a>
             </div>
             <div class="data__approval__actions d-flex">
-              <button class="btn btn-outline-secondary data__approval__revert__approval__btn mr-2">Revert Approval</button>
-              <button class="btn btn-approved text-success">Approved</button>
+              <button class="btn btn-approved text-success d-flex align-items-center justify-content-end">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <g fill-rule="nonzero" fill="none">
+                    <circle fill="currentColor" cx="10" cy="10" r="10"/>
+                    <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z"/>
+                  </g>
+                </svg>
+                <span class="ml-1">Approved</span>
+              </button>
             </div>
           </div>
         </div>
@@ -192,7 +211,7 @@
             <div class="card-body">
               <div class="d-flex justify-content-between mb-2">
                 <div>
-                  <h4 class="card-title data__approval__data__type m-0">SHIPMENTS</h4>
+                  <h4 class="card-title data__approval__data__type m-0">SHIPMENTS <span class="badge badge-secondary text-14 ml-3">BU: XYZ</span></h4>
                   <p class="card-sub-title data__approval__file__name m-0">Shipments_PS_C2_d_new.csv</p>
                 </div>
                 <div class="data__approval__file__info text-right">
@@ -209,8 +228,15 @@
                 <a href="#" class="mr-4">Download Data</a>
               </div>
               <div class="data__approval__actions d-flex">
-                <button class="btn btn-outline-secondary data__approval__undo__reject__btn mr-2">Undo Reject</button>
-                <button class="btn btn-rejected text-danger">Rejected</button>
+                <button class="btn btn-rejected text-danger d-flex align-items-center justify-content-end">
+                  <svg width="23" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="currentColor" fill-rule="nonzero">
+                      <path d="M.105 20.449c.26-.818.731-1.523 1.123-2.285a5262.987 5262.987 0 018.887-16.923c.235-.423.496-.818.967-.987.052-.028.104-.028.13-.057h.393c.575.17.888.593 1.176 1.129 2.9 5.471 5.828 10.943 8.73 16.415.391.733.783 1.467 1.15 2.2.104.197.156.395.234.592v.423c-.104.282-.209.565-.47.706l-.392.169H1.019c-.47-.17-.81-.452-.914-.987v-.395zm21.04-.226c-3.242-6.12-6.482-12.213-9.723-18.333-3.215 6.12-6.404 12.213-9.619 18.333h19.341z"/>
+                      <path d="M13.147 8.433c-.053.423-.105.903-.157 1.354-.079.649-.157 1.27-.235 1.918l-.236 1.918-.156 1.27c-.053.394-.21.704-.55.874a.73.73 0 01-.993-.423c-.13-.31-.156-.65-.209-.988-.104-.761-.183-1.494-.287-2.256-.079-.733-.183-1.467-.261-2.172-.053-.423-.079-.818-.157-1.24-.183-.79.287-1.467.81-1.778 1.045-.648 2.222.17 2.404 1.213.027.085.027.17.027.31zM11.526 16.556c.627 0 1.124.593 1.124 1.27s-.523 1.24-1.15 1.24c-.627-.028-1.15-.592-1.124-1.269 0-.761.549-1.269 1.15-1.24z"/>
+                    </g>
+                  </svg>
+                  <span class="ml-1">Rejected</span>
+                </button>
               </div>
             </div>
           </div>
@@ -220,7 +246,7 @@
           <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h4 class="card-title data__approval__brand m-0"><span class="text-grey">BRAND NAME - </span>XYZ</h4>
+                <h4 class="card-title data__approval__brand data__approval__data__type m-0"><span class="badge badge-secondary text-14 ml-3">BU: XYZ</span></h4>
               </div>
               <div class="data__approval__file__info text-right">
                 <p class="data__approval__file__status m-0">Approved by</p>
@@ -229,18 +255,22 @@
             </div>
           </div>
           <div class="card-body d-flex justify-content-between align-items-end">
-            <div class="mr-3">
-              <div class="data__approval__file__desc">
-                <p class="card-text text-success mb-2">All file types were approved.</p>
-                <p class="card-text text-question mb-0">Approve data preparations?</p>
-                <p class="card-text">This step will approve the data preparations process to happen.</p>
-              </div>
+            <div class="data__approval__file__desc">
+              <p class="card-text text-success mb-2">All file types were approved.</p>
+              <p class="card-text text-question mb-0">Approve data preparations?</p>
+              <p class="card-text">This step will approve the data preparations process to happen.</p>
+            </div>
 
-            </div>
-            <div class="data__approval__actions d-flex">
-              <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
-              <button class="btn btn-primary data__approval__approve__btn">Approve</button>
-            </div>
+          </div>
+          <div class="card-footer data__approval__footer d-flex justify-content-between align-items-center">
+              <div class="data__approval__links">
+                  <a href="#" class="mr-4">Preview Dashboard</a>
+                  <a href="#" class="mr-4">Download Dashboard as PDF</a>
+              </div>
+              <div class="data__approval__actions d-flex">
+                <button class="btn btn-outline-secondary data__approval__reject__btn mr-2">Reject</button>
+                <button class="btn btn-primary data__approval__approve__btn">Approve</button>
+              </div>
           </div>
         </div>
 
@@ -249,7 +279,7 @@
           <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h4 class="card-title data__approval__brand m-0"><span class="text-grey">BRAND NAME - </span>XYZ</h4>
+                <h4 class="card-title data__approval__brand data__approval__data__type m-0"><span class="badge badge-secondary text-14 ml-3">BU: XYZ</span></h4>
               </div>
               <div class="data__approval__file__info text-right">
                 <p class="data__approval__file__status m-0">Approved by</p>
