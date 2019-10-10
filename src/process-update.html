@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CPG by TEG</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header class="navbar fixed-top navbar-expand navbar-light bg-white">
+    <button class="btn sidebar__toggle__btn toggle mr-3">
+      <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path d="M0 10v2h20v-2H0zm0-5v2h20V5H0zm0-5v2h20V0H0z" id="a" />
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <mask id="b" fill="#fff">
+            <use xlink:href="#a" />
+          </mask>
+          <g mask="url(#b)">
+            <path d="M-15-19h50v50h-50z" fill="#000" />
+          </g>
+        </g>
+      </svg>
+    </button>
+    <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+      <img src="img/intell-mix-logo.png" alt="intell mix logo">
+    </a>
+    <div class="header-right logout-block">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle dropdown-toggle-split" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+          <p class="user-name text-truncate">Hello, Avijit!</p>
+          <span class="user-profile-icon"></span>
+          <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="edit-profile.html">Profile</a>
+          <a class="dropdown-item" href="login.html">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="sidebar sidebar__open">
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/home.png" alt="home icon" />
+        </span>
+        <span class="sidebar__link__text">Home</span>
+      </a>
+      <a class="nav-link sidebar__link" href="data-upload.html">
+        <span class="sidebar__link__icon">
+          <img src="./img/upload.png" alt="upload icon" />
+        </span>
+        <span class="sidebar__link__text">Data Ingestion</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/data-approval.png" alt="data approval icon" />
+        </span>
+        <span class="sidebar__link__text">Approval</span>
+      </a>
+      <a class="nav-link sidebar__link active" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/process-update.png" alt="process update icon" />
+        </span>
+        <span class="sidebar__link__text">Process Update</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/dashboard.png" alt="dashboard icon" />
+        </span>
+        <span class="sidebar__link__text">Dashboards</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/simulator.png" alt="simulator icon" />
+        </span>
+        <span class="sidebar__link__text">Media Simulator</span>
+      </a>
+      <a class="nav-link sidebar__link" href="#">
+        <span class="sidebar__link__icon">
+          <img src="./img/cube.png" alt="cube icon" />
+        </span>
+        <span class="sidebar__link__text">Data Cube</span>
+      </a>
+      <a class="nav-link sidebar__link" href="manage-user-list.html">
+        <span class="sidebar__link__icon">
+          <img src="./img/manage-users.png" alt="manage users icon" />
+        </span>
+        <span class="sidebar__link__text">Manage Users</span>
+      </a>
+      <div class="admin__access__toggle">
+        <p class="admin__access__toggle__title">Admin</p>
+        <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give
+          SuperAdmin Access</button>
+        <a class="nav-link sidebar__link" href="add-a-new-role.html">
+          <span class="sidebar__link__icon">
+            <img src="./img/manage-users.png" alt="create role icon" />
+          </span>
+          <span class="sidebar__link__text">Create Role</span>
+        </a>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="data-upload.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <i class="fas fa-chevron-right pr-2"></i>
+            Process Update
+          </li>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-between align-items-between">
+        <div class="page-header">
+          <h3>Process Update</h3>
+        </div>
+      </div>
+      <div class="d-flex flex-column card process__update__wrapper">
+        <div class="d-flex process__update__filter data__uploads__filter manage__org__form p-4 m-0">
+          <div class="d-flex align-items-center form-group mr-5 mb-0">
+            <label for="process__update__filter__brand" class="col-form-label">SELECT BU</label>
+            <select id="process__update__filter__brand" class="form-control form-control-sm">
+              <option>Brand 1</option>
+              <option>Brand 2</option>
+              <option>Brand 3</option>
+              <option>Brand 4</option>
+            </select>
+          </div>
+        </div>
+        <div class="process__update__inner__wrapper">
+          <div class="process__update__status">
+            <!-- add success class when data is uploaded to all file type -->
+            <div class="process__update__step success">
+              <span class="step__no">1</span>
+              <span class="step__text">File Upload</span>
+            </div>
+            <div class="process__update__step">
+              <span class="step__no">2</span>
+              <span class="step__text">File Approved</span>
+            </div>
+            <div class="process__update__step">
+              <span class="step__no">3</span>
+              <span class="step__text">Data Preparation</span>
+            </div>
+            <div class="process__update__step">
+              <span class="step__no">4</span>
+              <span class="step__text">Reports</span>
+            </div>
+          </div>
+          <div class="process__update">
+            <div class="process__update__file__column left">
+              <div class="process__update__file__row">
+                <!-- add danger class to process__update__file__block when due date is crossed -->
+                <div class="process__update__file__block file-upload danger">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Brand Hierarchy</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 0 days</p>
+                  </div>
+                  <span class="badge badge-danger process__update__msg">Due Date Crossed</span>
+                </div>
+                <div class="process__update__file__block file-approve">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Brand Hierarchy</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+              </div>
+              <div class="process__update__file__row">
+                <div class="process__update__file__block file-upload">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Spend</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+                <div class="process__update__file__block file-approve danger">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Spend</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 0 days</p>
+                  </div>
+                  <span class="badge badge-danger process__update__msg">Due Date Crossed</span>
+                </div>
+              </div>
+              <div class="process__update__file__row">
+                <!-- add success class to process__update__file__block when uploaded / approved  -->
+                <div class="process__update__file__block file-upload success">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Financial</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Upload Date:</span> 05 Jan 2019 11:38AM</p>
+                  </div>
+                  <span class="badge badge-success process__update__msg">Uploaded</span>
+                </div>
+                <!-- add success class to process__update__file__block when uploaded / approved  -->
+                <div class="process__update__file__block file-approve success">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Financial</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Approved Date:</span> 08 Jan 2019 2:08PM</p>
+                  </div>
+                  <span class="badge badge-success process__update__msg">Approved</span>
+                </div>
+              </div>
+              <div class="process__update__file__row">
+                <!-- add warning class to process__update__file__block when due date is approaching -->
+                <div class="process__update__file__block file-upload warning">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Shipments</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 18 days</p>
+                  </div>
+                  <span class="badge badge-warning process__update__msg">Due Date Approaching</span>
+                </div>
+                <div class="process__update__file__block file-approve">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Shipments</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+              </div>
+              <div class="process__update__file__row">
+                <div class="process__update__file__block file-upload">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Volume</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+                <div class="process__update__file__block file-approve">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Volume</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+              </div>
+              <div class="process__update__file__row">
+                <div class="process__update__file__block file-upload">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Event</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+                <div class="process__update__file__block file-approve">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Event</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="process__update__file__column right">
+              <div class="process__update__file__row">
+                <div class="process__update__file__block data-preparation warning">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Data Preparations</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                    <p><span class="badge badge-warning process__update__msg relative mt-2">Due Date Approaching</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="process__update__file__block data-report">
+                  <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="nonzero" fill="none">
+                      <circle fill="currentColor" cx="14" cy="14" r="14" />
+                      <path stroke="#FFF" fill="#FFF"
+                        d="M19.408 10l-7.056 6.843-3.756-3.641L8 13.78 12.352 18 20 10.578z" />
+                    </g>
+                  </svg>
+                  <div class="file__block__text">
+                    <h3 class="type">Data Reports</h3>
+                    <p class="owner"><span class="fw-500">Owner:</span> Arvind Prasad</p>
+                    <p class="date"><span class="fw-500">Due Date in:</span> 2 months, 10 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- file block actions modal -->
+      <div class="file__block__actions">
+        <button class="btn file__block__actions__btn" data-toggle="modal" data-target="#viewLogModal">View Log</button>
+        <button class="btn file__block__actions__btn" data-toggle="modal" data-target="#changeOwnerModal">Change
+          Owner</button>
+        <button class="btn file__block__actions__btn" data-toggle="modal" data-target="#changeDueDateModal">Change Due
+          Date</button>
+        <button class="btn file__block__actions__btn" data-toggle="modal" data-target="#sendNotificationModal">Send
+          Notification</button>
+        <button class="btn file__block__actions__btn" data-toggle="modal" data-target="#changeProcessTypeModal">Change
+          Process
+          Type</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- View log Modal -->
+  <div class="modal fade process__update__modal" id="viewLogModal" tabindex="-1" role="dialog"
+    aria-labelledby="viewLogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewLogModalLabel">Log</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="t-18 fw-500">Datewise log of all the changes done to the current file type</p>
+          <div class="table-responsive">
+            <table class="table table-bordered process__update__log__table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">File Status</th>
+                  <th scope="col">Admin Name</th>
+                  <th scope="col">Timestamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>File Updated</td>
+                  <td>Arun Prem</td>
+                  <td>10 June, Fri 2019 11:11 AM</td>
+                </tr>
+                <tr>
+                  <td>File Updated</td>
+                  <td>Arun Prem</td>
+                  <td>10 June, Fri 2019 11:11 AM</td>
+                </tr>
+                <tr>
+                  <td>File Updated</td>
+                  <td>Arun Prem</td>
+                  <td>10 June, Fri 2019 11:11 AM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Owner Modal -->
+  <div class="modal fade process__update__modal" id="changeOwnerModal" tabindex="-1" role="dialog"
+    aria-labelledby="changeOwnerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changeOwnerModalLabel">Change Owner Type</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="t-18 fw-500">Change current owner of this process</p>
+          <div class="d-flex process__update__select mb-5">
+            <div class="input-group">
+              <input type="text" class="form-control" value="Arun Prem" disabled>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Arun Prem</a>
+                  <a class="dropdown-item" href="#">Avijit Kumar</a>
+                  <a class="dropdown-item" href="#">Arvind Prasad</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Due Date Modal -->
+  <div class="modal fade process__update__modal" id="changeDueDateModal" tabindex="-1" role="dialog"
+    aria-labelledby="changeDueDateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changeDueDateModalLabel">Change Due Date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="t-18 fw-500">Change upload due date of the file type</p>
+          <div class="d-flex flex-column mb-3">
+            <h3 class="mb-1 form-title">For</h3>
+            <div class="d-flex align-items-center">
+              <div class="d-flex process__update__checkbox mr-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dueDatePeriod" id="dueDatePeriod-quarterly"
+                    value="quarterly">
+                  <label class="form-check-label" for="dueDatePeriod-quarterly">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero" fill="none">
+                        <circle fill="currentColor" cx="10" cy="10" r="10" />
+                        <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                      </g>
+                    </svg>
+                    <span>Quarterly</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dueDatePeriod" id="dueDatePeriod-manual"
+                    value="halfyearly" checked>
+                  <label class="form-check-label" for="dueDatePeriod-halfYearly">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero" fill="none">
+                        <circle fill="currentColor" cx="10" cy="10" r="10" />
+                        <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                      </g>
+                    </svg>
+                    <span>Half Yearly</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dueDatePeriod" id="dueDatePeriod-yearly"
+                    value="yearly">
+                  <label class="form-check-label" for="dueDatePeriod-yearly">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero" fill="none">
+                        <circle fill="currentColor" cx="10" cy="10" r="10" />
+                        <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                      </g>
+                    </svg>
+                    <span>Yearly</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column mb-5">
+            <h3 class="mb-1 form-title">The due date should be</h3>
+            <div class="d-flex align-items-center">
+              <div class="mr-2 t-18 fw-500">On</div>
+              <div class="d-flex process__update__select mr-2">
+                <div class="input-group">
+                  <input id="puDueWeek" type="text" class="form-control" value="First" disabled>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">First</a>
+                      <a class="dropdown-item" href="#">Second</a>
+                      <a class="dropdown-item" href="#">Third</a>
+                      <a class="dropdown-item" href="#">Fourth</a>
+                      <a class="dropdown-item" href="#">Last</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex process__update__select mr-2">
+                <div class="input-group">
+                  <input id="puDueDay" type="text" class="form-control" value="Monday" disabled>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Monday</a>
+                      <a class="dropdown-item" href="#">Tuesday</a>
+                      <a class="dropdown-item" href="#">Wednesday</a>
+                      <a class="dropdown-item" href="#">Thursday</a>
+                      <a class="dropdown-item" href="#">Friday</a>
+                      <a class="dropdown-item" href="#">Saturday</a>
+                      <a class="dropdown-item" href="#">Sunday</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mr-2 t-18 fw-500">Of</div>
+              <div class="d-flex process__update__select">
+                <div class="input-group">
+                  <input id="puDueMonth" type="text" class="form-control" value="First Month" disabled>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">First Month</a>
+                      <a class="dropdown-item" href="#">Second Month</a>
+                      <a class="dropdown-item" href="#">Third Month</a>
+                      <a class="dropdown-item" href="#">Fourth Month</a>
+                      <a class="dropdown-item" href="#">Fifth Month</a>
+                      <a class="dropdown-item" href="#">Sixth Month</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <div class="mr-auto">
+            <b>NOTE:</b> Data will be pulled at 12PM noon.
+          </div>
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Send Notification Modal -->
+  <div class="modal fade process__update__modal" id="sendNotificationModal" tabindex="-1" role="dialog"
+    aria-labelledby="sendNotificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sendNotificationModalLabel">Send Notification</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="t-18 fw-500">Add details to send a notification</p>
+          <textarea id="puNotificationMsg" class="form-control process__update__textarea" rows="4"
+            placeholder="Enter Details..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Process Type Modal -->
+  <div class="modal fade process__update__modal" id="changeProcessTypeModal" tabindex="-1" role="dialog"
+    aria-labelledby="changeProcessTypeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changeProcessTypeModalLabel">Change Process Type</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <div class="d-flex process__update__checkbox">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="processType" id="processType-automatic"
+                    value="automatic" checked>
+                  <label class="form-check-label" for="processType-automatic">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero" fill="none">
+                        <circle fill="currentColor" cx="10" cy="10" r="10" />
+                        <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                      </g>
+                    </svg>
+                    <span>Automatic</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="processType" id="processType-manual"
+                    value="manual">
+                  <label class="form-check-label" for="processType-manual">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero" fill="none">
+                        <circle fill="currentColor" cx="10" cy="10" r="10" />
+                        <path stroke="#FFF" fill="#FFF" d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                      </g>
+                    </svg>
+                    <span>Manual</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script>
+    // For sidebar
+    $('.sidebar__toggle__btn').on('click', function () {
+      if ($('.sidebar').hasClass('sidebar__open')) {
+        $('.sidebar__toggle__btn').removeClass('toggle');
+        $('.sidebar').removeClass('sidebar__open');
+        $('.container').addClass('expand');
+      } else {
+        $('.sidebar__toggle__btn').addClass('toggle');
+        $('.sidebar').addClass('sidebar__open');
+        $('.container').removeClass('expand');
+      }
+    });
+
+    $('.process__update__file__block').on('click', function () {
+      if ($(this).hasClass('selected')) {
+        $(this).removeClass('selected');
+        $('.file__block__actions').hide();
+      } else {
+        $('.process__update__file__block').removeClass('selected');
+        $(this).addClass('selected');
+        $('.file__block__actions').show();
+      }
+    })
+
+  </script>
+</body>
+
+</html>

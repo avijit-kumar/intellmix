@@ -3,6 +3,15 @@
     font-weight: 700;
     font-size: 24px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    .badge {
+      padding: 5px 25px;
+      &-secondary {
+        background-color: #d8d8d8;
+        color: #333;
+      }
+    }
   }
   &__file__ {
     &name {
