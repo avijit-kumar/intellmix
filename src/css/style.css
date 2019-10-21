@@ -2204,6 +2204,18 @@
     left: 245px;
 }
 
+.dashboard__card {
+    margin-bottom: 30px;
+}
+
+.dashboard__card:not(:first-child) {
+    padding-left: 7.5px;
+}
+
+.dashboard__card:not(:last-child) {
+    padding-right: 7.5px;
+}
+
 html,
 body {
     height: 100%;
