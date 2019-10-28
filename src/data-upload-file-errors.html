@@ -232,56 +232,53 @@
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th scope="col">Column name</th>
-                                                    <th scope="col">Number Missing</th>
+                                                    <th scope="col">Value Missing</th>
                                                     <th scope="col">Data Type</th>
                                                     <th class="action__col" scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Column name</td>
+                                                    <td>ABC</td>
                                                     <td>13</td>
-                                                    <td>lorem</td>
                                                     <td>int</td>
                                                     <td class="action__col">
-                                                        <button class="btn btn-outline-secondary btn-fix"
-                                                            data-toggle="modal"
-                                                            data-target="#DTVChangeModal">CHANGE</button>
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Column name</td>
+                                                    <td>DEF</td>
                                                     <td>22</td>
-                                                    <td>11</td>
                                                     <td>string</td>
                                                     <td class="action__col">
-                                                        <button class="btn btn-outline-secondary btn-fix"
-                                                            data-toggle="modal"
-                                                            data-target="#DTVChangeModal">CHANGE</button>
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Column name</td>
+                                                    <td>XYZ</td>
                                                     <td>36</td>
-                                                    <td>21</td>
-                                                    <td class="text-success">int</td>
+                                                    <td>int</td>
                                                     <td class="action__col">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <span class="d-flex align-items-center text-success">
-                                                                <svg width="20" height="20"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <g fill-rule="nonzero" fill="none">
-                                                                        <circle fill="#7ED321" cx="10" cy="10" r="10" />
-                                                                        <path stroke="#FFF" fill="#FFF"
-                                                                            d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
-                                                                    </g>
-                                                                </svg>
-                                                                <span>&nbsp;Changed</span>
-                                                            </span>
-                                                            <button class="btn btn-outline-secondary btn-undo ml-3"
-                                                                data-toggle="modal"
-                                                                data-target="#DTVUndoModal">UNDO</button>
-                                                        </div>
+                                                        <!-- Add "disabled" attribute when value is not a Number -->
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -431,7 +428,8 @@
                                                 <p>All rows will be kept.</p>
                                                 <!-- <p>Only 1 row will be kept.</p> -->
                                                 <!-- <p>All rows will be removed.</p> -->
-                                                <button class="btn btn-outline-secondary mr-1" type="button">Undo</button>
+                                                <button class="btn btn-outline-secondary mr-1"
+                                                    type="button">Undo</button>
                                             </div>
                                         </div>
                                         <div class="row-set-details mb-3">
