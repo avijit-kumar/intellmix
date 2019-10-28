@@ -199,19 +199,19 @@
                 </div>
                 <div class="data__uploads_errors file__errors mb-4">
                     <h4 class="text-danger mb-2">Errors*</h4>
-                    <div class="accordion data__uploads__errors__accordion" id="columnMappingCheck">
+                    <div class="accordion data__uploads__errors__accordion" id="missingValues">
                         <div class="card">
-                            <div class="card-header d-flex align-items-center p-0" id="columnMappingCheckHeading">
+                            <div class="card-header d-flex align-items-center p-0" id="missingValuesHeading">
                                 <div class="heading">
                                     <div class="col font-weight-bold py-3 px-4">
-                                        Columnn Mapping Check
+                                        Missing Values Found
                                     </div>
                                     <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
-                                        2 issues
+                                        3 issues
                                     </div>
                                 </div>
                                 <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
-                                    data-target="#columnMappingCheckContent" aria-expanded="false"
+                                    data-target="#missingValuesContent" aria-expanded="false"
                                     aria-controls="collapseOne">
                                     <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
                                     <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
@@ -223,124 +223,63 @@
                                 </div>
                             </div>
 
-                            <div id="columnMappingCheckContent" class="collapse"
-                                aria-labelledby="columnMappingCheckHeading" data-parent="#columnMappingCheck">
+                            <div id="missingValuesContent" class="collapse" aria-labelledby="missingValuesHeading"
+                                data-parent="#missingValues">
                                 <div class="card-body">
                                     <div class="table-responsive border border-dark">
                                         <table
                                             class="table data__uploads__table data__uploads__table__column__mapping table-bordered manage__org__form">
                                             <thead class="thead-dark">
                                                 <tr>
-                                                    <th class="text-right" scope="col">Type</th>
-                                                    <th class="text-right" scope="col">Column</th>
-                                                    <th class="text-left" scope="col">Column</th>
-                                                    <th class="text-left" scope="col">Type</th>
+                                                    <th scope="col">Column name</th>
+                                                    <th scope="col">Value Missing</th>
+                                                    <th scope="col">Data Type</th>
+                                                    <th class="action__col" scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="text-right w-30">int</td>
-                                                    <td class="text-right w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>ECF6</option>
-                                                                <option>ABC1</option>
-                                                                <option>XYZ10</option>
-                                                                <option>LMN1</option>
-                                                            </select>
-                                                        </div>
+                                                    <td>ABC</td>
+                                                    <td>13</td>
+                                                    <td>int</td>
+                                                    <td class="action__col">
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
-                                                    <td class="text-left w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>CFC7</option>
-                                                                <option>MNO8</option>
-                                                                <option>CAC14</option>
-                                                                <option>STU3</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-left w-30">int</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-right w-30">int</td>
-                                                    <td class="text-right w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>ECF6</option>
-                                                                <option selected>ABC1</option>
-                                                                <option>XYZ10</option>
-                                                                <option>LMN1</option>
-                                                            </select>
-                                                        </div>
+                                                    <td>DEF</td>
+                                                    <td>22</td>
+                                                    <td>string</td>
+                                                    <td class="action__col">
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
-                                                    <td class="text-left w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>CFC7</option>
-                                                                <option selected>MNO8</option>
-                                                                <option>CAC14</option>
-                                                                <option>STU3</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-left w-30">int</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-right w-30">int</td>
-                                                    <td class="text-right w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>ECF6</option>
-                                                                <option>ABC1</option>
-                                                                <option selected>XYZ10</option>
-                                                                <option>LMN1</option>
-                                                            </select>
-                                                        </div>
+                                                    <td>XYZ</td>
+                                                    <td>36</td>
+                                                    <td>int</td>
+                                                    <td class="action__col">
+                                                        <!-- Add "disabled" attribute when value is not a Number -->
+                                                        <select id="row__sets__filter"
+                                                            class="form-control form-control-sm mb-3">
+                                                            <option>Select</option>
+                                                            <option>Mean</option>
+                                                            <option>Median</option>
+                                                            <option>Zero</option>
+                                                        </select>
                                                     </td>
-                                                    <td class="text-left w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>CFC7</option>
-                                                                <option>MNO8</option>
-                                                                <option selected>CAC14</option>
-                                                                <option>STU3</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-left w-30">int</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-right w-30">int</td>
-                                                    <td class="text-right w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>ECF6</option>
-                                                                <option>ABC1</option>
-                                                                <option>XYZ10</option>
-                                                                <option selected>LMN1</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-left w-20">
-                                                        <div class="d-flex align-items-center">
-                                                            <select id="data__uploads__filter__brand"
-                                                                class="form-control form-control-sm">
-                                                                <option>CFC7</option>
-                                                                <option>MNO8</option>
-                                                                <option>CAC14</option>
-                                                                <option selected>STU3</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-left w-30">int</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -364,7 +303,7 @@
                                         3 issues
                                     </div>
                                 </div>
-                                <div class="show-hide-toggle py-3 px-4" data-toggle="collapse"
+                                <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
                                     data-target="#dataTypeValidationContent" aria-expanded="false"
                                     aria-controls="collapseOne">
                                     <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
@@ -447,14 +386,183 @@
                         </div>
                     </div>
 
+                    <div class="accordion data__uploads__errors__accordion mb-3" id="duplicateRows">
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center p-0" id="duplicateRowsHeading">
+                                <div class="heading">
+                                    <div class="col font-weight-bold py-3 px-4">
+                                        Duplicate Rows Found
+                                    </div>
+                                    <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
+                                        3 issues
+                                    </div>
+                                </div>
+                                <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
+                                    data-target="#duplicateRowsContent" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
+                                    <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
+                                            fill="currentColor" fill-rule="nonzero" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div id="duplicateRowsContent" class="collapse" aria-labelledby="duplicateRowsHeading"
+                                data-parent="#duplicateRows">
+                                <div class="card-body">
+                                    <div class="row-sets-block">
+                                        <strong class="mb-0">Row Sets (3)</strong>
+                                        <select id="row__sets__filter"
+                                            class="col-sm-2 form-control form-control-sm mb-3">
+                                            <option>Set 1</option>
+                                            <option>Set 2</option>
+                                            <option>Set 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="row-sets-container">
+                                        <div class="action-sheen d-none">
+                                            <div class="sheen-details">
+                                                <p>All rows will be kept.</p>
+                                                <!-- <p>Only 1 row will be kept.</p> -->
+                                                <!-- <p>All rows will be removed.</p> -->
+                                                <button class="btn btn-outline-secondary mr-1"
+                                                    type="button">Undo</button>
+                                            </div>
+                                        </div>
+                                        <div class="row-set-details mb-3">
+                                            <p class="mb-1"><span>Duplicate Row Numbers - </span>R1, R2</p>
+                                            <p class="mb-1"><strong>Duplicate Data</strong></p>
+                                            <table
+                                                class="table table-responsive border border-dark data__uploads__table">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Data Table 1</th>
+                                                        <th scope="col">Data Table 2</th>
+                                                        <th scope="col">Data Table 3</th>
+                                                        <th scope="col">Data Table 4</th>
+                                                        <th scope="col">Data Table 5</th>
+                                                        <th scope="col">Data Table 6</th>
+                                                        <th scope="col">Data Table 7</th>
+                                                        <th scope="col">Data Table 8</th>
+                                                        <th scope="col">Data Table 9</th>
+                                                        <th scope="col">Data Table 10</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Dummy Data 1</td>
+                                                        <td>Dummy Data 2</td>
+                                                        <td>Dummy Data 3</td>
+                                                        <td>Dummy Data 4</td>
+                                                        <td>Dummy Data 5</td>
+                                                        <td>Dummy Data 6</td>
+                                                        <td>Dummy Data 7</td>
+                                                        <td>Dummy Data 8</td>
+                                                        <td>Dummy Data 9</td>
+                                                        <td>Dummy Data 10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row-set-actions">
+                                            <button class="btn btn-outline-secondary mr-1" type="button">Keep All
+                                                Rows</button>
+                                            <button class="btn btn-outline-secondary mr-1" type="button">Keep One
+                                                Rows</button>
+                                            <button class="btn btn-outline-secondary mr-1" type="button">Remove All
+                                                Rows</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion data__uploads__errors__accordion" id="outlierData">
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center p-0" id="outlierDataHeading">
+                                <div class="heading">
+                                    <div class="col font-weight-bold py-3 px-4">
+                                        Outlier / Wrong Data
+                                    </div>
+                                    <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
+                                        3 issues
+                                    </div>
+                                </div>
+                                <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
+                                    data-target="#outlierDataContent" aria-expanded="false" aria-controls="collapseOne">
+                                    <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
+                                    <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
+                                            fill="currentColor" fill-rule="nonzero" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div id="outlierDataContent" class="collapse" aria-labelledby="outlierDataHeading"
+                                data-parent="#outlierData">
+                                <div class="card-body">
+                                    <div class="table-responsive border border-dark">
+                                        <table
+                                            class="table data__uploads__table data__uploads__table__column__mapping table-bordered manage__org__form">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Column name</th>
+                                                    <th scope="col">Row Number</th>
+                                                    <th scope="col">Value</th>
+                                                    <th class="action__col" scope="col">Range</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ABC</td>
+                                                    <td>13</td>
+                                                    <td>1234</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DEF</td>
+                                                    <td>22</td>
+                                                    <td>4567</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XYZ</td>
+                                                    <td>36</td>
+                                                    <td>8765</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
             <div class="right__side__dot__nav">
-                <a href="#columnMappingCheck" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title
+                <a href="#missingValues" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title
                     data-original-title="Columnn Mapping Check"></a>
                 <a href="#dataTypeValidation" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
                     data-original-title="Data Type Validation"></a>
+                <a href="#duplicateRows" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Duplicate Rows"></a>
+                <a href="#outlierData" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Outlier / Wrong Data"></a>
             </div>
             <div class="p-4"></div>
             <div class="manage__form__action_btn">
@@ -555,10 +663,10 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </script>
     <script>
         // For sidebar
         $('.sidebar__toggle__btn').on('click', function () {
