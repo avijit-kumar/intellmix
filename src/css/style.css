@@ -1615,6 +1615,11 @@
     flex: 0 0 200px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.data__uploads__errors__accordion .show-hide-toggle:hover {
+    background-color: #eee;
 }
 
 .data__uploads__errors__accordion .show-hide-toggle:not(.collapsed) svg {
@@ -1725,6 +1730,10 @@
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+}
+
+.accordion .card-header {
+    background-color: #fff !important;
 }
 
 .data__approval__data__type {

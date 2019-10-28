@@ -284,6 +284,10 @@ $primary: #F7931E;
             flex: 0 0 200px;
             text-align: center;
             text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                background-color: #eee;
+            }
 
             &:not(.collapsed) {
                 svg {
@@ -379,5 +383,12 @@ $primary: #F7931E;
 
     to {
         transform: rotate(0deg);
+    }
+}
+
+
+.accordion {
+    .card-header {
+        background-color: #fff !important;
     }
 }

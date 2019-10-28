@@ -199,19 +199,19 @@
                 </div>
                 <div class="data__uploads_errors file__errors mb-4">
                     <h4 class="text-danger mb-2">Errors*</h4>
-                    <div class="accordion data__uploads__errors__accordion" id="columnMappingCheck">
+                    <div class="accordion data__uploads__errors__accordion" id="missingValues">
                         <div class="card">
-                            <div class="card-header d-flex align-items-center p-0" id="columnMappingCheckHeading">
+                            <div class="card-header d-flex align-items-center p-0" id="missingValuesHeading">
                                 <div class="heading">
                                     <div class="col font-weight-bold py-3 px-4">
                                         Missing Values Found
                                     </div>
                                     <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
-                                        2 issues
+                                        3 issues
                                     </div>
                                 </div>
                                 <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
-                                    data-target="#columnMappingCheckContent" aria-expanded="false"
+                                    data-target="#missingValuesContent" aria-expanded="false"
                                     aria-controls="collapseOne">
                                     <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
                                     <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
@@ -223,8 +223,8 @@
                                 </div>
                             </div>
 
-                            <div id="columnMappingCheckContent" class="collapse"
-                                aria-labelledby="columnMappingCheckHeading" data-parent="#columnMappingCheck">
+                            <div id="missingValuesContent" class="collapse" aria-labelledby="missingValuesHeading"
+                                data-parent="#missingValues">
                                 <div class="card-body">
                                     <div class="table-responsive border border-dark">
                                         <table
@@ -397,7 +397,7 @@
                                         3 issues
                                     </div>
                                 </div>
-                                <div class="show-hide-toggle py-3 px-4" data-toggle="collapse"
+                                <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
                                     data-target="#duplicateRowsContent" aria-expanded="false"
                                     aria-controls="collapseOne">
                                     <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
@@ -410,7 +410,7 @@
                                 </div>
                             </div>
 
-                            <div id="duplicateRowsContent" class="" aria-labelledby="duplicateRowsHeading"
+                            <div id="duplicateRowsContent" class="collapse" aria-labelledby="duplicateRowsHeading"
                                 data-parent="#duplicateRows">
                                 <div class="card-body">
                                     <div class="row-sets-block">
@@ -481,14 +481,88 @@
                         </div>
                     </div>
 
+                    <div class="accordion data__uploads__errors__accordion" id="outlierData">
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center p-0" id="outlierDataHeading">
+                                <div class="heading">
+                                    <div class="col font-weight-bold py-3 px-4">
+                                        Outlier / Wrong Data
+                                    </div>
+                                    <div class="col border-left border-right py-3 px-4 font-italic text-secondary">
+                                        3 issues
+                                    </div>
+                                </div>
+                                <div class="show-hide-toggle collapsed py-3 px-4" data-toggle="collapse"
+                                    data-target="#outlierDataContent" aria-expanded="false" aria-controls="collapseOne">
+                                    <span class="text-nowrap text-13 show">Show Preview &nbsp; &nbsp;</span>
+                                    <span class="text-nowrap text-13 hide">Hide Preview &nbsp; &nbsp;</span>
+                                    <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.872 9.872L19.017.726a.413.413 0 0 0 0-.598.413.413 0 0 0-.598 0L9.573 8.974.726.128a.413.413 0 0 0-.598 0 .462.462 0 0 0-.128.3C0 .512.043.64.128.725l9.146 9.146c.085.085.17.128.299.128a.388.388 0 0 0 .299-.128z"
+                                            fill="currentColor" fill-rule="nonzero" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div id="outlierDataContent" class="collapse" aria-labelledby="outlierDataHeading"
+                                data-parent="#outlierData">
+                                <div class="card-body">
+                                    <div class="table-responsive border border-dark">
+                                        <table
+                                            class="table data__uploads__table data__uploads__table__column__mapping table-bordered manage__org__form">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Column name</th>
+                                                    <th scope="col">Row Number</th>
+                                                    <th scope="col">Value</th>
+                                                    <th class="action__col" scope="col">Range</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ABC</td>
+                                                    <td>13</td>
+                                                    <td>1234</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DEF</td>
+                                                    <td>22</td>
+                                                    <td>4567</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XYZ</td>
+                                                    <td>36</td>
+                                                    <td>8765</td>
+                                                    <td class="action__col">
+                                                        [10, 6000]
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
             <div class="right__side__dot__nav">
-                <a href="#columnMappingCheck" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title
+                <a href="#missingValues" class="dot dot-danger" data-toggle="tooltip" data-placement="left" title
                     data-original-title="Columnn Mapping Check"></a>
                 <a href="#dataTypeValidation" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
                     data-original-title="Data Type Validation"></a>
+                <a href="#duplicateRows" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Duplicate Rows"></a>
+                <a href="#outlierData" class="dot dot-warning" data-toggle="tooltip" data-placement="left" title
+                    data-original-title="Outlier / Wrong Data"></a>
             </div>
             <div class="p-4"></div>
             <div class="manage__form__action_btn">
