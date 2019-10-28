@@ -806,7 +806,7 @@
     line-height: 20px;
     padding: 0 3px;
     margin: 0 5px;
-    color: #0076FF;
+    color: #0076ff;
     text-decoration: underline;
 }
 
@@ -916,7 +916,7 @@
     align-items: center;
     border-radius: 50%;
     color: #fff;
-    background-color: #0076FF;
+    background-color: #0076ff;
     margin-right: 10px;
 }
 
@@ -2325,11 +2325,11 @@ header .navbar {
 }
 
 .breadcrumb .breadcrumb-item a {
-    color: #4A90E2;
+    color: #4a90e2;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-    content: '';
+    content: "";
     display: none;
 }
 
@@ -2449,4 +2449,45 @@ tr.disabled .disabled-badge {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 0;
+}
+
+.row-set-details {
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
+}
+
+.row-set-details span {
+    font-weight: bold;
+}
+
+.row-set-actions {
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.row-sets-container {
+    position: relative;
+}
+
+.action-sheen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.action-sheen .sheen-details {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.action-sheen .sheen-details p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
