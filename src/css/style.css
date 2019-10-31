@@ -1456,6 +1456,23 @@
     transform-origin: center;
 }
 
+.data__uploads__table__status .error-icon {
+    display: none;
+    width: 100px;
+}
+
+.data__uploads__table__status.state-error .loader {
+    display: none;
+}
+
+.data__uploads__table__status.state-error .error-icon {
+    display: block;
+}
+
+.data__uploads__table__status.state-error .status-msg {
+    display: none;
+}
+
 .data__uploads__table__column__mapping td:first-child {
     border-left-color: transparent;
 }
@@ -1542,6 +1559,8 @@
 .data__uploads__file__stage span {
     margin-left: 5px;
     margin-right: 5px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .data__uploads__file__stage svg {

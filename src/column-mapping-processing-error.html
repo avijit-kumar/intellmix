@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>CPG by TEG</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header class="navbar fixed-top navbar-expand navbar-light bg-white">
+    <button class="btn sidebar__toggle__btn toggle mr-3">
+      <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path d="M0 10v2h20v-2H0zm0-5v2h20V5H0zm0-5v2h20V0H0z" id="a" />
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <mask id="b" fill="#fff">
+            <use xlink:href="#a" />
+          </mask>
+          <g mask="url(#b)">
+            <path d="M-15-19h50v50h-50z" fill="#000" />
+          </g>
+        </g>
+      </svg>
+    </button>
+    <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+      <img src="img/intell-mix-logo.png" alt="intell mix logo">
+    </a>
+    <div class="header-right logout-block">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle dropdown-toggle-split" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+          <p class="user-name text-truncate">Hello, Avijit!</p>
+          <span class="user-profile-icon"></span>
+          <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="edit-profile.html">Profile</a>
+            <a class="dropdown-item" href="login.html">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="content">
+    <div class="sidebar sidebar__open">
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/home.png" alt="home icon" />
+            </span>
+            <span class="sidebar__link__text">Home</span>
+        </a>
+        <a class="nav-link sidebar__link active" href="data-upload.html">
+            <span class="sidebar__link__icon">
+                <img src="./img/upload.png" alt="upload icon" />
+            </span>
+            <span class="sidebar__link__text">Data Ingestion</span>
+        </a>
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/data-approval.png" alt="data approval icon" />
+            </span>
+            <span class="sidebar__link__text">Approval</span>
+        </a>
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/process-update.png" alt="process update icon" />
+            </span>
+            <span class="sidebar__link__text">Process Update</span>
+        </a>
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/dashboard.png" alt="dashboard icon" />
+            </span>
+            <span class="sidebar__link__text">Dashboards</span>
+        </a>
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/simulator.png" alt="simulator icon" />
+            </span>
+            <span class="sidebar__link__text">Media Simulator</span>
+        </a>
+        <a class="nav-link sidebar__link" href="#">
+            <span class="sidebar__link__icon">
+                <img src="./img/cube.png" alt="cube icon" />
+            </span>
+            <span class="sidebar__link__text">Data Cube</span>
+        </a>
+        <a class="nav-link sidebar__link" href="manage-user-list.html">
+            <span class="sidebar__link__icon">
+                <img src="./img/manage-users.png" alt="manage users icon" />
+            </span>
+            <span class="sidebar__link__text">Manage Users</span>
+        </a>
+        <div class="admin__access__toggle">
+            <p class="admin__access__toggle__title">Admin</p>
+            <button class="btn admin__access__toggle__btn" data-toggle="modal" data-target="#superAdminAccessModal">Give SuperAdmin Access</button>
+            <a class="nav-link sidebar__link" href="add-a-new-role.html">
+                <span class="sidebar__link__icon">
+                    <img src="./img/manage-users.png" alt="create role icon" />
+                </span>
+                <span class="sidebar__link__text">Create Role</span>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="manage-user-list.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <i class="fas fa-chevron-right pr-2"></i>Data Upload</li>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="page-header">
+          <h3>Data Upload</h3>
+          <p>Upload files in every tab to process the data</p>
+        </div>
+        <a href="upload-file.html" class="btn btn-primary btn-upload">+ UPLOAD</a>
+      </div>
+      <div class="d-flex data__uploads__filter manage__org__form m-0">
+        <div class="d-flex align-items-center form-group mr-5">
+          <label for="data__uploads__filter__qtr" class="col-form-label">SELECT QUARTER</label>
+          <select id="data__uploads__filter__qtr" class="form-control form-control-sm">
+            <option>2019 Q1</option>
+            <option>2019 Q2</option>
+            <option>2019 Q3</option>
+            <option>2019 Q4</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center form-group">
+            <label for="data__uploads__filter__brand" class="col-form-label">SELECT BRAND</label>
+            <select id="data__uploads__filter__brand" class="form-control form-control-sm">
+              <option>Brand 1</option>
+              <option>Brand 2</option>
+              <option>Brand 3</option>
+            </select>
+        </div>
+        <div class="d-flex align-self-end ml-auto text-right flex-column data__uploads__due">
+            <p class="m-0 text-grey data__uploads__due__text">Due Date in</p>
+            <p class="m-0 data__uploads__due__date">2 months, 10 days</p>
+        </div>
+      </div>
+      <div class="d-flex data__uploads">
+        <div class="nav flex-column nav-pills data__uploads__nav__tab" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-spend-tab" data-toggle="pill" href="#v-pills-spend" role="tab"
+            aria-controls="v-pills-spend" aria-selected="true">spend</a>
+          <a class="nav-link" id="v-pills-financial-tab" data-toggle="pill" href="#v-pills-financial" role="tab"
+            aria-controls="v-pills-financial" aria-selected="false">financial</a>
+          <a class="nav-link active" id="v-pills-shipments-tab" data-toggle="pill" href="#v-pills-shipments" role="tab"
+            aria-controls="v-pills-shipments" aria-selected="false">shipments</a>
+          <a class="nav-link" id="v-pills-volume-tab" data-toggle="pill" href="#v-pills-volume" role="tab"
+            aria-controls="v-pills-volume" aria-selected="false">volume</a>
+          <a class="nav-link" id="v-pills-event-tab" data-toggle="pill" href="#v-pills-event" role="tab"
+            aria-controls="v-pills-event" aria-selected="false">event</a>
+          <a class="nav-link" id="v-pills-brand-hierarchy-tab" data-toggle="pill" href="#v-pills-brand-hierarchy"
+            role="tab" aria-controls="v-pills-brand-hierarchy" aria-selected="false">brand hierarchy</a>
+        </div>
+        <div class="tab-content data__uploads__tab__content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-spend" role="tabpanel" aria-labelledby="v-pills-spend-tab">
+              <div class="d-flex w-100 justify-content-between mb-3">
+                  <div class="alert alert-warning m-0" role="alert">
+                    <b>Warning!</b> No file uploaded yet.
+                  </div>
+                  <div class="data__uploads__action">
+                    <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+                  </div>
+                </div>
+                <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+                  <div class="data__uploads__table__title">
+                    SAMPLE FORMAT
+                  </div>
+                  <div class="data__uploads__table__links">
+                    <a href="#">Help</a>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table data__uploads__table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Data Table 1</th>
+                        <th scope="col">Data Table 2</th>
+                        <th scope="col">Data Table 3</th>
+                        <th scope="col">Data Table 4</th>
+                        <th scope="col">Data Table 5</th>
+                        <th scope="col">Data Table 6</th>
+                        <th scope="col">Data Table 7</th>
+                        <th scope="col">Data Table 8</th>
+                        <th scope="col">Data Table 9</th>
+                        <th scope="col">Data Table 10</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Dummy Data 1</td>
+                        <td>Dummy Data 2</td>
+                        <td>Dummy Data 3</td>
+                        <td>Dummy Data 4</td>
+                        <td>Dummy Data 5</td>
+                        <td>Dummy Data 6</td>
+                        <td>Dummy Data 7</td>
+                        <td>Dummy Data 8</td>
+                        <td>Dummy Data 9</td>
+                        <td>Dummy Data 10</td>
+                      </tr>
+                      <tr>
+                        <td>Dummy Data 1</td>
+                        <td>Dummy Data 2</td>
+                        <td>Dummy Data 3</td>
+                        <td>Dummy Data 4</td>
+                        <td>Dummy Data 5</td>
+                        <td>Dummy Data 6</td>
+                        <td>Dummy Data 7</td>
+                        <td>Dummy Data 8</td>
+                        <td>Dummy Data 9</td>
+                        <td>Dummy Data 10</td>
+                      </tr>
+                      <tr>
+                        <td>Dummy Data 1</td>
+                        <td>Dummy Data 2</td>
+                        <td>Dummy Data 3</td>
+                        <td>Dummy Data 4</td>
+                        <td>Dummy Data 5</td>
+                        <td>Dummy Data 6</td>
+                        <td>Dummy Data 7</td>
+                        <td>Dummy Data 8</td>
+                        <td>Dummy Data 9</td>
+                        <td>Dummy Data 10</td>
+                      </tr>
+                      <tr>
+                        <td>Dummy Data 1</td>
+                        <td>Dummy Data 2</td>
+                        <td>Dummy Data 3</td>
+                        <td>Dummy Data 4</td>
+                        <td>Dummy Data 5</td>
+                        <td>Dummy Data 6</td>
+                        <td>Dummy Data 7</td>
+                        <td>Dummy Data 8</td>
+                        <td>Dummy Data 9</td>
+                        <td>Dummy Data 10</td>
+                      </tr>
+                      <tr>
+                        <td>Dummy Data 1</td>
+                        <td>Dummy Data 2</td>
+                        <td>Dummy Data 3</td>
+                        <td>Dummy Data 4</td>
+                        <td>Dummy Data 5</td>
+                        <td>Dummy Data 6</td>
+                        <td>Dummy Data 7</td>
+                        <td>Dummy Data 8</td>
+                        <td>Dummy Data 9</td>
+                        <td>Dummy Data 10</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-financial" role="tabpanel" aria-labelledby="v-pills-financial-tab">
+            <div class="d-flex w-100 justify-content-between mb-3">
+              <div class="alert alert-warning m-0" role="alert">
+                <b>Warning!</b> No file uploaded yet.
+              </div>
+              <div class="data__uploads__action">
+                <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+              </div>
+            </div>
+            <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+              <div class="data__uploads__table__title">
+                SAMPLE FORMAT
+              </div>
+              <div class="data__uploads__table__links">
+                <a href="#">Help</a>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table data__uploads__table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Data Table 1</th>
+                    <th scope="col">Data Table 2</th>
+                    <th scope="col">Data Table 3</th>
+                    <th scope="col">Data Table 4</th>
+                    <th scope="col">Data Table 5</th>
+                    <th scope="col">Data Table 6</th>
+                    <th scope="col">Data Table 7</th>
+                    <th scope="col">Data Table 8</th>
+                    <th scope="col">Data Table 9</th>
+                    <th scope="col">Data Table 10</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-shipments" role="tabpanel" aria-labelledby="v-pills-shipments-tab">
+            <div class="d-flex w-100 justify-content-between mb-3">
+                <div class="data__uploads__action">
+                  <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+                </div>
+              </div>
+              <div class="d-flex w-100 justify-content-between align-items-end data__uploads__table__header mb-3">
+                <div class="data__uploads__table__title">
+                  Shipment_PS_C2_d_new.csv <span class="file__version ml-3">(V8)</span>
+                </div>
+                <div class="data__uploads__table__last__updated">
+                  <p>LAST UPDATED BY:</p>
+                  <P class="font-weight-bold">Arun Prem on 28 May, Tue 2019 06:23 AM</P>
+                </div>
+              </div>
+              <!-- Add ".state-error" class on the below parent if any step has error -->
+              <div class="data__uploads__table__status state-error">
+                <svg class="loader mb-4" width="102" height="102" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#000" fill-rule="nonzero" opacity=".597">
+                    <path class="rotate" d="M51 0C31.233 0 21.368 6.56 12.75 15.07V2.125a2.125 2.125 0 1 0-4.25 0V21.25a2.125 2.125 0 0 0 2.125 2.125h17a2.125 2.125 0 1 0 0-4.25H14.713A45.089 45.089 0 0 1 51 4.25c25.82 0 46.75 20.93 46.75 46.75S76.82 97.75 51 97.75c-2.037 0-4.071-.131-6.09-.392a2.124 2.124 0 0 0-.549 4.212A51.031 51.031 0 0 0 102 51C101.968 22.847 79.153.032 51 0zM10.085 81.454a2.125 2.125 0 0 0 3.408-2.54 46.893 46.893 0 0 1-5.161-8.779 2.125 2.125 0 1 0-3.877 1.744 51.098 51.098 0 0 0 5.63 9.575zM20.107 88.935c-.701.94-.507 2.272.433 2.973a50.993 50.993 0 0 0 9.573 5.632 2.125 2.125 0 0 0 1.744-3.876 46.787 46.787 0 0 1-8.776-5.163 2.124 2.124 0 0 0-2.974.434zM2.125 48.875A2.124 2.124 0 0 0 0 51c0 2.22.143 4.437.43 6.639a2.124 2.124 0 1 0 4.212-.548A47.526 47.526 0 0 1 4.25 51a2.124 2.124 0 0 0-2.125-2.125z"/>
+                    <path d="M78.625 51c0-15.257-12.368-27.625-27.625-27.625S23.375 35.743 23.375 51 35.743 78.625 51 78.625C66.25 78.607 78.607 66.25 78.625 51zm-51 0c0-12.91 10.465-23.375 23.375-23.375S74.375 38.09 74.375 51 63.91 74.375 51 74.375C38.096 74.36 27.64 63.904 27.625 51z"/>
+                    <path d="M52.962 51.811c.107-.257.162-.532.163-.811v-8.5a2.125 2.125 0 1 0-4.25 0v7.62l-7.877 7.878a2.125 2.125 0 1 0 3.004 3.004l8.498-8.497c.198-.199.355-.434.462-.694z"/>
+                  </g>
+                </svg>
+                <img src="img/error-icon.svg" class="error-icon mb-4" alt="">
+                <p class="mb-1 font-weight-bold">File Name: <span class="text-grey">Shipment_PS_C2_d_new.csv</span></p>
+                <p class="m-0 status-msg">You will be notified when the file gets uploaded.</p>
+                <div class="data__uploads__file__stage">
+                  <span class="text-success">Upload Started
+                    <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                    </svg>
+                  </span>
+                 
+                  <span class="text-success">
+                    <span class="text-success">Upload in Progress</span>
+                    <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                    </svg>
+                  </span>
+
+                  <span class="text-success">Upload Completed
+                    <svg width="35" height="9" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0l9 4.5L26 9V5H0V4h26V0z" fill="currentColor" fill-rule="nonzero"/>
+                    </svg>
+                  </span>
+                  <!-- add class "text-danger to show error in this step" -->
+                  <span class="text-danger">Mapping Columns</span>
+                </div>
+                <!-- this messaging is required to show column mapping error-->
+                <!-- Below DIV can also be shown for error in any step -->
+                <!-- to hide thie DIV, use "d-none" classname at the end -->
+                <div class="text-danger mt-3"><strong>Shipment_PS_C2_d_new.csv</strong> contains <strong>7</strong> columns while in <strong>Shipment</strong> file <strong>10</strong> are expected.</div>
+                <button class="btn btn-outline-secondary mt-4 d-none">Show Column Mapping Details</button>
+                <!-- use the below button to allow re-upload of file in case of column mapping error -->
+                <div class="file__upload mt-3">
+                    <input type="file" class="hidden w-0" id="inputGroupFile03"
+                        aria-describedby="inputGroupFileAddon03">
+                    <label class="file__upload__label btn btn-primary mb-0" for="inputGroupFile03">
+                        Re-Upload File
+                    </label>
+                </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-volume" role="tabpanel" aria-labelledby="v-pills-volume-tab">
+            <div class="d-flex w-100 justify-content-between mb-3">
+              <div class="alert alert-warning m-0" role="alert">
+                <b>Warning!</b> No file uploaded yet.
+              </div>
+              <div class="data__uploads__action">
+                <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+              </div>
+            </div>
+            <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+              <div class="data__uploads__table__title">
+                SAMPLE FORMAT
+              </div>
+              <div class="data__uploads__table__links">
+                <a href="#">Help</a>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table data__uploads__table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Data Table 1</th>
+                    <th scope="col">Data Table 2</th>
+                    <th scope="col">Data Table 3</th>
+                    <th scope="col">Data Table 4</th>
+                    <th scope="col">Data Table 5</th>
+                    <th scope="col">Data Table 6</th>
+                    <th scope="col">Data Table 7</th>
+                    <th scope="col">Data Table 8</th>
+                    <th scope="col">Data Table 9</th>
+                    <th scope="col">Data Table 10</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-event" role="tabpanel" aria-labelledby="v-pills-event-tab">
+            <div class="d-flex w-100 justify-content-between mb-3">
+              <div class="alert alert-warning m-0" role="alert">
+                <b>Warning!</b> No file uploaded yet.
+              </div>
+              <div class="data__uploads__action">
+                <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+              </div>
+            </div>
+            <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+              <div class="data__uploads__table__title">
+                SAMPLE FORMAT
+              </div>
+              <div class="data__uploads__table__links">
+                <a href="#">Help</a>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table data__uploads__table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Data Table 1</th>
+                    <th scope="col">Data Table 2</th>
+                    <th scope="col">Data Table 3</th>
+                    <th scope="col">Data Table 4</th>
+                    <th scope="col">Data Table 5</th>
+                    <th scope="col">Data Table 6</th>
+                    <th scope="col">Data Table 7</th>
+                    <th scope="col">Data Table 8</th>
+                    <th scope="col">Data Table 9</th>
+                    <th scope="col">Data Table 10</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                  <tr>
+                    <td>Dummy Data 1</td>
+                    <td>Dummy Data 2</td>
+                    <td>Dummy Data 3</td>
+                    <td>Dummy Data 4</td>
+                    <td>Dummy Data 5</td>
+                    <td>Dummy Data 6</td>
+                    <td>Dummy Data 7</td>
+                    <td>Dummy Data 8</td>
+                    <td>Dummy Data 9</td>
+                    <td>Dummy Data 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-brand-hierarchy" role="tabpanel" aria-labelledby="v-pills-brand-hierarchy-tab">
+            <div class="d-flex w-100 justify-content-between mb-3">
+                <div class="alert alert-warning m-0" role="alert">
+                  <b>Warning!</b> No file uploaded yet.
+                </div>
+                <div class="data__uploads__action">
+                  <button class="btn btn-outline-secondary">GET FILES FROM DB</button>
+                </div>
+              </div>
+              <div class="d-flex w-100 justify-content-between data__uploads__table__header mb-3">
+                <div class="data__uploads__table__title">
+                  SAMPLE FORMAT
+                </div>
+                <div class="data__uploads__table__links">
+                  <a href="#">Help</a>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table data__uploads__table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Data Table 1</th>
+                      <th scope="col">Data Table 2</th>
+                      <th scope="col">Data Table 3</th>
+                      <th scope="col">Data Table 4</th>
+                      <th scope="col">Data Table 5</th>
+                      <th scope="col">Data Table 6</th>
+                      <th scope="col">Data Table 7</th>
+                      <th scope="col">Data Table 8</th>
+                      <th scope="col">Data Table 9</th>
+                      <th scope="col">Data Table 10</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dummy Data 1</td>
+                      <td>Dummy Data 2</td>
+                      <td>Dummy Data 3</td>
+                      <td>Dummy Data 4</td>
+                      <td>Dummy Data 5</td>
+                      <td>Dummy Data 6</td>
+                      <td>Dummy Data 7</td>
+                      <td>Dummy Data 8</td>
+                      <td>Dummy Data 9</td>
+                      <td>Dummy Data 10</td>
+                    </tr>
+                    <tr>
+                      <td>Dummy Data 1</td>
+                      <td>Dummy Data 2</td>
+                      <td>Dummy Data 3</td>
+                      <td>Dummy Data 4</td>
+                      <td>Dummy Data 5</td>
+                      <td>Dummy Data 6</td>
+                      <td>Dummy Data 7</td>
+                      <td>Dummy Data 8</td>
+                      <td>Dummy Data 9</td>
+                      <td>Dummy Data 10</td>
+                    </tr>
+                    <tr>
+                      <td>Dummy Data 1</td>
+                      <td>Dummy Data 2</td>
+                      <td>Dummy Data 3</td>
+                      <td>Dummy Data 4</td>
+                      <td>Dummy Data 5</td>
+                      <td>Dummy Data 6</td>
+                      <td>Dummy Data 7</td>
+                      <td>Dummy Data 8</td>
+                      <td>Dummy Data 9</td>
+                      <td>Dummy Data 10</td>
+                    </tr>
+                    <tr>
+                      <td>Dummy Data 1</td>
+                      <td>Dummy Data 2</td>
+                      <td>Dummy Data 3</td>
+                      <td>Dummy Data 4</td>
+                      <td>Dummy Data 5</td>
+                      <td>Dummy Data 6</td>
+                      <td>Dummy Data 7</td>
+                      <td>Dummy Data 8</td>
+                      <td>Dummy Data 9</td>
+                      <td>Dummy Data 10</td>
+                    </tr>
+                    <tr>
+                      <td>Dummy Data 1</td>
+                      <td>Dummy Data 2</td>
+                      <td>Dummy Data 3</td>
+                      <td>Dummy Data 4</td>
+                      <td>Dummy Data 5</td>
+                      <td>Dummy Data 6</td>
+                      <td>Dummy Data 7</td>
+                      <td>Dummy Data 8</td>
+                      <td>Dummy Data 9</td>
+                      <td>Dummy Data 10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SuperAdmin Access confimation Modal -->
+  <div class="modal fade" id="superAdminAccessModal" tabindex="-1" role="dialog"
+    aria-labelledby="superAdminAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header pl-30">
+          <h5 class="modal-title" id="superAdminAccessModalLabel">Grant Superadmin Access?</h5>
+        </div>
+        <div class="modal-body p-30">
+          <div class="manage__form__input mb-3">
+            <label for="accessConfirmPassword">Enter your Current Password for verification.</label>
+            <input class="form-control" id="accessConfirmPassword" placeholder="Enter password" type="password">
+          </div>
+          <div class="manage__form__checkbox">
+            <input type="checkbox" id="accessConfirm" class="checkbox__dataTypes">
+            <label for="accessConfirm">I understand this will delete the data type & cannot be recoverd again.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn">Procced</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script>
+    $('.sidebar__toggle__btn').on('click', function() {
+      if ($('.sidebar').hasClass('sidebar__open')) {
+          $('.sidebar__toggle__btn').removeClass('toggle');
+          $('.sidebar').removeClass('sidebar__open');
+          $('.container').addClass('expand');
+      } else {
+          $('.sidebar__toggle__btn').addClass('toggle');
+          $('.sidebar').addClass('sidebar__open');
+          $('.container').removeClass('expand');
+      }
+    });
+  </script>
+</body>
+
+</html>
