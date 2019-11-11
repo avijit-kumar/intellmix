@@ -58,16 +58,28 @@
       width: calc((100% / 3) - 15px);
       margin-bottom: 30px;
 
+      .card-body {
+        position: relative;
+      }
       .card-title {
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 1rem;
+        padding-right: 100px;
       }
 
       .card-subtitle {
         text-transform: uppercase;
         font-weight: 500;
         color: #676767;
+      }
+      .card-link {
+        margin-left: 0 !important;
+      }
+      .card-link.edit-org {
+        position: absolute;
+        right: 10px;
+        top: 20px;
       }
     }
   }

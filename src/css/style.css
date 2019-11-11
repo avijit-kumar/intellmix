@@ -738,16 +738,31 @@
     margin-bottom: 30px;
 }
 
+.admin__organisation__card .card-body {
+    position: relative;
+}
+
 .admin__organisation__card .card-title {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 1rem;
+    padding-right: 100px;
 }
 
 .admin__organisation__card .card-subtitle {
     text-transform: uppercase;
     font-weight: 500;
     color: #676767;
+}
+
+.admin__organisation__card .card-link {
+    margin-left: 0 !important;
+}
+
+.admin__organisation__card .card-link.edit-org {
+    position: absolute;
+    right: 10px;
+    top: 20px;
 }
 
 .manage__org__form {
@@ -967,6 +982,7 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
+    padding-top: 20px;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;

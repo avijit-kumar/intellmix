@@ -114,9 +114,11 @@
             </div>
         </div>
         <div class="container-fluid">
-            <nav aria-label="breadcrumb">
+            <!-- this breadcrumbs will only come when user is coming to any org dashboard from Super Admin -->
+            <!-- To show the below set of breadcrumbs, remove 'd-none' class from nav tag -->
+            <nav aria-label="breadcrumb" class="d-none">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="data-upload.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="data-upload.html">Back to Super Admin Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
                         <i class="fas fa-chevron-right pr-2"></i>
                         Dashboard
