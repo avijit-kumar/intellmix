@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>CPG by TEG</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <header class="navbar fixed-top navbar-expand navbar-light bg-white">
+      <a class="navbar-brand im-logo" href="/" aria-label="Bootstrap">
+        <img src="img/intell-mix-logo.png" alt="intell mix logo" />
+      </a>
+      <div class="header-right logout-block">
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle Dropdown</span>
+            <p class="user-name text-truncate">Hello, Avijit!</p>
+            <span class="user-profile-icon"></span>
+            <span class="caret"></span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="edit-profile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+            <div class="sidebar sidebar__open">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="#">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/home.png" alt="home icon" />
+                                </span>
+                                <span class="sidebar__link__text">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="data-upload.html">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/upload.png" alt="upload icon" />
+                                </span>
+                                <span class="sidebar__link__text">Data Ingestion</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="#">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/data-approval.png" alt="data approval icon" />
+                                </span>
+                                <span class="sidebar__link__text">Approval</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="#">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/process-update.png" alt="process update icon" />
+                                </span>
+                                <span class="sidebar__link__text">Process Update</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropright">
+                            <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" id="dashboardMenu"
+                                href="list-of-dashboards.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/dashboard.png" alt="dashboard icon" />
+                                </span>
+                                <span class="sidebar__link__text">Dashboards</span>
+                            </a>
+                            <ul class="sidebar__aside__nav dropdown-menu" aria-labelledby="dashboardMenu">
+                                <a class="sidebar__aside__link dropdown-item" href="#">Executive Dashboard</a>
+                                <a class="sidebar__aside__link dropdown-item" href="#">Media Effectiveness</a>
+                                <a class="sidebar__aside__link dropdown-item" href="#">Trend Analysis</a>
+                                <a class="sidebar__aside__link dropdown-item" href="#">Volume Contribution</a>
+                                <a class="sidebar__aside__link dropdown-item" href="#">Campaign Deep Dive</a>
+                                <a class="sidebar__aside__link dropdown-item" href="#">Data Summary</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="#">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/simulator.png" alt="simulator icon" />
+                                </span>
+                                <span class="sidebar__link__text">Media Simulator</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="#">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/cube.png" alt="cube icon" />
+                                </span>
+                                <span class="sidebar__link__text">Data Cube</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sidebar__link" href="manage-user-list.html">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/manage-users.png" alt="manage users icon" />
+                                </span>
+                                <span class="sidebar__link__text">Manage Users</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropright">
+                            <a class="nav-link sidebar__link sidebar__link__dropdown dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sidebar__link__icon">
+                                    <img src="./img/manage-users.png" alt="manage users icon" />
+                                </span>
+                                <span class="sidebar__link__text">Admin Settings</span>
+                            </a>
+                            <div class="sidebar__aside__nav dropdown-menu">
+                                <a class="sidebar__aside__link dropdown-item" href="#" role="button" data-toggle="modal"
+                                    data-target="#superAdminAccessModal">Give SuperAdmin Access</a>
+                                <a class="sidebar__aside__link dropdown-item" href="add-a-new-role.html">Create Role</a>
+                            </div>
+                        </li>
+                    </ul>
+        
+                </div>
+      <div class="container-fluid mt-4">
+        <div class="d-flex justify-content-between align-items-start">
+          <div class="page-header">
+            <h3>Tableu Dashboards</h3>
+            <!-- <p>this page is just to list down all (module wise) html files</p> -->
+          </div>
+        </div>
+        <div class="clearfix dashboard d-flex flex-column">
+          <div class="dashboard__card__wrapper">
+            <div class="row">
+              <!-- each dashboard card -->
+              <div class="col-3 dashboard__card mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="dashboard__card__latest__data">
+                      <h2 class="card-title h5 mb-1 font-weight-bold">
+                        Executive Dashboard
+                      </h2>
+                      <p><span class="qtr">(For FY 2019 Q2)</span></p>
+                      <a href="#" class="card-link">Show Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- each dashboard card -->
+              <div class="col-3 dashboard__card mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="dashboard__card__latest__data">
+                      <h2 class="card-title h5 mb-1 font-weight-bold">
+                        Media Effectiveness
+                      </h2>
+                      <p><span class="qtr">(For FY 2019 Q2)</span></p>
+                      <a href="#" class="card-link">Show Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- each dashboard card -->
+              <div class="col-3 dashboard__card mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="dashboard__card__latest__data">
+                      <h2 class="card-title h5 mb-1 font-weight-bold">
+                        Trend Analysis
+                      </h2>
+                      <p><span class="qtr">(For FY 2019 Q2)</span></p>
+                      <a href="#" class="card-link">Show Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- each dashboard card -->
+              <div class="col-3 dashboard__card mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="dashboard__card__latest__data">
+                      <h2 class="card-title h5 mb-1 font-weight-bold">
+                        Volume Contribution
+                      </h2>
+                      <p><span class="qtr">(For FY 2019 Q2)</span></p>
+                      <a href="#" class="card-link">Show Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- each dashboard card -->
+              <div class="col-3 dashboard__card mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="dashboard__card__latest__data">
+                      <h2 class="card-title h5 mb-1 font-weight-bold">
+                        Data Summary
+                      </h2>
+                      <p><span class="qtr">(For FY 2019 Q2)</span></p>
+                      <a href="#" class="card-link">Show Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex data__uploads"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
