@@ -765,6 +765,21 @@
     top: 20px;
 }
 
+.admin__organisation__status {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 20px;
+    line-height: 18px;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0 10px;
+}
+
 .manage__org__form {
     margin-bottom: 40px;
 }
@@ -783,6 +798,12 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0;
+}
+
+.manage__org__form .form-control.disabled, .manage__org__form .form-control:disabled {
+    border-color: #ced4da;
+    opacity: 0.5;
+    background-color: transparent;
 }
 
 .manage__org__form select {

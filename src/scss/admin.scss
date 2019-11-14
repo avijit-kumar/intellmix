@@ -82,5 +82,18 @@
         top: 20px;
       }
     }
+
+    &__status {
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      display: flex;
+      height: 20px;
+      line-height: 18px;
+      border-radius: 0.2rem;
+      font-weight: 500;
+      color: #fff;
+      padding: 0 10px;
+    }
   }
 }

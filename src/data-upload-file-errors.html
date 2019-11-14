@@ -234,6 +234,7 @@
                                                     <th scope="col">Column name</th>
                                                     <th scope="col">Value Missing</th>
                                                     <th scope="col">Data Type</th>
+                                                    <th scope="col" class="w-20">is Null</th>
                                                     <th class="action__col" scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -242,6 +243,7 @@
                                                     <td>ABC</td>
                                                     <td>13</td>
                                                     <td>int</td>
+                                                    <td>yes</td>
                                                     <td class="action__col">
                                                         <select id="row__sets__filter"
                                                             class="form-control form-control-sm mb-3">
@@ -256,6 +258,7 @@
                                                     <td>DEF</td>
                                                     <td>22</td>
                                                     <td>string</td>
+                                                    <td>no</td>
                                                     <td class="action__col">
                                                         <select id="row__sets__filter"
                                                             class="form-control form-control-sm mb-3">
@@ -268,12 +271,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td>XYZ</td>
-                                                    <td>36</td>
-                                                    <td>int</td>
+                                                    <td>string value</td>
+                                                    <td>string</td>
+                                                    <td>yes</td>
                                                     <td class="action__col">
                                                         <!-- Add "disabled" attribute when value is not a Number -->
                                                         <select id="row__sets__filter"
-                                                            class="form-control form-control-sm mb-3">
+                                                            class="form-control form-control-sm mb-3 disabled">
                                                             <option>Select</option>
                                                             <option>Mean</option>
                                                             <option>Median</option>

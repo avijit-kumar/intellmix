@@ -22,6 +22,12 @@
       box-shadow: none;
       outline: 0;
     }
+    &.disabled,
+    &:disabled {
+      border-color: #ced4da;
+      opacity: 0.5;
+      background-color: transparent;
+    }
   }
 
   select {
