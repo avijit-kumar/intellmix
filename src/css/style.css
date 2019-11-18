@@ -725,17 +725,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-bottom: 50px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .admin__organisation__card {
-    width: calc((100% / 3) - 15px);
+    width: calc((100% / 3) - 20px);
+    margin-right: 15px;
+    margin-left: 15px;
     margin-bottom: 30px;
+}
+
+.admin__organisation__card:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.admin__organisation__card:nth-child(3n) {
+    margin-right: 0;
 }
 
 .admin__organisation__card .card-body {
@@ -1811,6 +1818,24 @@
 .data__approval__data__type .badge-secondary {
     background-color: #d8d8d8;
     color: #333;
+}
+
+.data__approval__item {
+    border-color: #6c757d;
+}
+
+.data__approval__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.data__approval__item .card-header,
+  .data__approval__item .card-footer {
+    border-color: #6c757d;
+}
+
+.data__approval .card-body.tasks__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .data__approval__file__name {

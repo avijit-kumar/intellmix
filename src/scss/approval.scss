@@ -13,6 +13,20 @@
       }
     }
   }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    border-color: #6c757d;
+    .card-header,
+    .card-footer {
+      border-color: #6c757d;
+    }
+  }
+  .card-body.tasks__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   &__file__ {
     &name {
       font-weight: 500;
