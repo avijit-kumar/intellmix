@@ -1794,7 +1794,7 @@
 
 .data__approval__data__type {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1821,6 +1821,10 @@
     font-size: 14px;
 }
 
+.data__approval__file__desc.reject {
+    color: red;
+}
+
 .data__approval__file__info {
     font-size: 14px;
     font-weight: 600;
@@ -1834,6 +1838,10 @@
 
 .data__approval__links a {
     white-space: nowrap;
+}
+
+.data__approval__actions a.rejection-details-link {
+    line-height: 35px;
 }
 
 .data__approval .card-header,
@@ -1857,7 +1865,7 @@
 }
 
 .data__approval .text-success {
-    color: #7ED321 !important;
+    color: #7ed321 !important;
     font-weight: bold;
 }
 
@@ -2555,4 +2563,13 @@ tr.disabled .disabled-badge {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+.tasks-container > h4 {
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+}
+
+.tasks-container.completed .card {
+    border-left: 5px solid green;
 }

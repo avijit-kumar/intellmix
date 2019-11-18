@@ -305,3 +305,15 @@ tr {
   }
 }
 
+
+.tasks-container {
+  > h4 {
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+  }
+  &.completed {
+    .card {
+      border-left: 5px solid green;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .data__approval {
   &__data__type {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -19,7 +19,13 @@
     }
     &desc {
       font-size: 14px;
+      &.reject {
+        
+          color: red;
+        
+      }
     }
+    
     &info {
       font-size: 14px;
       font-weight: 600;
@@ -34,6 +40,11 @@
   &__links {
     a {
       white-space: nowrap;
+    }
+  }
+  &__actions {
+    a.rejection-details-link {
+      line-height: 35px;
     }
   }
   .card-header,
@@ -55,7 +66,7 @@
     }
   }
   .text-success {
-    color: #7ED321 !important;
+    color: #7ed321 !important;
     font-weight: bold;
   }
   .text-danger {
