@@ -13,14 +13,21 @@
       }
     }
   }
+  &__nav {
+    .nav-link.active {
+      font-weight: bold;
+    }
+  }
   &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-    border-color: #6c757d;
+    // border-color: #6c757d;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     .card-header,
     .card-footer {
-      border-color: #6c757d;
+      padding: 10px 15px !important;
+      // border-color: #6c757d;
     }
   }
   .card-body.tasks__container {

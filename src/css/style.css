@@ -1820,8 +1820,13 @@
     color: #333;
 }
 
+.data__approval__nav .nav-link.active {
+    font-weight: bold;
+}
+
 .data__approval__item {
-    border-color: #6c757d;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .data__approval__item:not(:last-child) {
@@ -1830,7 +1835,7 @@
 
 .data__approval__item .card-header,
   .data__approval__item .card-footer {
-    border-color: #6c757d;
+    padding: 10px 15px !important;
 }
 
 .data__approval .card-body.tasks__container {
