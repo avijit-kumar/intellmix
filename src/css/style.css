@@ -2319,6 +2319,69 @@
     padding-right: 7.5px;
 }
 
+.dashboard__process {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dashboard__process__wrapper {
+    margin-top: 20px;
+}
+
+.dashboard__process__wrapper .status {
+    font-size: 12px;
+    line-height: 15px;
+    color: #131c2e;
+    color: rgba(19, 28, 46, 0.6);
+    margin: 0;
+}
+
+.dashboard__process .card-body {
+    padding: 0;
+}
+
+.dashboard__process__block {
+    width: 100%;
+    padding: 50px 30px;
+    border-top: 10px solid #E7E7E7;
+}
+
+.dashboard__process__block.success {
+    border-color: #28a745;
+}
+
+.dashboard__process__block__text {
+    padding-left: 20px;
+    position: relative;
+}
+
+.dashboard__process__block__text h3 {
+    color: rgba(52, 53, 54, 0.6);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dashboard__process__block__text p {
+    font-size: 12px;
+    line-height: 15px;
+    color: #131c2e;
+    color: rgba(19, 28, 46, 0.6);
+    margin: 0;
+}
+
+.dashboard__process__block__text.arrow-right::after {
+    content: '';
+    background-image: url("./../img/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: -25px;
+    top: 0;
+}
+
 .iframe-container {
     position: relative;
     padding-bottom: 56.25%;
