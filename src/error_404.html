@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404: Page not found</title>
+  <style media="screen">
+    body {
+      height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #1c1c1c;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .parent {
+      width: 100%;
+      height: 100%;
+    }
+
+    .take-me-back {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      /* margin-top: 50px; */
+      position: relative;
+      z-index: 1;
+    }
+
+    .take-me-back p {
+      color: #eee;
+      font-size: 48px;
+      font-weight: 300;
+    }
+
+    .take-me-back a {
+      display: inline-block;
+      padding: 15px 50px;
+      color: #fff;
+      font-size: 22px;
+      border-radius: 5px;
+      background-color: #f7f7f7;
+      min-width: 320px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s all ease;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.1) inset, 0 0px 1px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.1) inset, 0 0px 1px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 1px 0px rgba(255, 255, 255, 0.1) inset, 0 0px 1px rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.1);
+      /* #191919 */
+      border: 1px solid #141414;
+    }
+
+    .take-me-back a:hover {
+      background-color: #000;
+    }
+
+    .text-404-container {
+      text-align: center;
+      width: 1000px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .text-404-container p {
+      color: #eee;
+      font-size: 25rem;
+      display: inline-block;
+      height: 470px;
+      vertical-align: middle;
+      padding-top: 0px;
+      width: 250px;
+      margin: 0;
+    }
+
+    #hitarea {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      vertical-align: middle;
+    }
+
+    .hitbox {
+      width: 100px;
+      height: 100px;
+      float: left;
+      padding-top: 30px;
+    }
+    /* eyes */
+
+    .eye {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      border-radius: 50px;
+      left: 20%;
+      top: 40%;
+      pointer-events: none;
+    }
+
+    .eye+.eye {
+      left: 55%;
+    }
+
+    .pupil {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      background: #1c1c1c;
+      border-radius: 12px;
+      left: 50%;
+      top: 50%;
+      margin: -12px 0 0 -12px;
+      -webkit-transition: all .5s ease;
+    }
+
+    .eyelid {
+      width: 110px;
+      height: 75px;
+      position: absolute;
+      left: 15%;
+      top: 25%;
+      pointer-events: none;
+      background: #1c1c1c;
+      -webkit-animation-name: blink;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-delay: 2s;
+      -webkit-transition: all .5s ease;
+    }
+
+    .eyelid+.eyelid {
+      left: 50%;
+    }
+    /* Blinking eyes */
+
+    @-webkit-keyframes blink {
+      0% {
+        top: 25%;
+      }
+      95% {
+        top: 25%;
+      }
+      100% {
+        top: 40%;
+      }
+    }
+    /* hover events */
+    /* eye lids */
+    .arrow-left {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+.arrow1 {
+  animation: slide1 1s ease-in-out infinite;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="text-404-container">
+      <p>4</p>
+      <div id="hitarea">
+        <div id="a-1" class="hitbox"></div>
+        <div id="a-2" class="hitbox"></div>
+        <div id="a-3" class="hitbox"></div>
+        <div id="a-4" class="hitbox"></div>
+        <div id="a-5" class="hitbox"></div>
+        <div id="b-1" class="hitbox"></div>
+        <div id="b-2" class="hitbox"></div>
+        <div id="b-3" class="hitbox"></div>
+        <div id="b-4" class="hitbox"></div>
+        <div id="b-5" class="hitbox"></div>
+        <div id="c-1" class="hitbox"></div>
+        <div id="c-2" class="hitbox"></div>
+        <div id="c-3" class="hitbox"></div>
+        <div id="c-4" class="hitbox"></div>
+        <div id="c-5" class="hitbox"></div>
+        <div id="d-1" class="hitbox"></div>
+        <div id="d-2" class="hitbox"></div>
+        <div id="d-3" class="hitbox"></div>
+        <div id="d-4" class="hitbox"></div>
+        <div id="d-5" class="hitbox"></div>
+        <div id="e-1" class="hitbox"></div>
+        <div id="e-2" class="hitbox"></div>
+        <div id="e-3" class="hitbox"></div>
+        <div id="e-4" class="hitbox"></div>
+        <div id="e-5" class="hitbox"></div>
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="eyelid"></div>
+        <div class="eyelid"></div>
+      </div>
+      <p>4</p>
+    </div>
+    <div class="take-me-back">
+      <p class="d-none"></p>
+      <p>The page you requested couldn't be found</p>
+      <!-- <p>You shouldn't be here</p> -->
+      <!-- <a href="#"><i class="arrow-left arrow1" aria-hidden="true">&larr;</i>Take me back</a> -->
+    </div>
+  </div>
+</body>
+
+</html>
