@@ -466,6 +466,157 @@
                   </div>
                 </div>
               </div>
+              <!-- Data Preparations Approved Card -->
+              <div class="card data__approval__item">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="card-title data__approval__brand data__approval__data__type m-0">
+                        <span class="badge badge-secondary text-14 ml-3">BU: XYZ</span>
+                      </h4>
+                    </div>
+                    <div class="data__approval__file__info text-right">
+                      <!-- if process is approved -->
+                      <p class="data__approval__file__status m-0">
+                          Approved by
+                        </p>
+                        <!-- if process is rejected -->
+                        <p class="data__approval__file__status m-0 d-none">
+                          Rejected by
+                        </p>
+                      <p class="data__approval__file__status_update m-0">
+                        Arun Prem on 28 May 2019, Tue 06:23 AM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-end">
+                  <div class="data__approval__file__desc">
+                    
+                    <!-- if process is approved -->
+                    <p class="card-text text-question text-success mb-0">
+                      Data Preparations process is approved
+                    </p>
+                    <!-- if process is rejected -->
+                    <p class="card-text text-question text-danger mb-0 d-none">
+                      Data Preparations process is rejected
+                    </p>
+                    
+                    <p class="card-text data__approval__file__desc reject d-none">
+                      <b>Rejection Reason - </b>This will contain the
+                      rejection details entered by the user.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-footer data__approval__footer d-flex justify-content-between align-items-center">
+                  <div class="data__approval__links">
+                    <a href="#" class="mr-4">Preview Dashboard</a>
+                    <a href="#" class="mr-4">Download Dashboard as PDF</a>
+                  </div>
+                  <!-- if process is approved -->
+                  <div class="data__approval__actions">
+                    <button class="btn btn-approved text-success d-flex align-items-center justify-content-end">
+                      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                          <circle fill="currentColor" cx="10" cy="10" r="10" />
+                          <path stroke="#FFF" fill="#FFF"
+                            d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                        </g>
+                      </svg>
+                      <span class="ml-1">Approved</span>
+                    </button>
+                  </div>
+                  <!-- if process is rejected -->
+                  <div class="data__approval__actions d-none">
+                    <button class="btn btn-rejected text-danger d-flex align-items-center justify-content-end">
+                      <svg width="23" height="22" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="currentColor" fill-rule="nonzero">
+                          <path
+                            d="M.105 20.449c.26-.818.731-1.523 1.123-2.285a5262.987 5262.987 0 018.887-16.923c.235-.423.496-.818.967-.987.052-.028.104-.028.13-.057h.393c.575.17.888.593 1.176 1.129 2.9 5.471 5.828 10.943 8.73 16.415.391.733.783 1.467 1.15 2.2.104.197.156.395.234.592v.423c-.104.282-.209.565-.47.706l-.392.169H1.019c-.47-.17-.81-.452-.914-.987v-.395zm21.04-.226c-3.242-6.12-6.482-12.213-9.723-18.333-3.215 6.12-6.404 12.213-9.619 18.333h19.341z" />
+                          <path
+                            d="M13.147 8.433c-.053.423-.105.903-.157 1.354-.079.649-.157 1.27-.235 1.918l-.236 1.918-.156 1.27c-.053.394-.21.704-.55.874a.73.73 0 01-.993-.423c-.13-.31-.156-.65-.209-.988-.104-.761-.183-1.494-.287-2.256-.079-.733-.183-1.467-.261-2.172-.053-.423-.079-.818-.157-1.24-.183-.79.287-1.467.81-1.778 1.045-.648 2.222.17 2.404 1.213.027.085.027.17.027.31zM11.526 16.556c.627 0 1.124.593 1.124 1.27s-.523 1.24-1.15 1.24c-.627-.028-1.15-.592-1.124-1.269 0-.761.549-1.269 1.15-1.24z" />
+                        </g>
+                      </svg>
+                      <span class="ml-1">Rejected</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Data Reports Approval Card - this will come after all data preparations approval have happened -->
+              <div class="card data__approval__item">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="card-title data__approval__brand data__approval__data__type m-0">
+                        <span class="badge badge-secondary text-14 ml-3">BU: XYZ</span>
+                      </h4>
+                    </div>
+                    <div class="data__approval__file__info text-right">
+                      <!-- if process is approved -->
+                      <p class="data__approval__file__status m-0 ">
+                        Approved by
+                      </p>
+                      <!-- if process is rejected -->
+                      <p class="data__approval__file__status m-0 d-none">
+                        Rejected by
+                      </p>
+                      <p class="data__approval__file__status_update m-0">
+                        Arun Prem on 28 May 2019, Tue 06:23 AM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="data__approval__file__desc">
+                    <!-- if process is approved -->
+                    <p class="card-text text-question text-success mb-0">
+                      Data Reports process is approved
+                    </p>
+                    <!-- if process is rejected -->
+                    <p class="card-text text-question text-danger mb-0 d-none">
+                      Data Reports process is rejected
+                    </p>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <div class="data__approval__links">
+                    <a href="#" class="mr-4">Preview Dashboard</a>
+                    <a href="#" class="mr-4">Preview Data Through Pivot</a>
+                    <a href="#" class="mr-4">Download Dashboard as PDF</a>
+                  </div>
+                  <!-- if process is approved -->
+                  <div class="data__approval__actions">
+                    <button class="btn btn-approved text-success d-flex align-items-center justify-content-end">
+                      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                          <circle fill="currentColor" cx="10" cy="10" r="10" />
+                          <path stroke="#FFF" fill="#FFF"
+                            d="M13.655 8l-4.116 3.422L7.348 9.6 7 9.89 9.539 12 14 8.29z" />
+                        </g>
+                      </svg>
+                      <span class="ml-1">Approved</span>
+                    </button>
+                  </div>
+                  <!-- if process is rejected -->
+                  <div class="data__approval__actions  d-none">
+                      <button class="btn btn-outline-secondary data__approval__reject__btn float-left mr-2"
+                      data-toggle="modal" data-target="#undoModal">
+                      Undo
+                    </button>
+                    <button class="btn btn-rejected text-danger d-flex align-items-center justify-content-end">
+                      <svg width="23" height="22" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="currentColor" fill-rule="nonzero">
+                          <path
+                            d="M.105 20.449c.26-.818.731-1.523 1.123-2.285a5262.987 5262.987 0 018.887-16.923c.235-.423.496-.818.967-.987.052-.028.104-.028.13-.057h.393c.575.17.888.593 1.176 1.129 2.9 5.471 5.828 10.943 8.73 16.415.391.733.783 1.467 1.15 2.2.104.197.156.395.234.592v.423c-.104.282-.209.565-.47.706l-.392.169H1.019c-.47-.17-.81-.452-.914-.987v-.395zm21.04-.226c-3.242-6.12-6.482-12.213-9.723-18.333-3.215 6.12-6.404 12.213-9.619 18.333h19.341z" />
+                          <path
+                            d="M13.147 8.433c-.053.423-.105.903-.157 1.354-.079.649-.157 1.27-.235 1.918l-.236 1.918-.156 1.27c-.053.394-.21.704-.55.874a.73.73 0 01-.993-.423c-.13-.31-.156-.65-.209-.988-.104-.761-.183-1.494-.287-2.256-.079-.733-.183-1.467-.261-2.172-.053-.423-.079-.818-.157-1.24-.183-.79.287-1.467.81-1.778 1.045-.648 2.222.17 2.404 1.213.027.085.027.17.027.31zM11.526 16.556c.627 0 1.124.593 1.124 1.27s-.523 1.24-1.15 1.24c-.627-.028-1.15-.592-1.124-1.269 0-.761.549-1.269 1.15-1.24z" />
+                        </g>
+                      </svg>
+                      <span class="ml-1">Rejected</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
